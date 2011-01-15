@@ -1,0 +1,7 @@
+GIT Readme:
+
+How to use:
+If you've committed a bunch of stuff and want to push, do the following:
+
+git fetch
+git rebase master
