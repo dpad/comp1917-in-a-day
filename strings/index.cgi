@@ -10,7 +10,7 @@ opendir(DIR, ".");
 &blindPrint("../glheader.html");
 &blindPrint("lheader.html");
 
-&sectionPrint("intro.html", 0);
+&sectionPrint("intro.html", 1);
 
 &blindPrint("../bar.html");
 
