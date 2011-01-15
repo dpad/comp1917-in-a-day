@@ -11,6 +11,7 @@ opendir(DIR, ".");
 &blindPrint("lheader.html");
 
 &sectionPrint("intro.html", 0);
+&sectionPrint("typedef.html", 0);
 
 &blindPrint("../bar.html");
 
