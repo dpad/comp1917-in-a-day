@@ -7,8 +7,6 @@ int main(int argc, char *argv[]) {
     char message[MAXLEN] = {'h', 'e', 'l', 'l', 'o', '\0'};
     char new[MAXLEN];
     
-    //this is equivelant: char message[MAXLEN] = "hello";
-
     printf("%s\n", message);
 
     
