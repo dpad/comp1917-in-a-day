@@ -1,8 +1,6 @@
-<h1>Your first c program</h1>
+{{NL2BR}}
 To keep the computer gods happy, we must begin with writing a helloworld program. This is a program that does nothing more than print the text &quot;Hello World!&quot;. So without further ado:
-
-codefile: helloworld.c handle: helloworld code: 1
-
+{{helloworld.c}}
 Make a directory for your c programs and navigate to it in your 
 Open gedit and copy the above code into the editor.
 Save the file in your c directory with the name helloworld.c.
@@ -14,7 +12,6 @@ Now run it:
 <pre class="code">
 ./helloworld
 </pre>
-
 Congratulations! You just compiled your first c program.
 
 Here is what everything means.

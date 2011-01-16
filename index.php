@@ -12,8 +12,8 @@ function getTemplate($template){
     return ob_get_clean();
 }
 
-function printSection($section){
-    $section = explode("\n", $section);
+function printSection($chapter_dir, $section){
+    $section = explode("\n", getTemplate($chapter_dir.$section.".section"));
     $nl2br = false;
     $nl2brorig = false;
     if ($section[0] == "{{NL2BR}}"){
@@ -27,14 +27,17 @@ function printSection($section){
     foreach ($section as $line){
         if (preg_match("/^\<pre/i", $line) > 0){
             $nl2br = false;
-        } else if (preg_match("/^<\/pre>$/i", $line) > 0){
-            $nl2br = $nl2brorig;
+        } else if (preg_match("/^{{(.+)}}$/i", $line, $matches) > 0){
+            $line = codeToHtml($chapter_dir.$matches[1]);
         }
         $string .= $line;
         if ($nl2br){
             $string .= "<br/>";
         } else {
             $string .= "\n";
+        }
+        if (preg_match("/^<\/pre>$/i", $line) > 0){
+            $nl2br = $nl2brorig;
         }
     }
 
@@ -46,7 +49,7 @@ function codeToHtml($code_file){
     require_once($code_file);
     $code = explode("\n", ob_get_clean());
 
-    $string = "<div class='code'><strong>Download: <a href='$code_file'>$code_file</a></strong>";
+    $string = "<div class='code'><strong>Download: <a href='".FULL_DIR."$code_file'>$code_file</a></strong>";
     $string .= "<br/><a href=\"javascript:toggleLineNos('".md5($code_file)."');\">Toggle line numbers</a><pre id='".md5($code_file)."lines'>";
 
     $digits = 0;
@@ -121,7 +124,7 @@ if (isset($_GET['link'])){
             if ($link != ""){
                 $content .= "<div class='section'>";
                 $content .= "<h1>$section</h1>";
-                $content .= printSection(getTemplate(CHAPTERS_DIR.$_GET['link']."/".$link.".section"));
+                $content .= printSection(CHAPTERS_DIR.$_GET['link']."/", $link);
                 $content .= "</div>";
             }
         }
