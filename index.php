@@ -12,6 +12,35 @@ function getTemplate($template){
     return ob_get_clean();
 }
 
+function printSection($section){
+    $section = explode("\n", $section);
+    $nl2br = false;
+    $nl2brorig = false;
+    if ($section[0] == "{{NL2BR}}"){
+        $nl2br = true;
+        $nl2brorig = true;
+        array_shift($section);
+    }
+
+    $string = "";
+
+    foreach ($section as $line){
+        if (preg_match("/^\<pre/i", $line) > 0){
+            $nl2br = false;
+        } else if (preg_match("/^<\/pre>$/i", $line) > 0){
+            $nl2br = $nl2brorig;
+        }
+        $string .= $line;
+        if ($nl2br){
+            $string .= "<br/>";
+        } else {
+            $string .= "\n";
+        }
+    }
+
+    return $string;
+}
+
 function codeToHtml($code_file){
     ob_start();
     require_once($code_file);
@@ -62,9 +91,6 @@ foreach ($chapter_order as $chapter){
 // Get the layout template
 $layout = getTemplate(LAYOUT);
 
-// Get the section wrapping template
-$section_wrapper = getTemplate(SECTION_WRAPPER);
-
 // Build the table of contents
 $toc = "";
 foreach($chapter_list as $link => $name){
@@ -89,6 +115,21 @@ if (isset($_GET['link'])){
             $section_list[$section[0]] = $section[1];
         }
 
+        // Add each section to the content
+        $content = "";
+        foreach ($section_list as $link => $section){
+            if ($link != ""){
+                $content .= "<div class='section'>";
+                $content .= "<h1>$section</h1>";
+                $content .= printSection(getTemplate(CHAPTERS_DIR.$_GET['link']."/".$link.".section"));
+                $content .= "</div>";
+            }
+        }
+
+        // Build the layout
+        $layout = str_replace("{{CONTENT}}", $content, $layout);
+        $layout = str_replace("{{TITLE}}", "COMP1917 in a Day >> ".$chapter_list[$_GET['link']], $layout);
+        $layout = str_replace("{{HEADER}}", $chapter_list[$_GET['link']], $layout);
 
     } else {
         printf("<h1>Invalid Chapter!</h1>");
