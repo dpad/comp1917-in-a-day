@@ -10,32 +10,31 @@
 // Get the configuration information
 require_once("config.php");
 
-// Get a list of all the chapters
-$chapter_list = scandir(CHAPTERS_DIR);
-array_shift($chapter_list); // Get rid of "."
-array_shift($chapter_list); // Get rid of ".."
-
 // Create an output buffer
 ob_start();
 
 // Get the list of chapters in order
 require_once(CHAPTERS_DIR . CHAPTERS_LIST);
 $chapter_order = explode("\n", ob_get_clean());
-var_dump($chapter_order);
+
+// Split the chapter list
+foreach ($chapter_order as $chapter){
+    $chapter = explode(" ", $chapter, 2);
+    $chapter_list[$chapter[0]] = $chapter[1];
+}
 
 // Print the layout template
 require_once(LAYOUT);
 $layout = ob_get_clean();
 
-echo "Yes: ".$_GET['link'];
 // Check if we are reading a chapter
 if (isset($_GET['link'])){
 
     // Check if that chapter exists
-    $chapter_key = array_search($_GET['link'], $chapter_list);
-    if ($chapter_key != FALSE){
+    if(array_key_exists($_GET['link'], $chapter_list)){
 
-        require_once(CHAPTERS_DIR . $_GET['link'] . SECTIONS_LIST);
+        ob_start();
+        require_once(CHAPTERS_DIR . $_GET['link'] . "/" . SECTIONS_LIST);
         $chapter_contents = explode("\n", ob_get_clean());
 
         var_dump($chapter_contents);
