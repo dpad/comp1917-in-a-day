@@ -7,7 +7,10 @@ class PagesController extends AppController {
     function index(){
         $this->set('chapter_title', 'COMP1917 in a Day');
         $this->set('page_title', 'COMP1917 in a Day');
-        $this->set('table_of_contents', $this->Chapter->find('all'));
+        $this->set('table_of_contents', $this->Chapter->find('all', array(
+                        'conditions' => 'Chapter.shown = 1'
+                        )
+                    ));
     }
 }
 
