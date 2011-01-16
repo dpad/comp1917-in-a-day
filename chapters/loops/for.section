@@ -1,12 +1,7 @@
-<h1>For Loops</h1>
 For loops are a special type of loop for a particular (but common) situation. This is when a counter is required and something needs to be done a certain number of times. You will probably find that you use these far more than while loops. Everything that can be done with a for loop can be done with a while loop, but for loops provide an elegant, readible approach to this particular case. Here is an example:
-
-codefile: tables.c handle: tables code: 1
-
+{{tables.c}}
 output
-
-codefile: tableout handle: tableout code: 0
-
+{{tableout}}
 The part in the brackets in the first line of a for loop has 3 parts seperated by semicolons.
 The first part is what happens before the for loop starts iterating.
 The second part is a condition that while true, the for loop will iterate.

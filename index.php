@@ -27,8 +27,12 @@ function printSection($chapter_dir, $section){
             if (preg_match("/^\<pre/i", $line) > 0){
                 $last = $nl2br;
                 $nl2br = false;
-            } else if (preg_match("/^{{(.+)}}$/i", $line, $matches) > 0){
-                $line = codeToHtml($chapter_dir.$matches[1]);
+            } else if (preg_match("/^{{(.+)}}(!)?$/i", $line, $matches) > 0){
+                if ($matches[2] == "!"){
+                    $line = codeToHtml($chapter_dir.$matches[1], false);
+                } else {
+                    $line = codeToHtml($chapter_dir.$matches[1]);
+                }
             }
             $string .= $line;
             if ($nl2br){
@@ -45,30 +49,34 @@ function printSection($chapter_dir, $section){
     return $string;
 }
 
-function codeToHtml($code_file){
+function codeToHtml($code_file, $download = true){
     ob_start();
     require_once($code_file);
     $code = explode("\n", ob_get_clean());
 
-    $string = "<div class='code'><strong>Download: <a href='".FULL_DIR."$code_file'>$code_file</a></strong>";
-    $string .= "<br/><a href=\"javascript:toggleLineNos('".md5($code_file)."');\">Toggle line numbers</a><pre id='".md5($code_file)."lines'>";
+    if ($download){
+        $string = "<div class='code'><strong>Download: <a href='".FULL_DIR."$code_file'>$code_file</a></strong>";
+        $string .= "<br/><a href=\"javascript:toggleLineNos('".md5($code_file)."');\">Toggle line numbers</a><pre id='".md5($code_file)."lines'>";
 
-    $digits = 0;
-    $lines = sizeof($code);
-    while($lines >= 1){
-        $lines = $lines / 10;
-        $digits++;
-    }
-
-    foreach ($code as $i => $line){
-        if (!($i == sizeof($code)-1 && $line == "")){
-            $i = str_pad($i+1, $digits, "0", STR_PAD_LEFT);
-            $string .= $i.": ".htmlspecialchars($line)."\n";
+        $digits = 0;
+        $lines = sizeof($code);
+        while($lines >= 1){
+            $lines = $lines / 10;
+            $digits++;
         }
+
+        foreach ($code as $i => $line){
+            if (!($i == sizeof($code)-1 && $line == "")){
+                $i = str_pad($i+1, $digits, "0", STR_PAD_LEFT);
+                $string .= $i.": ".htmlspecialchars($line)."\n";
+            }
+        }
+    } else {
+        $string .= "<pre class='code'>";
     }
 
     // Annoying redundancy but saves us from having to embed jquery
-    $string .= "</pre><pre style='display:none;' id='".md5($code_file)."nolines'>";
+    if ($download){ $string .= "</pre><pre style='display:none;' id='".md5($code_file)."nolines'>"; }
     foreach ($code as $i => $line){
         if (!($i == sizeof($code)-1 && $line == "")){
             $i = str_pad($i+1, $digits, "0", STR_PAD_LEFT);
@@ -76,7 +84,10 @@ function codeToHtml($code_file){
         }
     }
 
-    $string .= "</pre></div>";
+    $string .= "</pre>";
+    if ($download){
+        $string .= "</div>";
+    }
 
     return $string;
 
