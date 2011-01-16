@@ -1,16 +1,10 @@
-<h1>Pointers and Arrays</h1>
-
 Pointers and arrays are <strong>essentially the same things</strong>.
 Did that not just blow your mind?
 <br />
 This code should help you understand:
-
-codefile: pointersarearrays.c handle: array code: 1
-<br />
+{{pointersarearrays.c}}
 output:
-
-codefile: arrayoutput handle: araryout code: 0
-<br />
+{{arrayoutput}}!
 There is a slight difference between arrays and pointers.
 When you declare an array, some memory is set asside for that array.
 (The amount of memory depends on the number in square brackets.)

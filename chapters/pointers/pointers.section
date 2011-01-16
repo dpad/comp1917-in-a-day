@@ -1,8 +1,7 @@
-<h1>Pointers</h1>
 Lets jump straight into it.
-codefile: pointers.c handle: pointers code: 1
+{{pointers.c}}
 output:
-codefile: pointerout handle: pointerout code: 0
+{{pointerout}}!
 
 <h2>Pointer Syntax</h2>
 When declaring a pointer variable, use the type of the variable to which it will point, an asterisk, then the name of the pointer variable.
