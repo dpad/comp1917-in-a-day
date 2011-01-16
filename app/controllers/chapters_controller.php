@@ -10,6 +10,7 @@ class ChaptersController extends AppController {
         if ($this->Chapter->find()){
             echo "yay!";
         } else {
+            $this->redirect("/");
             echo "WTF";
         }
     }
