@@ -1,7 +1,8 @@
 <?php
 
-class IndexController extends AppController {
-    var $name = 'Index';
+class PagesController extends AppController {
+    var $name = 'Pages';
+    var $uses = array('Chapter', 'Section');
 
     function index(){
         $this->set('chapter_title', 'COMP1917 in a Day');

@@ -6,7 +6,7 @@ class ChaptersController extends AppController {
     var $helpers = array('html');
 
     function index($chapter = 0){
-        $this->Chapter->id = $chapter;
+        $this->Chapter->link = $chapter;
         if ($this->Chapter->find()){
             echo "yay!";
         } else {
