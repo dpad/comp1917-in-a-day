@@ -14,30 +14,31 @@ function getTemplate($template){
 
 function printSection($chapter_dir, $section){
     $section = explode("\n", getTemplate($chapter_dir.$section.".section"));
-    $nl2br = false;
-    $nl2brorig = false;
-    if ($section[0] == "{{NL2BR}}"){
-        $nl2br = true;
-        $nl2brorig = true;
-        array_shift($section);
-    }
+    $nl2br = true;
 
     $string = "";
 
     foreach ($section as $line){
-        if (preg_match("/^\<pre/i", $line) > 0){
+        if (preg_match("/^{{NL2BR}}$/i", $line) > 0){
+            $nl2br = true;
+        } else if (preg_match("/^{{NONL2BR}}$/i", $line) > 0){
             $nl2br = false;
-        } else if (preg_match("/^{{(.+)}}$/i", $line, $matches) > 0){
-            $line = codeToHtml($chapter_dir.$matches[1]);
-        }
-        $string .= $line;
-        if ($nl2br){
-            $string .= "<br/>";
         } else {
-            $string .= "\n";
-        }
-        if (preg_match("/^<\/pre>$/i", $line) > 0){
-            $nl2br = $nl2brorig;
+            if (preg_match("/^\<pre/i", $line) > 0){
+                $last = $nl2br;
+                $nl2br = false;
+            } else if (preg_match("/^{{(.+)}}$/i", $line, $matches) > 0){
+                $line = codeToHtml($chapter_dir.$matches[1]);
+            }
+            $string .= $line;
+            if ($nl2br){
+                $string .= "<br/>";
+            } else {
+                $string .= "\n";
+            }
+            if (preg_match("/^<\/pre>$/i", $line) > 0){
+                $nl2br = $last;
+            }
         }
     }
 
@@ -60,15 +61,19 @@ function codeToHtml($code_file){
     }
 
     foreach ($code as $i => $line){
-        $i = str_pad($i+1, $digits, "0", STR_PAD_LEFT);
-        $string .= $i.": ".htmlspecialchars($line)."\n";
+        if (!($i == sizeof($code)-1 && $line == "")){
+            $i = str_pad($i+1, $digits, "0", STR_PAD_LEFT);
+            $string .= $i.": ".htmlspecialchars($line)."\n";
+        }
     }
 
     // Annoying redundancy but saves us from having to embed jquery
     $string .= "</pre><pre style='display:none;' id='".md5($code_file)."nolines'>";
     foreach ($code as $i => $line){
-        $i = str_pad($i+1, $digits, "0", STR_PAD_LEFT);
-        $string .= htmlspecialchars($line)."\n";
+        if (!($i == sizeof($code)-1 && $line == "")){
+            $i = str_pad($i+1, $digits, "0", STR_PAD_LEFT);
+            $string .= htmlspecialchars($line)."\n";
+        }
     }
 
     $string .= "</pre></div>";
