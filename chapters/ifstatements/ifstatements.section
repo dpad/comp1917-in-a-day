@@ -1,5 +1,3 @@
-<h1>If statements</h1>
-
 These are used to take an action depending on a condition. The syntax for if statements in c is:
 <pre class="code">
 if (condidion) {
