@@ -1,1 +1,54 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+<html> 
+<head> 
+<script> 
+ 
+function toggleLineNos(name) {
+ 
+    if (document.getElementById(name + "lines").style.display == "none") {
+ 
+        document.getElementById(name + "lines").style.display = "";
+        document.getElementById(name + "nolines").style.display = "none";
+    } else {
+        document.getElementById(name + "lines").style.display = "none";
+        document.getElementById(name + "nolines").style.display = "";
+ 
+    }
+ 
+}
+function toggleList() {
+    if (document.getElementById("list").style.display == "none") {   
+        document.getElementById("list").style.display = "";
+        document.getElementById("showbtn").innerHTML = "Table of Contents";
+    } else {
+        document.getElementById("list").style.display = "none";
+        document.getElementById("showbtn").innerHTML = "Table of Contents";
+    }
+}
+</script> 
+<link href="css/sections.css" rel="stylesheet"  type="text/css"/>  
+<title>{{TITLE}}</title> 
+</head> 
+<body> 
+ 
+<h1>{{HEADER}}</h1> 
+
+{{CONTENT}}
+
+<div id="header" style="position:absolute;left:10px;top:0px;font-family:monospace;font-size:20px;background-color:rgba(255, 255, 255, 0.95);margin:0px 0px 0px 20px;padding:0px 20px 10px 20px;"> 
+<a href="/">index</a> 
+</div> 
+<div style="position:absolute;left:100px;top:0px;font-family:monospace;font-size:20px;background-color:rgba(255, 255, 255, 0.95);padding:0px 20px 10px 20px;margin:0px 0px 0px 20px;"> 
+<a id="showbtn" href="javascript:toggleList();">Table of Contents</a> 
+</div> 
+ 
+<div id="list" style="position:absolute;left:100px;top:40px;font-family:monospace;font-size:20px;background-color:rgba(255, 255, 255, 0.95);padding:0px 20px 10px 20px;margin:0px 0px 0px 20px;display:none;"> 
+{{TABLE_OF_CONTENTS}} 
+</div> 
+ 
+<div style="position:relative;height:40px;width:100%;font-family:monospace;text-align:center;"> 
+Copyright &copy; 2011 Stephen Sherratt, Dan Padilha
+</div> 
+</body> 
+</html>
