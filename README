@@ -14,4 +14,3 @@ The first option is easier, but the second option gives a cleaner history.
 
 If anything goes wrong during an automatic merge, just run
 git mergetool
-(or git merge-tool? I don't remember)
