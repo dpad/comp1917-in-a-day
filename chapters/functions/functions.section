@@ -1,11 +1,9 @@
-<h1>Functions</h1>
 Suppose in your program you had a need to calculate the value of a number to the power of another number. This is easy enough to code, however what if there were two or more parts in your code when this is required? Of course, you could copy all the code for finding powers to this new section, but it is messy, and a far more elegand approach is to write a <strong>function</strong>.
 
 You have already used several functions. scanf, printf, sizeof and main are all functions that you will have seen before. Functions can be thought of in a similar way to functions in mathematics. That is, they take several values as input (these are called <strong>arguments</strong>), do something with them, and possibly return a value. The number of arguments can be zero, and there can be as many as you like. Functions can return at most one value, however sometimes it is unnecessary to return anything (e.g. functions for printing).
 
 Here is an example of code with a power function:
-
-codefile: power.c handle: power code: 1
+{{power.c}}
 
 Some things to note:
 On line 3, there is a <strong>prototype</strong> for the power function. This is essentially the first line of the function definition but without the open parenthesis and ending in a semicolon.

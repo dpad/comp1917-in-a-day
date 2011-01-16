@@ -4,5 +4,5 @@ Avoid using "magic" numbers. In the examples so far, the code has contained stat
 To define a constant, place the line "#define NAME value" at the top of the file, just below the #include lines. Constant names must be in all upper case. Here is an example of a program with constants. %f is the placeholder for floating points.
 {{area.c}}
 Output:
-{{areaout}}
+{{areaout}}!
 When the code is compiled, the references to symbolic constants are exactly replaced with their value. Constants are purely for readibility, but they are still important.
