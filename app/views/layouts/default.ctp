@@ -20,10 +20,10 @@ function toggleLineNos(name) {
 function toggleList() {
     if (document.getElementById("list").style.display == "none") {   
         document.getElementById("list").style.display = "";
-        document.getElementById("showbtn").innerHTML = "Hide Index";
+        document.getElementById("showbtn").innerHTML = "Table of Contents";
     } else {
         document.getElementById("list").style.display = "none";
-        document.getElementById("showbtn").innerHTML = "Show Index";
+        document.getElementById("showbtn").innerHTML = "Table of Contents";
     }
 }
 </script> 
@@ -38,14 +38,13 @@ echo $content_for_layout;
 ?>
  
 <div id="header" style="position:absolute;left:10px;width:auto;top:0px;height:auto;text-align:left;font-family:monospace;font-size:20px;background-color:rgba(255, 255, 255, 0.95);padding:0px;margin:0px;margin-left:20px;padding-left:20px;padding-right:20px;padding-bottom:10px;"> 
-<a href="../">back</a> 
+<a href="/">index</a> 
 </div> 
 <div style="position:absolute;left:100px;width:auto;top:0px;height:auto;text-align:left;font-family:monospace;font-size:20px;background-color:rgba(255, 255, 255, 0.95);padding:0px;margin:0px;margin-left:20px;padding-left:20px;padding-right:20px;padding-bottom:10px;"> 
 <a id="showbtn" href="javascript:toggleList();">Table of Contents</a> 
 </div> 
  
 <div id="list" style="position:absolute;left:100px;width:auto;top:40px;height:auto;text-align:left;font-family:monospace;font-size:20px;background-color:rgba(255, 255, 255, 0.95);padding:0px;margin:0px;margin-left:20px;padding-left:20px;padding-right:20px;padding-bottom:10px;display:none;"> 
-
 <?php 
 foreach ($table_of_contents as $id => $chapter){
     echo "<a href='/chapters/".$chapter['Chapter']['link']."'>".$chapter['Chapter']['name']."</a><br/>";
