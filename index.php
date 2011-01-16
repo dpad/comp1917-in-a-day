@@ -121,7 +121,7 @@ $layout = str_replace("{{TABLE_OF_CONTENTS}}", $toc, $layout);
 if (isset($_GET['link'])){
 
     // Check if that chapter exists
-    if(array_key_exists($_GET['link'], $chapter_list)){
+    if(array_key_exists($_GET['link'], $chapter_list) || $_GET['skip']){
 
         // Grab the list of sections in the chapter
         ob_start();
@@ -146,9 +146,15 @@ if (isset($_GET['link'])){
         }
 
         // Build the layout
-        $layout = str_replace("{{CONTENT}}", $content, $layout);
-        $layout = str_replace("{{TITLE}}", "COMP1917 in a Day >> ".$chapter_list[$_GET['link']], $layout);
-        $layout = str_replace("{{HEADER}}", $chapter_list[$_GET['link']], $layout);
+        if (!isset($_GET['skip'])){
+            $layout = str_replace("{{CONTENT}}", $content, $layout);
+            $layout = str_replace("{{TITLE}}", "COMP1917 in a Day >> ".$chapter_list[$_GET['link']], $layout);
+            $layout = str_replace("{{HEADER}}", $chapter_list[$_GET['link']], $layout);
+        } else {
+            $layout = str_replace("{{CONTENT}}", $content, $layout);
+            $layout = str_replace("{{TITLE}}", "COMP1917 in a Day >> ".$_GET['link'], $layout);
+            $layout = str_replace("{{HEADER}}", $_GET['link'], $layout);
+        }
 
     } else {
 

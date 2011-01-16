@@ -21,4 +21,3 @@ Floating Point Exception
 </pre>
 it probably means that your program attempted to divide or mod by 0.
 <a href="/chapter/recap1/solution">Solution</a>
-

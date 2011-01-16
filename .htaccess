@@ -1,5 +1,5 @@
 <IfModule mod_rewrite.c>
    RewriteEngine on
-   RewriteRule    chapter/(.+)/(.+) /chapters/$1/$2 [L]
+   RewriteRule    chapter/(.+)/(.+) /index.php?link=$1/$2&skip=1 [L]
    RewriteRule    chapter/(.+) /index.php?link=$1 [L]
 </IfModule>
