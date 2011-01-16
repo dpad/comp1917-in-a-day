@@ -1,4 +1,4 @@
-<h1>C Compiler</h1>
+{{NL2BR}}
 <h2>gcc</h2>
 gcc (the GNU C Compiler) is what we will be using to compile our code. Linux users will already have it. Mac users will need to install X Code which is available from the Apple website. Once X Code is installed, gcc can be run from the command line.
 
