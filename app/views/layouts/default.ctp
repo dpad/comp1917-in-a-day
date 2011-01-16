@@ -27,7 +27,7 @@ function toggleList() {
     }
 }
 </script> 
-<link href="sections.css" rel="stylesheet"  type="text/css"/>  
+<link href="http://comp1917.ripenetwork.com/sections.css" rel="stylesheet"  type="text/css"/>  
 <title><?php echo $page_title; ?></title> 
 </head> 
 <body> 
@@ -47,8 +47,8 @@ echo $content_for_layout;
 <div id="list" style="position:absolute;left:100px;width:auto;top:40px;height:auto;text-align:left;font-family:monospace;font-size:20px;background-color:rgba(255, 255, 255, 0.95);padding:0px;margin:0px;margin-left:20px;padding-left:20px;padding-right:20px;padding-bottom:10px;display:none;"> 
 
 <?php 
-foreach ($table_of_contents as $link => $name){
-    echo "<a href='/chapters/$link'>$name</a><br/>";
+foreach ($table_of_contents as $id => $chapter){
+    echo "<a href='/chapters/".$chapter['Chapter']['link']."'>".$chapter['Chapter']['name']."</a><br/>";
 }
 ?>
 </div> 

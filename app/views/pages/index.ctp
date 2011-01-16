@@ -1,8 +1,7 @@
 <div class="section"> 
 <?php 
-var_dump($table_of_contents);
-foreach ($table_of_contents as $link => $name){
-    echo "<a href='/chapters/$link'>$name</a><br/>";
+foreach ($table_of_contents as $id => $chapter){
+    echo "<a href='/chapters/".$chapter['Chapter']['link']."'>".$chapter['Chapter']['name']."</a><br/>";
 }
 ?>
 </div>
