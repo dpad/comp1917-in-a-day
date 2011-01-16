@@ -1,88 +1,54 @@
 <?php
-/**
- * Index
- *
- * The Front Controller for handling every request
- *
- * PHP versions 4 and 5
- *
- * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright 2005-2009, Cake Software Foundation, Inc. (http://cakefoundation.org)
- *
- * Licensed under The MIT License
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright 2005-2009, Cake Software Foundation, Inc. (http://cakefoundation.org)
- * @link          http://cakephp.org
- * @package       cake
- * @subpackage    cake.app.webroot
- * @since         CakePHP(tm) v 0.2.9
- * @license       http://www.opensource.org/licenses/mit-license.php The MIT License
- */
-/**
- * Use the DS to separate the directories in other defines
- */
-	if (!defined('DS')) {
-		define('DS', DIRECTORY_SEPARATOR);
-	}
-/**
- * These defines should only be edited if you have cake installed in
- * a directory layout other than the way it is distributed.
- * When using custom settings be sure to use the DS and do not add a trailing DS.
- */
+/*==========================================
+  COMP1917 in a day
+  by Stephen Sherratt and Dan Padilha
+  
+  Index page.
+============================================*/
+    
 
-/**
- * The full path to the directory which holds "app", WITHOUT a trailing DS.
- *
- */
-	if (!defined('ROOT')) {
-		define('ROOT', dirname(dirname(dirname(__FILE__))));
-	}
-/**
- * The actual directory name for the "app".
- *
- */
-	if (!defined('APP_DIR')) {
-		define('APP_DIR', basename(dirname(dirname(__FILE__))));
-	}
-/**
- * The absolute path to the "cake" directory, WITHOUT a trailing DS.
- *
- */
-	if (!defined('CAKE_CORE_INCLUDE_PATH')) {
-		define('CAKE_CORE_INCLUDE_PATH', ROOT);
-	}
+// Get the configuration information
+require_once("config.php");
 
-/**
- * Editing below this line should NOT be necessary.
- * Change at your own risk.
- *
- */
-	if (!defined('WEBROOT_DIR')) {
-		define('WEBROOT_DIR', basename(dirname(__FILE__)));
-	}
-	if (!defined('WWW_ROOT')) {
-		define('WWW_ROOT', dirname(__FILE__) . DS);
-	}
-	if (!defined('CORE_PATH')) {
-		if (function_exists('ini_set') && ini_set('include_path', CAKE_CORE_INCLUDE_PATH . PATH_SEPARATOR . ROOT . DS . APP_DIR . DS . PATH_SEPARATOR . ini_get('include_path'))) {
-			define('APP_PATH', null);
-			define('CORE_PATH', null);
-		} else {
-			define('APP_PATH', ROOT . DS . APP_DIR . DS);
-			define('CORE_PATH', CAKE_CORE_INCLUDE_PATH . DS);
-		}
-	}
-	if (!include(CORE_PATH . 'cake' . DS . 'bootstrap.php')) {
-		trigger_error("CakePHP core could not be found.  Check the value of CAKE_CORE_INCLUDE_PATH in APP/webroot/index.php.  It should point to the directory containing your " . DS . "cake core directory and your " . DS . "vendors root directory.", E_USER_ERROR);
-	}
-	if (isset($_GET['url']) && $_GET['url'] === 'favicon.ico') {
-		return;
-	} else {
-		$Dispatcher = new Dispatcher();
-		$Dispatcher->dispatch();
-	}
-	if (Configure::read() > 0) {
-		echo "<!-- " . round(getMicrotime() - $TIME_START, 4) . "s -->";
-	}
+// Get a list of all the chapters
+$chapter_list = scandir(CHAPTERS_DIR);
+array_shift($chapter_list); // Get rid of "."
+array_shift($chapter_list); // Get rid of ".."
+
+// Create an output buffer
+ob_start();
+
+// Get the list of chapters in order
+require_once(CHAPTERS_DIR . CHAPTERS_LIST);
+$chapter_order = explode("\n", ob_get_clean());
+var_dump($chapter_order);
+
+// Print the layout template
+require_once(LAYOUT);
+$layout = ob_get_clean();
+
+echo "Yes: ".$_GET['link'];
+// Check if we are reading a chapter
+if (isset($_GET['link'])){
+
+    // Check if that chapter exists
+    $chapter_key = array_search($_GET['link'], $chapter_list);
+    if ($chapter_key != FALSE){
+
+        require_once(CHAPTERS_DIR . $_GET['link'] . SECTIONS_LIST);
+        $chapter_contents = explode("\n", ob_get_clean());
+
+        var_dump($chapter_contents);
+
+    } else {
+        printf("<h1>Invalid Chapter!</h1>");
+    }
+
+} else {
+
+}
+
+// Print out anything waiting.
+ob_end_flush();
+
 ?>

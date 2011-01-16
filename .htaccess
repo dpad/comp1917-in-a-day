@@ -1,5 +1,5 @@
 <IfModule mod_rewrite.c>
    RewriteEngine on
-   RewriteRule    ^$ /    [L]
-   RewriteRule    (.*) /$1 [L]
+   RewriteRule    chapter/(.+) /index.php?link=$1 [L]
+   RewriteRule    chapters.* / [L]
 </IfModule>
