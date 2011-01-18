@@ -150,6 +150,7 @@ if (isset($_GET['link'])){
         $content = "";
         foreach ($section_list as $link => $section){
             if ($link != ""){
+                $content .= "<a name='$link'></a>";
                 $content .= "<div class='section'>";
                 $content .= "<h1>$section</h1>";
                 $content .= printSection(CHAPTERS_DIR.$_GET['link']."/", $link);
