@@ -5,16 +5,15 @@
 }
 
 body {
-    padding-left:150px;
-    padding-right:150px;
     padding-top:40px;
-    min-width:200px;
+    padding-bottom:20px;
     background-color:rgb(225,240,255);
 }
 
 h1 {
     margin: 10px 0px 20px 0px;
     color:#333;
+    letter-spacing:-2px;
 }
 
 h1, h2 {
@@ -25,7 +24,7 @@ h1, h2 {
 
 h2 {
     font-size:16px;
-    line-height:19px;
+    line-height:21px;
     margin: 0px 0px -10px 0px;
 }
 
@@ -38,19 +37,16 @@ h1#header {
     font-weight:bold;
     margin: 30px 0px;
     font-family:times,Times New Roman,times-roman,georgia,serif;
-    letter-spacing:-2px;
 }
 
 
 div.section {
     position:relative;
-    width:auto;
-    height:auto;
+    width:700px;
     
     padding:10px 20px;
 
-    margin-top:20px;
-    margin-bottom:20px;
+    margin:30px auto;
 
     background-color:rgba(255, 255, 255, 0.6);
 
