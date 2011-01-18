@@ -133,11 +133,14 @@ ul li {
 }
 
 img {
+    position:absolute;
     max-width:660px;
     text-align:center;
     margin:0px auto;
 }
 sub.imgsub {
+    position:absolute;
     text-align:center;
+    margin:0px auto;
 }
 
