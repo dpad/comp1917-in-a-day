@@ -1,13 +1,13 @@
-introduction Introduction
-helloworld Hello, World!
-variables Variables
-input Input
-ifstatements If Statements
+introduction Foreword: Introduction
+helloworld Chapter 1: Hello, World!
+variables Chapter 2: Variables
+input Chapter 3: Input
+ifstatements Chapter 4: If Statements
 leapyears Exercise: Leap Years
-loops Loops
-functions Functions
-arrays Arrays
+loops Chapter 5: Loops
+functions Chapter 6: Functions
+arrays Chapter 7: Arrays
 recap1 Recap 1
-pointers Pointers
-strings Strings
-structures Structures
+pointers Chapter 8: Pointers
+strings Chapter 9: Strings
+structures Chapter 10: Structures

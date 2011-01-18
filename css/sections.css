@@ -14,6 +14,12 @@ body {
     background-color:rgb(225,240,255);
 }
 
+h1#header {
+    text-align:center;
+    font-size:50px;
+    margin: 50px 0px;
+}
+
 
 div.section {
     position:relative;
@@ -28,6 +34,14 @@ div.section {
     background-color:rgba(255, 255, 255, 0.6);
 
     font-size:16px;
+}
+
+div.warning {
+    background-color:rgba(255, 0, 0, 0.2);
+    border: 2px solid #cc3333;
+    color: #fff;
+    text-align:center;
+    font-size:11px;
 }
 
 .code {
