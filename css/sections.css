@@ -128,3 +128,6 @@ a#indexbtn, a#indexbtn:visited, a#indexbtn:link {
     margin-left: 20px;
 }
 
+ul li {
+    margin:10px 0px;
+}
