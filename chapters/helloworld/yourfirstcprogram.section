@@ -16,7 +16,7 @@ And finally, we can run the program:
 ]]
 Congratulations! You just compiled and executed your first C program!
 
-<img src='/img/patyourselfontheback.jpg'><sub class='imgsub'>Pat yourself on the back!</sub>
+{{img/patyourselfontheback.jpg|Pat yourself on the back!}}
 
 <h2>What does this mean!?</h2>
 Line 1:
@@ -31,10 +31,9 @@ Beginning of definition of main function. In C, the main function is the only fu
 int - (integer) the "return" type of this function. We'll learn more about this when we learn about functions.
 main - the name of the function
 (int argc, char *argv[]) - a list of arguments. For the main function, arguments are entered at the command line following the program name when the program is executed. argc is an integer that refers to the number of arguments given. argv is a list of strings that are the actual arguments.
-
-<em>Don't stress if none of this makes any sense to you yet.</em>
+</div><div class="section warning packed"><em>Don't stress if none of this makes any sense to you yet.</em>
 Keep reading through the course and more and more will begin to make sense.
-
+</div><div class="section">
 Line 4:
 A comment (something C ignores completely). Single line comments in C are started with "//". Comments can follow code. Multiline comments begin with /* and end with */. A useful debuging trick is using comments to disable certain parts of code so you can see which part is problematic.
 
