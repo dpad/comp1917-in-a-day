@@ -22,9 +22,9 @@ vi vi vi, the text editor used by the devil himself!
 
 vi and vim (<em>vi i</em>mproved) are two text editors that are completely command line based. This means you can edit files whilst still in the command line! This also means that generally every installation of Linux will come with at least vi installed.
 
-vi/vim are <strong>not recommended</strong> for anyone who is not familiar with command lines.
+vi/vim is <strong>not recommended</strong> for anyone who is not familiar with command lines.
 
-It is also <strong>not recommended</strong> if you have any trace of a stable mind. vi/vim are extremely hard to learn, with a difficulty curve not unlike an immovable brick wall and learning it as painful as smashing your head repeatedly against said wall.
+It is also <strong>not recommended</strong> for anyone with any remaining trace of a stable mind. vi/vim is extremely hard to learn, with a difficulty curve not unlike an immovable brick wall and learning it as painful as smashing your head repeatedly against said wall.
 
 However, if you are willing to put in the effort it takes to learn vi/vim, you will see why it is the preferred choice of text editor for programmers worldwide*.
 <sub>*Emacs? Wtf is Emacs?</sub>
