@@ -1,5 +1,20 @@
 {{NL2BR}}
-<h2>To open a terminal in Mac OS X:</h2>
+All of the computers in the CSE labs run on GNU/Linux systems. As such, it is crucial to get to know these systems in your own time, preferably on your own computer.
+
+<h2>If you are a Windows user:</h2>
+Unfortunately there is not much you can do in COMP1917 with Windows. You basically have only the following three options:
+
+{{NONL2BR}}
+<ul>
+<li>Use only the CSE lab computers for all your work. <strong>NOT RECOMMENDED.</strong></li>
+<li>Run a Linux distribution, likely Ubuntu, inside a virtual machine in Windows.<br/>This is far simpler than the next option, but not recommended for CSE students. Students of COMP1917 who are not CSE students are suggested to do this.</li>
+<li>Dual-boot a Linux distribution, preferably Ubuntu. This means basically having both Windows and Linux on the same machine.<br/>This is highly recommended for CSE students as you will eventually grow tired of using a virtual machine and will need to learn to do this sooner or later. Why not do it sooner? ;)</li>
+</ul>
+{{NL2BR}}
+
+As these options are slightly outside of the scope of this course for the moment, we will leave it up to you to figure these out. We will post an update with instructions later.
+
+<h2>If you are a Mac OSX user:</h2>
 CMD+SPACE to open spotlight.
 Type &quot;terminal&quot; into the search field.
 Click on Terminal (the black box icon).
@@ -7,16 +22,21 @@ Click on Terminal (the black box icon).
 You will be using this A LOT!
 NOTE: Even if you use a mac, don't disregard the notes for GNU/Linux as this is the operating system that you will use on the CSE lab computers.
 
+<h2>If you are a Linux user:</h2>
+Congratulations on using a civilised operating system! Have a cookie.
+
+<h2>Other notes</h2>
 Arguments in the context of the command line refer to text entered after the name of a command/script/binary.
 
-The unix command line and the C programming language are all CASE SENSITIVE so A and a are considered to be completely different.
+The UNIX command line and the C programming language are all CASE SENSITIVE so 'A' and 'a' are considered to be completely different.
 
 To run a command, type it at the prompt and press ENTER/RETURN.
+
 To run a script/binary, type ./FILENAME at the prompt and press ENTER or PATHTOFILE/FILENAME and press ENTER.
 
 After running a command, press the up arrow key to have the text for that command copied to the current prompt. You can use this key to view and run previously used commands.
 
-The &quot;~&quot; character is an alias for your home directory.
+The <strong>~</strong> character is an alias for your home directory.
 e.g.
 ~/Documents refers to the directory /home/name/Documents or /Users/Name/Documents
 Similarly, the &quot;.&quot; character refers to the current or &quot;working&quot; directory and &quot;..&quot; refers to the parent directory (the directory that which contains the working directory).

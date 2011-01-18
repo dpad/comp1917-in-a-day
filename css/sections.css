@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-    margin: 10px 0px;
+    margin: 10px 0px 20px 0px;
     color:#333;
 }
 
@@ -26,7 +26,7 @@ h1, h2 {
 h2 {
     font-size:16px;
     line-height:19px;
-    margin: 20px 0px 0px 0px;
+    margin: 0px 0px -10px 0px;
 }
 
 h1#header {
@@ -58,12 +58,19 @@ div.section {
     line-height:20px;
 }
 
+ul {
+    margin: 0px 20px;
+}
+
+div.small {
+    font-size:11px;
+    line-height:15px;
+}
+
 div.warning {
     background-color:rgba(255, 0, 0, 0.2);
     color: #333;
     text-align:center;
-    font-size:11px;
-    line-height:15px;
 }
 
 .code {
@@ -85,3 +92,39 @@ td {
     border: 1px solid #333;
     padding: 5px;
 }
+
+a, a:visited, a:link {
+    text-decoration:underline;
+    color:#33a;
+}
+
+a:hover {
+    color: #a33;
+}
+
+a#showbtn, a#showbtn:visited, a#showbtn:link {
+    text-decoration:none;
+    display:block;
+    position:absolute;
+    top:0px;
+    left: 100px;
+    font-family:monospace;
+    font-size:20px;
+    background-color:rgba(255, 255, 255, 0.95);
+    padding: 10px;
+    margin-left: 20px;
+}
+
+a#indexbtn, a#indexbtn:visited, a#indexbtn:link {
+    text-decoration:none;
+    display:block;
+    position:absolute;
+    top:0px;
+    left: 10px;
+    font-family:monospace;
+    font-size:20px;
+    background-color:rgba(255, 255, 255, 0.95);
+    padding: 10px;
+    margin-left: 20px;
+}
+

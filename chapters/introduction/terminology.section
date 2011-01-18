@@ -36,13 +36,13 @@ We'll begin by defining some words you may not already know in a small list belo
 <td>A layer of abstraction contained inside an operating system, mostly consisting of tools to interface directly with hardware (i.e. hard-drives, displays, processors, etc.) or to manage processor scheduling or memory.</td></tr>
 
 <tr><td>Unix:</td>
-<td>Old multiuser operating system upon which many modern OSes are based (such as Mac OSX and GNU/Linux).</td></tr>
+<td>Old multiuser operating system upon which many modern operating systems are based (such as Mac OSX and GNU/Linux).</td></tr>
 
 <tr><td>Linux kernel:</td>
 <td>A Unix-like kernel which is almost completely open-source and free, <a href='http://en.wikipedia.org/wiki/Gratis_versus_Libre'>as in beer and as in speech</a>.</td></tr>
 
 <tr><td>GNU/Linux System:</td>
-<td>An operating system comprising of the Linux kernel and GNU project operating system. Generally, when you hear someone refer to "Linux", they are referring to this.</td></tr>
+<td>An operating system comprising of the Linux kernel and GNU Project operating system. Generally, when you hear someone refer to "Linux", they are referring to this.</td></tr>
 
 <tr><td>Linux Distribution:</td>
 <td>A GNU/Linux system specifically built with certain options and distributed freely to others. Examples include Ubuntu, Arch Linux, and billions of others. As an extremely crude analogy, "Windows Vista" can be thought of as a distribution of Microsoft's "Windows" system.</td></tr>
