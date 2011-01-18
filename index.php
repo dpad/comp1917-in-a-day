@@ -26,6 +26,8 @@ function printSection($chapter_dir, $section){
         } else if (preg_match("/^{{NONL2BR}}$/i", $line) > 0){
             $nl2br = false;
             $last  = false;
+        } else if (preg_match("/^{{img\/(.+?)(\|(.+))?}}$/i", $line, $matches) > 0){
+            $string .= "<img src='/img/".$matches[1]."'><sub class='imgsub'>".$matches[3]."</sub>";
         } else {
             if (preg_match("/\<pre/i", $line) > 0){
                 $string .= $line."\n";
