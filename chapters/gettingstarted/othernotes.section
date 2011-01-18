@@ -101,8 +101,7 @@ steve$ pwd
 ]]
 Look at all those delicious seconds we saved! Seconds that can be used in astonishing you with random explosions!
 
-<img src='/img/explosion.png'>
-<sub class='imgsub'>Look quickly! It's Michael Bay!</sub>
+<img src='/img/explosion.png'><sub class='imgsub'>Look quickly! It's Michael Bay!</sub>
 
 But wait, what happened if I had two folders, and one of them was called "antidisestablishmentawesome". (Seriously, what kind of fool would make these two folders? This one's not even a real word!)
 [[steve$ ls
@@ -113,11 +112,11 @@ steve$ cd antidisestablishmenta
 ]]
 Oh noes! It didn't complete the whole folder name and now I have wasted precious time! Why would it do this to me!?!?
 
-The reason is that, since you have two folders that both start with "an", the tab completion decided to fill in the rest of what you were typing, which was almost surely "antidisestablishmenta", but then after that there are two choices and so it left you to complete there rest.
+The reason is that, since you have two folders that both start with "an", the tab completion decided to fill in the rest of what you were typing, which was almost surely "antidisestablishmenta", but then after that there are two choices and so it left you to complete the rest.
 
 So, what do we do?
 [[steve$ cd an[TAB KEY]
-steve$ cd antidisestablishmentaw[TAB KEY]
+steve$ cd antidisestablishmenta[w KEY][TAB KEY]
 steve$ cd antidisestablishmentawesome[ENTER]
 ]]
 And all is right with the world!

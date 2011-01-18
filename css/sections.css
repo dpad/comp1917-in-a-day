@@ -41,7 +41,6 @@ h1#header {
 
 
 div.section {
-    position:relative;
     width:700px;
     
     padding:10px 20px;
@@ -133,11 +132,13 @@ ul li {
 }
 
 img {
+    display:block;
     max-width:660px;
     text-align:center;
     margin:0px auto;
 }
 sub.imgsub {
+    display:block;
     text-align:center;
     margin:0px auto;
 }
