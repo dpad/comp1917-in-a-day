@@ -1,27 +1,53 @@
+We'll begin by defining some words you may not already know in a small list below. Don't worry if you don't understand what they mean completely, just use the following list as reference while reading the words in context!
+
 {{NONL2BR}}
-<table border=1>
-<tr><td>Binary File: </td>
-<td>Excecutable file - not readable by humans.</td></tr>
+<table>
+<tr><td>Binary/Executable File:</td>
+<td>A file that can be executed, or "run" - all written in computer machine code mumbo jumbo that humans can't read (or can't read easily).</td></tr>
 
-<tr><td>Compile: </td>
-<td>Convert source code into a binary file that can be excecuted.</td></tr>
+<tr><td>Compile:</td>
+<td>Convert source code (i.e. code you write) into a binary/executable file which can be excecuted by the computer.</td></tr>
 
-<tr><td>Command: </td>
-<td>Programs that provide users with a means to interact with a computer via the command line.</td></tr>
+<tr><td>Command line:</td>
+<td>A textual method of interacting with a computer.</td></tr>
 
-<tr><td>Prompt: </td>
-<td>Initial text that appears on a command line. For example: <pre class="code">steve$ </pre></td></tr>
+<tr><td>Command:</td>
+<td>A program your computer has which can be run from inside the command line.</td></tr>
 
-<tr><td>Script: </td>
+<tr><td>Prompt:</td>
+<td>Initial text that appears on a command line, "prompting" you for a command. For example: <pre class="code">steve$ </pre></td></tr>
+
+<tr><td>Script:</td>
 <td>An excecutable file that is compiled automatically, immediately prior to excecution.</td></tr>
 
-<tr><td>Source Code: </td>
-<td>Code that is readable by humans.</td></tr>
+<tr><td>Source Code:</td>
+<td>The human-readable code which is compiled to create an executable program.</td></tr>
 
-<tr><td>Source File: </td>
-<td>File containing source code.</td></tr>
+<tr><td>Source File:</td>
+<td>A textual file containing source code.</td></tr>
 
-<tr><td>Unix: </td>
+<tr><td>Open Source:</td>
+<td>A program for which the source code is freely available to anyone.</td></tr>
+
+<tr><td>Operating System:</td>
+<td>A huge list of tools and programs, generally designed to operate together as a coherent system in which a user may perform computing tasks. Examples include Windows 7, Mac OSX, and Ubuntu.</td></tr>
+
+<tr><td>Kernel:</td>
+<td>A layer of abstraction contained inside an operating system, mostly consisting of tools to interface directly with hardware (i.e. hard-drives, displays, processors, etc.) or to manage processor scheduling or memory.</td></tr>
+
+<tr><td>Unix:</td>
 <td>Old multiuser operating system upon which many modern OSes are based (such as Mac OSX and GNU/Linux).</td></tr>
 
-</table>
+<tr><td>Linux kernel:</td>
+<td>A Unix-like kernel which is almost completely open-source and free, <a href='http://en.wikipedia.org/wiki/Gratis_versus_Libre'>as in beer and as in speech</a>.</td></tr>
+
+<tr><td>GNU/Linux System:</td>
+<td>An operating system comprising of the Linux kernel and GNU project operating system. Generally, when you hear someone refer to "Linux", they are referring to this.</td></tr>
+
+<tr><td>Linux Distribution:</td>
+<td>A GNU/Linux system specifically built with certain options and distributed freely to others. Examples include Ubuntu, Arch Linux, and billions of others. As an extremely crude analogy, "Windows Vista" can be thought of as a distribution of Microsoft's "Windows" system.</td></tr>
+
+<tr><td>Ubuntu:</td>
+<td>A popular Linux distribution intended for newcomers to Linux. Easy to set up and use, vaguely Windows/Macintosh-esque but with all the power of GNU/Linux behind it, and, as all GNU/Linux systems, completely open source and free.</td></tr>
+
+</table><br/>

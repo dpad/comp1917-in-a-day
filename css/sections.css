@@ -78,8 +78,10 @@ pre {
 
 table {
     border: 0px;
+    
 }
 
 td {
+    border: 1px solid #333;
     padding: 5px;
 }
