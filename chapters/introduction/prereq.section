@@ -1,0 +1,5 @@
+This course assumes no prior experience with programming of any kind. We aim to take you from zero knowledge to a fairly good base in programming with C.
+
+Those with previous programming knowledge, but none in C, may want to skim through most of the chapters to gain knowledge in C syntax. Of particular note are the chapters about <strong>memory</strong> and <strong>pointers</strong>, as these are important aspects of C not generally found in higher-level programming. Please also pay close attention to the information about <strong>style</strong>. 
+
+Those with previous C knowledge may skip through most of the course, but reading through the information on style is important, as following style guidelines is a major part of COMP1917.
