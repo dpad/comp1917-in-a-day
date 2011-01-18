@@ -1,78 +1,125 @@
-Arguments in the context of the command line refer to text entered after the name of a command/script/binary.
+</div><div class='section warning packed'><strong>WARNING!</strong>
+This section contains <strong>awesome explosions</strong>. Proceed at your own risk.</div><div class="section">
+Now that you have a Linux distribution installed (or are running Mac OSX), we can get started with the command line. (Note: See above for Mac OSX instructions)
 
-The UNIX command line and the C programming language are all CASE SENSITIVE so 'A' and 'a' are considered to be completely different.
+<strong>If you are running Ubuntu</strong>, begin by clicking on System -> Preferences -> Keyboard Shortcuts. Add a shortcut for "Terminal", something like Alt-T is recommended. You should now be able to open the terminal (a black rectangle) by pressing this shortcut. If not, you can still open the Terminal by clicking on Applications -> Accessories -> Terminal.
 
-To run a command, type it at the prompt and press ENTER/RETURN.
+If you are not running Ubuntu we'll assume you have enough knowledge to find the terminal yourself.
 
-To run a script/binary, type ./FILENAME at the prompt and press ENTER or PATHTOFILE/FILENAME and press ENTER.
+Once you know how to open the terminal, do so. You will be greeted by a black rectangle with text like this:
+[[steve$
+]]
+Did you expect something more exciting?
+As bland as this may look, most of your work for COMP1917 will be done in this boring black box. But don't worry, soon you'll come to love it*!
+<sub>*Results may vary.</sub>
 
-After running a command, press the up arrow key to have the text for that command copied to the current prompt. You can use this key to view and run previously used commands.
+So, what can we do in this boring black box?
 
-The <strong>~</strong> character is an alias for your home directory.
-e.g.
-~/Documents refers to the directory /home/name/Documents or /Users/Name/Documents
-Similarly, the &quot;.&quot; character refers to the current or &quot;working&quot; directory and &quot;..&quot; refers to the parent directory (the directory that which contains the working directory).
+The terminal is basically a simple way of interacting with your computer. It gets rid of all the useless clutter on the screen and presents you with only the information you need precisely when you ask for it. What can you do in the terminal? Practically everything!
 
-Here are some useful commands:
-pwd &#45; print working directory. Displays the full path to the current directory.
-ls &#45; list all files and directories in current directory
-cd DIRECTORY &#45; changes the working directory to DIRECTORY. With no arguments, you are taken to you home directory
-mkdir NAME &#45; creates a new directory of name NAME in the working directory
-
-An example command line:
-<pre class="code">
-steve$ pwd
-/home/steve                   current directory
-steve$ ls
-Desktop                       contents of directry
+Before we begin, notice the blinking white block. This is your "prompt", that is, where you type in commands. Try the commands shown below (write the text after steve$)
+[[steve$ pwd
+/home/steve]]
+This is the directory you are currently in, also known as your "working" directory. In fact, "pwd" stands for "print working directory". 
+/home/yourusername is your home folder, a shortcut for this is ~.
+[[steve$ ls
+Desktop
 Documents
-Music
-Videos
-steve$ cd Documents           change to ~/Documents directory
+Music]]
+These are the files and folders currently inside your working directory. "ls" stands for "list".
+[[steve$ cd Documents
 steve$ pwd
 /home/steve/Documents
-steve$ mkdir programs         make a directory named programs
-steve$ cd programs
 steve$ ls
-steve$ cd ..                  go back to ~/Documents
+assignment.txt]]
+This moves you into the Documents folder, so now you are at /home/yourusername/Documents, or ~/Documents in shorthand.
+[[steve$ mkdir comp1917
 steve$ ls
-helloworld.c                  there is now a programs directory
-programs
-test.c
-test
-steve$ ls *.c                 * can be used as a wild card
-helloworld.c
-test.c
-</pre>
+assignment.txt
+comp1917]]
+We have just created a folder called "comp1917"! "mkdir" stands for "make directory".
+[[steve$ cd comp1917
+steve$ pwd
+/home/steve/Documents/comp1917
+steve$ cd ..
+steve$ pwd
+/home/steve/Documents
+steve$ cd ~
+steve$ pwd
+/home/steve]]
+In this example we moved around in different directories. Make sure you remember the following shorthand symbols:
+<strong>~</strong> means /home/yourusername
+<strong>..</strong> means the parent directory of the current (working) directory
+<strong>.</strong> means the current (working) directory
 
-Don't worry, it comes with practice.
-If you need help or want more info on a command, type &quot;man COMMAND&quot; at the prompt (e.g. steve$ man ls) and you will be taken to the man page for that command (in the terminal). Press &quot;q&quot; to exit the  man page.
+Some commands we learned from the examples above are:
+<strong>ls</strong> - list the files and folders in the working directory
+<strong>pwd</strong> - print the working directory. Effectively, "where am I?"
+<strong>cd directory</strong> - go into "directory", i.e. change the working directory
+
+ls, pwd, cd are all examples of commands. The computer recognises that we want to run a specific program, say, "pwd" for example, and finds it in its program library.
+
+Remember, all UNIX commands are <strong>case-sensitive</strong>. So, "ls" is <em>not</em> the same as "LS" (the latter will not work).
+
+If you want to run the last command you typed again, simply press the up arrow key on your keyboard. This will copy the last command you executed into the prompt. Press up again and it will copy the second last command, and so on.
+
+<em>Don't worry, you'll remember all of this with practice.</em>
+
+If you need to know what a given command does, simply run the command "man" with an argument of your command. What is all this nonsense I just said?
+The "man" command runs a "manual" program. An "argument" is something you type after the command. For example, when you use the "cd" command, you have to specify a folder for it to change into. The folder you specify is the "argument" you pass into the command "cd".
+So, in a similar sense, if I want to know what "cd" does, I can pass "cd" as an argument into the "man" command, like so:
+[[steve$ man cd
+... lots of text in here ...]]
+Press the up and down arrow keys to read the manual, or "q" to exit out of the manual.
 
 <h2>Some more tips:</h2>
-Ctrl+C kills the current command. Use it to exit your programs if stuck in an infinite loop or taking too long to run. NEVER use it to exit your programs under normal conditions.
+Ctrl+C kills the current command. Use it to exit your programs if you are ever stuck in an infinite loop or taking too long to run.
 
-Ctrl+D enters the end of file (EOF) character. It is a more elegant way of closing your programs, and closes the terminal if entered at the prompt.
+Ctrl+D enters the end of file (EOF) character. It is a more elegant way of closing your programs, and closes the terminal if entered at the prompt. You will learn more about this later, especially during the <strong>Input</strong> chapter.
 
-Ctrl+Z should NOT be used to close your programs. This is because it doesn't actually close them, just puts them in the background so you can't see them any more. You should never use this for command line only programs.
+To close a terminal in Mac OSX, press Cmd+W.
 
-Generally, to close a terminal in GNU/Linux, press Ctrl+D or use the &quot;exit&quot; command.
-To close a terminal in Mac OSX, press Cmd+Q.
+<h2>TAB Completion</h2>
+Tab completion is an extremely useful feature in command lines which helps you be lazy... and who doesn't love being lazy?
 
-<h2>TAB Complete</h2>
-So important it has its own section. All commands and paths to files can be completed automatically by hitting the TAB key. This will save time and effort so use it when you can. Commands and paths are completed up to the point where they fit all valid command line entries.
+Tab completion essentially completes a command you have half-typed out so you don't have to waste precious milliseconds writing the rest of it!
 
-E.g.
-<pre class="code">steve$ pwd
+For example, let's say I have a folder called "antidisestablishmentarianism". Don't question why anyone would name a folder like that. Now let's say I want to go to that folder.
+
+Rather than this:
+[[steve$ pwd
 /home/steve
-steve$ ls
-Documents
-Desktop
-Music
-steve$ cd D
-&lt;press tab&gt;
-steve$ cd D        it will remain D as D could be the start of Desktop or Documents
-steve$ cd Do
-&lt;press tab&gt;
-steve$ cd Documents
-</pre>
+steve$ cd antidisestablishmentarianism
+steve$ pwd
+/home/steve/antidisestablishmentarianism
+]]
+I can choose to do this:
+[[steve$ cd an[TAB KEY]
+steve$ cd antidisestablishmentarianism[ENTER]
+steve$ pwd
+/home/steve/antidisestablishmentarianism
+]]
+Look at all those delicious seconds we saved! Seconds that can be used in astonishing you with random explosions!
+
+<img src='/img/explosion.png'>
+<sub class='imgsub'>Look quickly! It's Michael Bay!</sub>
+
+But wait, what happened if I had two folders, and one of them was called "antidisestablishmentawesome". (Seriously, what kind of fool would make these two folders? This one's not even a real word!)
+[[steve$ ls
+antidisestablishmentawesome
+antidisestablishmentarianism
+steve$ cd an[TAB KEY]
+steve$ cd antidisestablishmenta
+]]
+Oh noes! It didn't complete the whole folder name and now I have wasted precious time! Why would it do this to me!?!?
+
+The reason is that, since you have two folders that both start with "an", the tab completion decided to fill in the rest of what you were typing, which was almost surely "antidisestablishmenta", but then after that there are two choices and so it left you to complete there rest.
+
+So, what do we do?
+[[steve$ cd an[TAB KEY]
+steve$ cd antidisestablishmentaw[TAB KEY]
+steve$ cd antidisestablishmentawesome[ENTER]
+]]
+And all is right with the world!
+
 Note that the command will not actually run until you press ENTER.

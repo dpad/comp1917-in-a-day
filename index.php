@@ -15,34 +15,46 @@ function getTemplate($template){
 function printSection($chapter_dir, $section){
     $section = explode("\n", getTemplate($chapter_dir.$section.".section"));
     $nl2br = true;
+    $last  = true;
 
     $string = "";
 
     foreach ($section as $line){
         if (preg_match("/^{{NL2BR}}$/i", $line) > 0){
             $nl2br = true;
+            $last  = true;
         } else if (preg_match("/^{{NONL2BR}}$/i", $line) > 0){
             $nl2br = false;
+            $last  = false;
         } else {
-            if (preg_match("/^\<pre/i", $line) > 0){
-                $last = $nl2br;
+            if (preg_match("/\<pre/i", $line) > 0){
+                $string .= $line."\n";
                 $nl2br = false;
+            } else if (preg_match("/<\/pre>$/i", $line) > 0){
+                $string .= $line;
+                $nl2br = $last;
+            } else if (preg_match("/^\[\[(.*)/i", $line, $matches) > 0){
+                $string .= "<pre class='code'>".$matches[1]."\n";
+                $nl2br = false;
+            } else if (preg_match("/(.*)\]\]$/i", $line, $matches) > 0){
+                $string .= $matches[1]."</pre>";
+                $nl2br = $last;
             } else if (preg_match("/^{{(.+)}}(!)?$/i", $line, $matches) > 0){
                 if ($matches[2] == "!"){
-                    $line = codeToHtml($chapter_dir.$matches[1], false);
+                    $string .= codeToHtml($chapter_dir.$matches[1], false)."<br/>";
                 } else {
-                    $line = codeToHtml($chapter_dir.$matches[1]);
+                    $string .= codeToHtml($chapter_dir.$matches[1])."<br/>";
+                }
+            } else {
+                $string .= $line;
+
+                if ($nl2br){
+                    $string .= "<br/>";
+                } else {
+                    $string .= "\n";
                 }
             }
-            $string .= $line;
-            if ($nl2br){
-                $string .= "<br/>";
-            } else {
-                $string .= "\n";
-            }
-            if (preg_match("/^<\/pre>$/i", $line) > 0){
-                $nl2br = $last;
-            }
+
         }
     }
 

@@ -69,6 +69,10 @@ div.warning {
     text-align:center;
 }
 
+div.packed, div.section.packed, div.warning.packed, div.small.packed {
+    margin: -30px auto;
+}
+
 .code {
     display:block;
     background-color:rgba(255, 255, 255, 8);
@@ -127,3 +131,13 @@ a#indexbtn, a#indexbtn:visited, a#indexbtn:link {
 ul li {
     margin:10px 0px;
 }
+
+img {
+    max-width:660px;
+    text-align:center;
+    margin:0px auto;
+}
+sub.imgsub {
+    text-align:center;
+}
+
