@@ -1,4 +1,4 @@
-This course assumes no prior experience with programming of any kind. We aim to take you from zero knowledge to a fairly good base in programming with C.
+This course assumes no prior experience with programming of any kind. We aim to take you from zero knowledge to a fairly good base in programming with C. For those of you have never heard of C, and have no idea what we mean by "programming", don't worry, we've got you covered too.
 
 Those with previous programming knowledge, but none in C, may want to skim through most of the chapters to gain knowledge in C syntax. Of particular note are the chapters about <strong>memory</strong> and <strong>pointers</strong>, as these are important aspects of C not generally found in higher-level programming. Please also pay close attention to the information about <strong>style</strong>. 
 
