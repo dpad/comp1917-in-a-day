@@ -221,6 +221,8 @@ if (isset($_GET['link'])){
     $layout = str_replace("{{CONTENT}}", $content, $layout);
     $layout = str_replace("{{TITLE}}", "COMP1917 in a Day", $layout);
     $layout = str_replace("{{HEADER}}", "COMP1917 in a Day", $layout);
+    $layout = str_replace("{{PREVIOUS_CHAPTER}}", "", $layout);
+    $layout = str_replace("{{NEXT_CHAPTER}}", "", $layout);
 }
 
 
