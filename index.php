@@ -143,12 +143,12 @@ if (isset($_GET['link'])){
         if ($number > 0){
             $layout = str_replace("{{PREVIOUS_CHAPTER}}", "<a id='prevchap' href='/chapter/".$chapters[$number-1]."'>&laquo; ".$chapter_list[$chapters[$number-1]]."</a>", $layout);
         } else {
-            $layout = str_replace("{{PREVIOUS_CHAPTER}}", "<a id='prevchap'></a>", $layout);
+            $layout = str_replace("{{PREVIOUS_CHAPTER}}", "<a id='prevchap' style='visibility:hidden;'>&nbsp;</a>", $layout);
         }
-        if ($number < sizeof($chapters)){
-            $layout = str_replace("{{NEXT_CHAPTER}}", "<a id='nextchap' href='/chapter/".$chapters[$number+1]."'>".$chapter_list[$chapters[$number+1]]." &raquo;</a>", $layout);
+        if ($number < sizeof($chapters)-1){
+            $layout = str_replace("{{NEXT_CHAPTER}}", $number." ".sizeof($chapters)."<a id='nextchap' href='/chapter/".$chapters[$number+1]."'>".$chapter_list[$chapters[$number+1]]." &raquo;</a>", $layout);
         } else {
-            $layout = str_replace("{{NEXT_CHAPTER}}", "<a id='nextchap'></a>", $layout);
+            $layout = str_replace("{{NEXT_CHAPTER}}", "<a id='nextchap' style='visibility:hidden;'>&nbsp;</a>", $layout);
         }
 
         // Grab the list of sections in the chapter
