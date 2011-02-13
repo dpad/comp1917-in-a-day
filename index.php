@@ -145,6 +145,9 @@ if (isset($_GET['link'])){
         } else {
             $layout = str_replace("{{PREVIOUS_CHAPTER}}", "<a id='prevchap' style='visibility:hidden;'>&nbsp;</a>", $layout);
         }
+        var_dump($chapters);
+        ob_end_flush();
+        ob_start();
         if ($number < sizeof($chapters)-1){
             $layout = str_replace("{{NEXT_CHAPTER}}", $number." ".sizeof($chapters)."<a id='nextchap' href='/chapter/".$chapters[$number+1]."'>".$chapter_list[$chapters[$number+1]]." &raquo;</a>", $layout);
         } else {
