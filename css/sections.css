@@ -143,6 +143,7 @@ div#footer {
     width:100%;
     font-family:monospace;
     text-align:center;
+    clear:left;
 }
 
 ul li {
@@ -161,3 +162,27 @@ sub.imgsub {
     margin:0px auto;
 }
 
+div#chapbuttons {
+    width:700px;
+    position:relative;
+    margin:0px auto;
+    padding:0px;
+}
+
+a#prevchap, a#nextchap {
+    position:relative;
+    display:block;
+    width:340px;
+    margin: 0px 0px 20px -20px;
+    padding: 10px 10px;
+    text-align:left;
+    background-color:rgba(255, 255, 255, 0.6);
+    text-decoration:none;
+    font-size:18px;
+}
+a#nextchap {
+    float:right;
+    margin: 0px -20px 20px 0px;
+    margin-left:20px;
+    text-align:right;
+}

@@ -131,11 +131,25 @@ foreach($chapter_list as $link => $name){
 }
 $layout = str_replace("{{TABLE_OF_CONTENTS}}", $toc, $layout);
 
+
 // Check if we are reading a chapter
 if (isset($_GET['link'])){
 
     // Check if that chapter exists
     if(array_key_exists($_GET['link'], $chapter_list) || $_GET['skip']){
+
+        $chapters = array_keys($chapter_list);
+        $number = array_search($_GET['link'], $chapters);
+        if ($number > 0){
+            $layout = str_replace("{{PREVIOUS_CHAPTER}}", "<a id='prevchap' href='/chapter/".$chapters[$number-1]."'>&laquo; ".$chapter_list[$chapters[$number-1]]."</a>", $layout);
+        } else {
+            $layout = str_replace("{{PREVIOUS_CHAPTER}}", "", $layout);
+        }
+        if ($number < sizeof($chapters)-1){
+            $layout = str_replace("{{NEXT_CHAPTER}}", "<a id='nextchap' href='/chapter/".$chapters[$number+1]."'>".$chapter_list[$chapters[$number+1]]." &raquo;</a>", $layout);
+        } else {
+            $layout = str_replace("{{NEXT_CHAPTER}}", "", $layout);
+        }
 
         // Grab the list of sections in the chapter
         ob_start();
