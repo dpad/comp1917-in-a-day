@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-#define HT 20
-#define WD 30
+#define HT 25
+#define WD 50
 
 float power(float base, int index);
 
