@@ -125,7 +125,6 @@ foreach ($chapter_order as $chapter){
 $layout = getTemplate(LAYOUT);
 
 // Build the table of contents
-$toc = "<div class='section warning small'><strong>WARNING!</strong><br/>This guide contains strong language, manly explosions, blatant sexism, and other acts which may be perceived as inappropriate by various parties.<br/>If you can not tolerate pure awesomeness, have a weak stomach, or lack balls of steel, then proceed at your own risk.</div>";
 foreach($chapter_list as $link => $name){
     $toc .= "<a href='/chapter/$link'>$name</a><br/>";
 }
@@ -195,7 +194,8 @@ if (isset($_GET['link'])){
 
 } else {
 
-    $content = "<div class='section'>".$toc."</div>";
+    $content = "<div class='section warning small'><strong>WARNING!</strong><br/>This guide contains strong language, manly explosions, blatant sexism, and other acts which may be perceived as inappropriate.<br/>If you can not tolerate pure awesomeness, have a weak stomach, or lack balls of steel, then proceed at your own risk.</div>";
+    $content .= "<div class='section'>".$toc."</div>";
     $content .= "<div class='section'><p><h2>For the love of code...</h2>";
     $content .= "<pre id='heartoutnolines' class='code'>
        #####       #####      
