@@ -125,7 +125,7 @@ foreach ($chapter_order as $chapter){
 $layout = getTemplate(LAYOUT);
 
 // Build the table of contents
-$toc = "";
+$toc = "<div class='section warning small'><strong>WARNING!</strong><br/>This guide contains strong language, manly explosions, blatant sexism, and other acts which may be perceived as inappropriate by various parties.<br/>If you can not tolerate pure awesomeness, have a weak stomach, or lack balls of steel, then proceed at your own risk.</div>";
 foreach($chapter_list as $link => $name){
     $toc .= "<a href='/chapter/$link'>$name</a><br/>";
 }
