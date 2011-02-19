@@ -20,7 +20,7 @@ Best of all, it's all free. <em>Free as in beer and free as in speech.</em> Free
 Unfortunately for you, the vast superiorities of running a GNU/Linux distribution as your operating system rather than Windows or Mac are far too numerous to mention in this course. However, the following points are noteworthy:
 {{NONL2BR}}
 <ul>
-<li>Linux is completely free and open source, and, much like bowties, open source is cool.</li>
+<li>Linux is completely free and open source, and, much like <a href='/img/fezzes_are_cool.jpg">bowties and fezzes</a>, open source is cool.</li>
 <li>Linux has access to superior development platforms and standardised toolsets.</li>
 <li>You will require access to a powerful command line. Windows' command line is severely lacking.</li>
 <li>Courses in CSE are taught using Linux and will assume that you will be learning to use Linux. Furthermore, all computers in CSE labs run Linux by default.</li>
@@ -48,6 +48,6 @@ The basic gist of it is this:
 <li>Ubuntu is easy to install and easy to use.</li>
 <li>Ubuntu is currently the most popular Linux distribution in use.</li>
 <li>There is a large support community, if you ever get stuck.</li>
-<li>CSE provides an easy to install virtual box pre-installed with Linux. See the next section for more details.</li>
+<li>CSE provides an easy to install virtual box pre-installed with Ubuntu. See the next section for more details.</li>
 </ul>
 {{NL2BR}}
