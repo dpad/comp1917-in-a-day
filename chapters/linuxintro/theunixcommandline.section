@@ -5,11 +5,11 @@ Although you can do the course in Windows, it will be to your extreme advantage 
 
 {{NONL2BR}}
 <ul>
-<li>Write your code in a text editor in Windows, such as Notepad, and compile/run it using Cygwin. <strong>NOT RECOMMENDED</strong> because you won't learn nearly as much for the amount of work required.</li>
-<li>Use only the CSE lab computers for all your work. <strong>NOT RECOMMENDED</strong>, who wants to spend their whole day in CSE lab?</li>
-<li>Run a Linux distribution, likely Ubuntu, inside a virtual machine in Windows.<br/>This is far simpler than the next option, but not recommended for CSE students. Students of COMP1917 who are not Computer Science/Computer Engineering/Software Engineering students are suggested to do this.</li>
-<li>Dual-boot a Linux distribution, preferably Ubuntu. This means basically having both Windows and Linux on the same machine.<br/>This is highly recommended for CSE students as you will eventually grow tired of using a virtual machine and will need to learn to do this sooner or later. Why not do it sooner? ;) You can also receive help doing this from the good folks at <a href='http://csesoc.unsw.edu.au'>CSESoc</a>!</li>
-<li>Go hardcore. Expunge the evil that is Windows from your hard-drive entirely and install a pristine distribution of Linux. Not recommended if you don't know what you're doing.</li>
+<li>Write your code in a text editor in Windows, such as Notepad, and compile/run it using Cygwin. <strong>NOT RECOMMENDED</strong> because it's actually harder than some of the other options on this list.</li>
+<li>Use only the CSE lab computers for all your work. <strong>NOT RECOMMENDED</strong>. Why would you spend your whole day in a CSE lab when you can spend it in your parents' basement instead?</li>
+<li>Run a Linux distribution, likely Ubuntu, inside a virtual machine in Windows.<br/>This is <s>far simpler than the next option</s> the pussy's way out, so it is not recommended for CSE students. However, those who are not studying a real degree can go ahead and do this while we sit back and laugh. Hah, Digital Media...</li>
+<li>Dual-boot a Linux distribution, preferably Ubuntu. This means basically having both Windows/Mac and Linux on the same machine.<br/>This is highly recommended for CSE students as you will eventually grow tired of using a virtual machine and will need to learn to do this sooner or later. You can also receive help doing this from the real men at <a href='http://csesoc.unsw.edu.au'>CSESoc</a>.</li>
+<li>Go hardcore. Expunge the evil that is Windows/Mac from your hard-drive entirely and install a pristine distribution of Linux. Not recommended if you don't know what you're doing or lack balls of steel.</li>
 </ul>
 {{NL2BR}}
 
