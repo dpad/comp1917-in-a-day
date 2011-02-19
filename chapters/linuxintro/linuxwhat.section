@@ -17,24 +17,37 @@ Best of all, it's all free. <em>Free as in beer and free as in speech.</em> Free
 
 {{img/im_a_mac.jpg|Hello, I'm a douchebag.}}
 
-Unfortunately for you, the vast superiorities of running a Linux distribution as your operating system rather than Windows or Mac are far too numerous to mention in this course. However, the following points are noteworthy:
+Unfortunately for you, the vast superiorities of running a GNU/Linux distribution as your operating system rather than Windows or Mac are far too numerous to mention in this course. However, the following points are noteworthy:
 {{NONL2BR}}
 <ul>
 <li>Linux is completely free and open source, and, much like bowties, open source is cool.</li>
 <li>Linux has access to superior development platforms and standardised toolsets.</li>
 <li>You will require access to a powerful command line. Windows' command line is severely lacking.</li>
 <li>Courses in CSE are taught using Linux and will assume that you will be learning to use Linux. Furthermore, all computers in CSE labs run Linux by default.</li>
-<li>Learning to use Linux will taech you far more about computers than you can imagine, and get you laid. True story.</li>
+<li>Linux is used in over 90% of the world's fastest supercomputers, as well as in all of the top 10 fastest. Needless to say, performance in Linux far outweighs that of Windows or Mac.</li>
+<li>Learning to use Linux will teach you far more about computers than you can imagine, and get you laid. True story.</li>
 </ul>
 {{NL2BR}}
 
 <h2>Okay, you've convinced me. How do I get Linux?</h2>
-Unlike Windows and Mac, there is no single company developing every version of Linux. Being "<strong>open source</strong>" basically means that anyone, even you, has access to the entire code making up Linux, and as such, many people and groups of people choose to run their own versions of Linux, known as "Linux distributions".
+Unlike Windows and Mac, there is no single company developing every version of Linux. Everyone has their own idea of what an ideal operating system is, and as such many people and groups of people choose to run their own versions of GNU/Linux, known as "Linux distributions".
 
-Some versions of Linux are better than others (subjectively, of course), so you are encouraged to google more information about Linux. But you won't look it up, because you're too lazy. After all, no sane or motivated person would ever attempt a course that claims to teach you an entire university course in a single day, would they?
+Some GNU/Linux distributions are better than others (subjectively, of course), so you are encouraged to look up some of the more popular alternatives. But you won't look it up, because you're too lazy; after all, no sane or motivated person would ever attempt a course that claims to teach you an entire university course in a single day, would they?
 
 So, if you're still stuck on choosing a Linux distribution, then take our advice and choose:
 
 <a href='http://www.ubuntu.com'>Ubuntu</a>
 
+<h2>Why should I use Ubuntu?</h2>
 Why? Because fuck you is why.
+
+<h2>No, really, why?</h2>
+The basic gist of it is this:
+{{NONL2BR}}
+<ul>
+<li>Ubuntu is easy to install and easy to use.</li>
+<li>Ubuntu is currently the most popular Linux distribution in use.</li>
+<li>There is a large support community, if you ever get stuck.</li>
+<li>CSE provides an easy to install virtual box pre-installed with Linux. See the next section for more details.</li>
+</ul>
+{{NL2BR}}
