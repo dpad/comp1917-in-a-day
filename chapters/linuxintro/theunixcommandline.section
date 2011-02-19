@@ -1,7 +1,6 @@
 {{NL2BR}}
-All of the computers in the CSE labs run on GNU/Linux systems. As such, it is crucial to get to know these systems in your own time, preferably on your own computer. The following steps outline your choices on running your own GNU/Linux distribution.
+It is crucial to get to know a GNU/Linux system in your own time, preferably on your own computer. The following steps outline your choices on running your own GNU/Linux distribution.
 
-<h2>If you are a Windows user:</h2>
 Although you can do the course in Windows, it will be to your extreme advantage to learn to use a Linux system. Unfortunately, Visual Studio on Windows may not always compile all the code we write (POSIX C), so the only options you have are:
 
 {{NONL2BR}}
@@ -17,12 +16,10 @@ Although you can do the course in Windows, it will be to your extreme advantage 
 As these options are slightly outside of the scope of this course for the moment, we will leave it up to you to figure these out. We will post an update with instructions later.
 
 <h2>If you are a Mac OSX user:</h2>
-CMD+SPACE to open spotlight.
-Type &quot;terminal&quot; into the search field.
-Click on Terminal (the black box icon).
+Mac OSX, while still being a steaming pile of shit, has the added benefit that it is Unix-based. Linux is also Unix-based, and as such you should be able to follow most of the same advise we provide on using a GNU/Linux system, although you are probably better off running a Linux distribution. Then again, you are also probably better off smashing your overpriced brick against a wall to cleanse yourself from the insult of having been blinded by the marketing evil of Apple.
 
-You will be using this A LOT!
-NOTE: Even if you use a mac, don't disregard the notes for GNU/Linux as this is the operating system that you will use on the CSE lab computers.
+Use CMD+SPACE to open spotlight. Type &quot;terminal&quot; into the search field. Click on Terminal (the black box icon). You will be using this a lot throughout the course.
+NOTE: Even if you use a Mac, don't disregard the notes for GNU/Linux as this is the operating system that you will use on the CSE lab computers.
 
 <h2>If you are a Linux user:</h2>
-Congratulations on using a civilised operating system! Have a cookie.
+Congratulations on using a civilised operating system!
