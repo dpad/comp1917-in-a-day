@@ -190,6 +190,8 @@ if (isset($_GET['link'])){
         $layout = str_replace("{{CONTENT}}", "No such chapter exists!", $layout);
         $layout = str_replace("{{TITLE}}", "COMP1917 in a Day >> 404", $layout);
         $layout = str_replace("{{HEADER}}", "404 Error!", $layout);
+        $layout = str_replace("{{PREV_CHAPTER}}", "", $layout);
+        $layout = str_replace("{{NEXT_CHAPTER}}", "", $layout);
     }
 
 } else {
