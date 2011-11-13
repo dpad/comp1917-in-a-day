@@ -48,12 +48,12 @@ function printSection($chapter_dir, $section){
                 $string .= preg_replace("/\[\[(.+?)\]\]/", "<div class='footnote'>\\1</div>", $line);
             } else {
                 $string .= $line;
+            }
 
-                if ($nl2br){
-                    $string .= "<br/>";
-                } else {
-                    $string .= "\n";
-                }
+            if ($nl2br){
+                $string .= "<br/>";
+            } else {
+                $string .= "\n";
             }
 
         }
