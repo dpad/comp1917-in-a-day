@@ -186,6 +186,6 @@ a#nextchap {
     margin-left:20px;
     text-align:right;
 }
-div#footnote {
+div.footnote {
     display:none;
 }
