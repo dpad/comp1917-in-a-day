@@ -40,10 +40,10 @@ function printSection($chapter_dir, $section){
                 $string .= $line;
                 $nl2br = $last;
             } else if (preg_match("/^\[\[(.*)$/i", $line, $matches) > 0){
-                $string .= "<pre class='code'>\n".$matches[1]."\n";
+                $string .= "<pre class='code'>\n".$matches[1];
                 $nl2br = false;
             } else if (preg_match("/(.*)\]\]$/i", $line, $matches) > 0){
-                $string .= $matches[1]."\n</pre>\n";
+                $string .= $matches[1]."</pre>\n";
                 $nl2br = $last;
             } else if (preg_match("/^{{(.+)}}(!)?$/i", $line, $matches) > 0){
                 if ($matches[2] == "!"){
