@@ -34,7 +34,7 @@ function printSection($chapter_dir, $section){
             $string .= "><sub class='imgsub'>".$matches[3]."</sub>";
         } else {
             if (preg_match("/\<pre/i", $line) > 0){
-                $string .= $line."\n";
+                $string .= $line."";
                 $nl2br = false;
             } else if (preg_match("/<\/pre>$/i", $line) > 0){
                 $string .= $line;
@@ -43,7 +43,7 @@ function printSection($chapter_dir, $section){
                 $string .= "<pre class='code'>".$matches[1];
                 $nl2br = false;
             } else if (preg_match("/(.*)\]\]$/i", $line, $matches) > 0){
-                $string .= $matches[1]."\n</pre>";
+                $string .= $matches[1]."</pre>";
                 $nl2br = $last;
             } else if (preg_match("/^{{(.+)}}(!)?$/i", $line, $matches) > 0){
                 if ($matches[2] == "!"){
