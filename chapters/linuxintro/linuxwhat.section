@@ -18,12 +18,12 @@ If you're still reading this then it's likely you fall into one of the inferior 
 
 Although this course can likely be completed using either of the first two options, <em><u>it will be to your significant advantage</u></em>, <em>especially</em> if you are a Windows user, to learn to use a variant of the third option, <strong>Linux</strong>.
 
-<h2>Linux: A quick background</h2>
+<h2>Linux: Why it rocks bollocks</h2>
 <strong>Linux</strong> is a (somewhat misused) term for a collection of operating systems built upon the <a href='http://wikipedia.org/wiki/Linux_kernel'>Linux kernel</a> and <a href='http://wikipedia.org/wiki/GNU_Project'>GNU Project</a>. This is a complicated way of saying that some 20 odd years ago some university nerds around your age decided to build their own operating system for shits and giggles and eventually turned it into one of the most popular things to rock the world of computer science.
 
 An important aspect of GNU/Linux operating systems are that they are <strong>free</strong>. Completely. You pay zilch, zero, nada. You may not realise it, but when you buy a computer with either Windows or Mac OSwhateverthefuck, there is a percentage of the fee going directly towards the price of running that operating system. 
 
-GNU/Linux is also free in that you are free to do anything and everything you want with it, including modifying the operating system itself for your own purposes.[[Not that we expect you to be able to yet, or even to understand what it means to modify an operating system.]] You have the option to install whichever "flavour" of GNU/Linux you want, whenever you want, on whatever computer you want, in whatever way you want. This makes it exceptionally popular in the field of computer science as you are able to run whatever the fuck you want without any dictator deciding every way your computer should behave.
+GNU/Linux is also free in that you are free to do anything and everything you want with it, including modifying the operating system itself for your own purposes.[[Not that we expect you to be able to yet, or even to understand what it means to modify an operating system.]] You have the option to install whichever "flavour" of GNU/Linux you want, whenever you want, on whatever computer you want, in whatever way you want. This makes it exceptionally popular in the field of computer science as you are able to run whatever the fuck you want without any dictator deciding which way your computer should behave.
 
 {{img/mac_hitler.jpg|That means none of this shit.}}
 
@@ -79,4 +79,4 @@ If you don't like that idea, here are the other distributions we recommend:
 
 Did we also mention the official mascot of Linux is <a href='http://en.wikipedia.org/wiki/Tux'>Tux the penguin</a>? If you don't think that in itself is bad-ass then you have no heart.
 
-{{img/tux_is_no_ordinary_penguin.png|He's so cute!}}
+{{img/tux_is_no_ordinary_penguin.png|He's so cute!|200}}

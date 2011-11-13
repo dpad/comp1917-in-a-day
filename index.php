@@ -26,8 +26,12 @@ function printSection($chapter_dir, $section){
         } else if (preg_match("/^{{NONL2BR}}$/i", $line) > 0){
             $nl2br = false;
             $last  = false;
-        } else if (preg_match("/^{{img\/(.+?)(\|(.+))?}}$/i", $line, $matches) > 0){
-            $string .= "<img src='/img/".$matches[1]."'><sub class='imgsub'>".$matches[3]."</sub>";
+        } else if (preg_match("/^{{img\/(.+)(\|(.+))?(\|(.+))?}}$/i", $line, $matches) > 0){
+            $string .= "<img src='/img/".$matches[1]."'";
+            if (count($matches) > 4){
+                $string .= " width='".$matches[5]."px'";
+            }
+            $string .= "><sub class='imgsub'>".$matches[3]."</sub>";
         } else {
             if (preg_match("/\<pre/i", $line) > 0){
                 $string .= $line."\n";
@@ -41,7 +45,7 @@ function printSection($chapter_dir, $section){
             } else if (preg_match("/(.*)\]\]$/i", $line, $matches) > 0){
                 $string .= $matches[1]."\n</pre>\n";
                 $nl2br = $last;
-            } else if (preg_match("/^{{(.+?)}}(!)?$/i", $line, $matches) > 0){
+            } else if (preg_match("/^{{(.+)}}(!)?$/i", $line, $matches) > 0){
                 if ($matches[2] == "!"){
                     $string .= codeToHtml($chapter_dir.$matches[1], false)."<br/>";
                 } else {
