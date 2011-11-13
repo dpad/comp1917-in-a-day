@@ -11,7 +11,7 @@ All three of these things are known as <strong>operating systems</strong>.
 <h2>But what is an Operating System?</h2>
 An operating system is, very simply put, the set of tools and mechanisms which allow you to run applications on your computer.
 
-If you're a Windows user then you may know that every time you run an application, you essentially run a ".exe" file. But how does the computer know what to do with that file? The operating system takes care of figuring that out. If you're a Mac user then think of a related example so we don't have to bother figuring out how your terrible piece of over-designed jail works.
+If you're a Windows user then you may know that every time you run an application, you essentially run a ".exe" file. But how does the computer know what to do with that file? The operating system takes care of figuring that out. If you're a Mac user then think of a related example so we don't have to bother figuring out how your terrible piece of over-designed junk works.
 
 <h2>Why this shit matters</h2>
 If you're still reading this then it's likely you fall into one of the inferior first two groups. In this course, we'll teach you how to join the elite group of men and <s>wo</s>men in the exhalted third group.
@@ -23,12 +23,12 @@ Although this course can likely be completed using either of the first two optio
 
 An important aspect of GNU/Linux operating systems are that they are <strong>free</strong>. Completely. You pay zilch, zero, nada. You may not realise it, but when you buy a computer with either Windows or Mac OSwhateverthefuck, there is a percentage of the fee going directly towards the price of running that operating system. 
 
-It's also free in that you are free to do anything and everything with it, including modifying the operating system itself for your own purposes. Not only does it cost you nothing, you also have the option install whichever "flavour" of GNU/Linux you want, whenever you want, on whatever computer you want, in whatever way you want. This makes it exceptionally popular in the field of computer science, as you are able to run whatever the fuck you want without any dictator deciding every way your computer should behave.
+GNU/Linux is also free in that you are free to do anything and everything you want with it, including modifying the operating system itself for your own purposes.[[Not that we expect you to be able to yet, or even to understand what it means to modify an operating system.]] Not only does it cost you nothing, you also have the option install whichever "flavour" of GNU/Linux you want, whenever you want, on whatever computer you want, in whatever way you want. This makes it exceptionally popular in the field of computer science, as you are able to run whatever the fuck you want without any dictator deciding every way your computer should behave.
 
 {{img/mac_hitler.jpg|That means none of this shit.}}
 
 <h2>Why you should care</h2>
-<em>Pfft,</em> you scoff, <em>I am well-established financially and can afford to buy overpriced flashy hipster products which cater to my every need by spoon-feeding me bullshit and giving me the illusion of freedom. How dare you insult me with your lowly peasantries?</em>
+<em>Pfft,</em> you scoff, <em>I am well-established financially and can afford to buy overpriced flashy hipster products which cater to my secret desire to be spoon-fed and give me the illusion of freedom. How dare you insult me with your lowly peasantries?</em>
 
 {{img/im_a_mac.jpg|Hello, I'm a douchebag.}}
 
@@ -76,3 +76,7 @@ If you don't like that idea, here are the other distributions we recommend:
 <li><a href='http://www.linuxmint.com'>Linux Mint</a> is an easy-to-use works-out-of-the-box distribution which looks familiar to Windows users, and has recently overtaken Ubuntu in popularity.</li>
 </ul>
 {{NL2BR}}
+
+Did we also mention the official mascot of Linux is <a href='http://en.wikipedia.org/wiki/Tux'>Tux the penguin</a>? If you don't think that in itself is bad-ass then you have no heart.
+
+{{img/tux_is_no_ordinary_penguin.png|He's so cute!}}
