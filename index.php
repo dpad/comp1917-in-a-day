@@ -35,19 +35,16 @@ function printSection($chapter_dir, $section){
             } else if (preg_match("/<\/pre>$/i", $line) > 0){
                 $string .= $line;
                 $nl2br = $last;
-            } else if (preg_match("/^\[\[(.*)/i", $line, $matches) > 0){
-                $string .= "<pre class='code'>".$matches[1]."\n";
-                $nl2br = false;
-            } else if (preg_match("/(.*)\]\]$/i", $line, $matches) > 0){
-                $string .= $matches[1]."</pre>";
+            } else if (preg_match("/^\[\[(.*)?\]\]$/i", $line, $matches) > 0){
+                $string .= "<pre class='code'>".$matches[1]."</pre>";
                 $nl2br = $last;
-            } else if (preg_match("/^{{(.+)}}(!)?$/i", $line, $matches) > 0){
+            } else if (preg_match("/^{{(.+?)}}(!)?$/i", $line, $matches) > 0){
                 if ($matches[2] == "!"){
                     $string .= codeToHtml($chapter_dir.$matches[1], false)."<br/>";
                 } else {
                     $string .= codeToHtml($chapter_dir.$matches[1])."<br/>";
                 }
-            } else if (preg_match("/\[\[(.+)\]\]/", $line, $matches) > 0){
+            } else if (preg_match("/\[\[(.+?)\]\]/", $line, $matches) > 0){
                 $string .= "<div class='footnote'>".$matches[1]."</div>";
             } else {
                 $string .= $line;
