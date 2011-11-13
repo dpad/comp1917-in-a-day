@@ -1,45 +1,62 @@
-For the sake of simplicity, we'll say that most of the people in the world, and likely you, fall into one of two groups:
+For the sake of simplicity, we'll say that most of the computer users in the world, and likely you, fall into one of three groups:
 {{NONL2BR}}
-<ul><li>Those who use Windows (XP, Vista, 7, etc.)</li>
-<li>Those who use Macs (OSX, and whatever other crap they put out)</li></ul>
+<ul>
+<li>Those who use Windows (XP, Vista, 7, etc.)</li>
+<li>Those who use Macs (OSX, and whatever other crap they put out)</li>
+<li>Those who use Linux</li>
+</ul>
 {{NL2BR}}
-Although this course can likely be completed using either of these two options, <em><u>it will be to your significant advantage</u></em>, especially if you are a Windows user, to learn to use a third option: <strong>Linux</strong>.
+All three of these things are known as <strong>operating systems</strong>. 
+
+<h2>But what is an Operating System?</h2>
+An operating system is, very simply put, the set of tools and mechanisms which allow you to run applications on your computer.
+
+If you're a Windows user then you may know that every time you run an application, you essentially run a ".exe" file. But how does the computer know what to do with that file? The operating system takes care of figuring that out. If you're a Mac user then think of a related example so we don't have to bother figuring out how your terrible piece of over-designed jail works.
+
+<h2>Why this shit matters</h2>
+If you're still reading this then it's likely you fall into one of the inferior first two groups. In this course, we'll teach you how to join the elite group of men and <s>wo</s>men in the exhalted third group.
+
+Although this course can likely be completed using either of the first two options, <em><u>it will be to your significant advantage</u></em>, <em>especially</em> if you are a Windows user, to learn to use a variant of the third option, <strong>Linux</strong>.
 
 <h2>Linux: A quick background</h2>
-<strong>Linux</strong> is a (somewhat misused) term for a collection of operating systems built upon the <a href='http://wikipedia.org/wiki/Linux_kernel'>Linux kernel</a> and <a href='http://wikipedia.org/wiki/GNU_Project'>GNU Project</a>. This is a complicated way of saying that it's a way of running your computer in whatever damn way you want.
+<strong>Linux</strong> is a (somewhat misused) term for a collection of operating systems built upon the <a href='http://wikipedia.org/wiki/Linux_kernel'>Linux kernel</a> and <a href='http://wikipedia.org/wiki/GNU_Project'>GNU Project</a>. This is a complicated way of saying that some 20 odd years ago some university nerds around your age decided to build their own operating system for shits and giggles and eventually turned it into one of the most popular things to rock the world of computer science.
+
+An important aspect of GNU/Linux operating systems are that they are <strong>free</strong>. Completely. You pay zilch, zero, nada. You may not realise it, but when you buy a computer with either Windows or Mac OSwhateverthefuck, there is a percentage of the fee going directly towards the price of running that operating system. 
+
+It's also free in that you are free to do anything and everything with it, including modifying the operating system itself for your own purposes. Not only does it cost you nothing, you also have the option install whichever "flavour" of GNU/Linux you want, whenever you want, on whatever computer you want, in whatever way you want. This makes it exceptionally popular in the field of computer science, as you are able to run whatever the fuck you want without any dictator deciding every way your computer should behave.
 
 {{img/mac_hitler.jpg|That means none of this shit.}}
 
-Best of all, it's all free. <em>Free as in beer and free as in speech.</em> Free as in you pay no money for it, and you can look through all the code that comprises it.
-
 <h2>Why you should care</h2>
-<em>Pfft,</em> I hear you scoff, <em>I am well-established financially and can afford to buy overpriced flashy hipster products. How dare you insult me with your lowly peasantries?</em>
+<em>Pfft,</em> you scoff, <em>I am well-established financially and can afford to buy overpriced flashy hipster products which cater to my every need by spoon-feeding me bullshit and giving me the illusion of freedom. How dare you insult me with your lowly peasantries?</em>
 
 {{img/im_a_mac.jpg|Hello, I'm a douchebag.}}
 
-Unfortunately for you, the vast superiorities of running a GNU/Linux distribution as your operating system rather than Windows or Mac are far too numerous to mention in this course. However, the following points are noteworthy:
+The vast superiorities of running a GNU/Linux distribution as your operating system rather than Windows or Mac are already well-documented in numerous nerd battles throughout the internet so we will not bother replicating them here. The following points, however, are notworthy of mention:
 {{NONL2BR}}
 <ul>
-<li>Linux is completely free and open source, and, much like <a href='/img/fezzes_are_cool.jpg'>bowties and fezzes</a>, open source is cool.</li>
-<li>Linux has access to superior development platforms and standardised toolsets.</li>
+<li>GNU/Linux is completely[[Technically not completely. Certain Linux kernels include "closed-source" parts such as specific drivers. Some GNU/Linux distributions, such as Gentoo, modify the Linux kernel to remove these parts in order to be able to call themselves <strong>completely</strong> free. Similarly, some distributions are not free of cost - some distributions are directly sold to enterprises with the cost going towards providing support.]] free and open source, and, much like <a href='/img/fezzes_are_cool.jpg' title='If you get this reference, then you, too, are cool.'>bowties and fezzes</a>, open source is cool.</li>
+<li>Linux has access to superior development platforms and standardised toolsets. Mmm buzzwords.</li>
 <li>You will require access to a powerful command line. Windows' command line is severely lacking.</li>
 <li>Courses in CSE are taught using Linux and will assume that you will be learning to use Linux. Furthermore, all computers in CSE labs run Linux by default.</li>
-<li>Linux is used in over 90% of the world's fastest supercomputers, as well as in all of the top 10 fastest. Needless to say, performance in Linux far outweighs that of Windows or Mac.</li>
-<li>Learning to use Linux will teach you far more about computers than you can imagine, and get you laid. True story.</li>
+<li>Linux is used in over 90% of the world's fastest supercomputers, including in the top 10 fastest. Needless to say, performance in Linux far outweighs that of Windows or Mac.</li>
+<li>Learning to use Linux will teach you far more about computers than you can imagine, and get you laid.[[Your mileage may vary.]]</li>
 </ul>
 {{NL2BR}}
 
 <h2>Okay, you've convinced me. How do I get Linux?</h2>
-Unlike Windows and Mac, there is no single company developing every version of Linux. Everyone has their own idea of what an ideal operating system is, and as such many people and groups of people choose to run their own versions of GNU/Linux, known as "Linux distributions".
+Unlike Windows and Mac, there is no single company developing every version of Linux. Everyone has their own idea of what an ideal operating system is, and as such many people and groups of people choose to develop their own versions of GNU/Linux, known as "GNU/Linux distributions".
 
-Some GNU/Linux distributions are better than others (subjectively, of course), so you are encouraged to look up some of the more popular alternatives. But you won't look it up, because you're too lazy; after all, no sane or motivated person would ever attempt a course that claims to teach you an entire university course in a single day, would they?
+Some GNU/Linux distributions are better at different things than others, so you are encouraged to look up some of the more popular alternatives yourself. 
+
+But you won't look it up, because, like us, you're a lazy fuck; after all, no truly motivated person would be reading a website claiming to teach an entire university course in a single day, would they?
 
 So, if you're still stuck on choosing a Linux distribution, then take our advice and choose:
 
 <a href='http://www.ubuntu.com'>Ubuntu</a>
 
 <h2>Why should I use Ubuntu?</h2>
-Why? Because fuck you is why.
+Because fuck you is why.
 
 <h2>No, really, why?</h2>
 The basic gist of it is this:
@@ -49,5 +66,13 @@ The basic gist of it is this:
 <li>Ubuntu is currently the most popular Linux distribution in use.</li>
 <li>There is a large support community, if you ever get stuck.</li>
 <li>CSE provides an easy-to-install virtual machine set up with Ubuntu. See the next section for more details.</li>
+</ul>
+{{NL2BR}}
+
+If you don't like that idea, here are the other distributions we recommend:
+{{NONL2BR}}
+<ul>
+<li><a href='http://www.xubuntu.org'>Xubuntu</a> is Ubuntu minus the recent bullshit developments in the user interface. Also, it comes with an application dock by default, so Macfags can feel right at home.</li>
+<li><a href='http://www.linuxmint.com'>Linux Mint</a> is an easy-to-use works-out-of-the-box distribution which looks familiar to Windows users, and has recently overtaken Ubuntu in popularity.</li>
 </ul>
 {{NL2BR}}
