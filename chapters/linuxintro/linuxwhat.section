@@ -13,10 +13,9 @@ An operating system is, very simply put, the set of tools and mechanisms which a
 
 If you're a Windows user then you may know that every time you run an application, you essentially run a ".exe" file. But how does the computer know what to do with that file? The operating system takes care of figuring that out. If you're a Mac user then think of a related example so we don't have to bother figuring out how your terrible piece of over-designed junk works.
 
-<h2>Why this shit matters</h2>
 If you're still reading this then it's likely you fall into one of the inferior first two groups. In this course, we'll teach you how to join the elite group of men and <s>wo</s>men in the exhalted third group.
 
-Although this course can likely be completed using either of the first two options, <em><u>it will be to your significant advantage</u></em>, <em>especially</em> if you are a Windows user, to learn to use a variant of the third option, <strong>Linux</strong>.
+Although this course can likely be completed using either of the first two options, <em><u>it will be to your significant advantage</u></em>, <em>especially</em> if you are a Windows user, to learn to use a variant of the third option, <strong>Linux</strong>. CSE courses in general will assume you have some knowledge of Linux systems, and all CSE lab machines run Linux by default.
 
 <h2>Linux: Why it rocks bollocks</h2>
 <strong>Linux</strong> is a (somewhat misused) term for a collection of operating systems built upon the <a href='http://wikipedia.org/wiki/Linux_kernel'>Linux kernel</a> and <a href='http://wikipedia.org/wiki/GNU_Project'>GNU Project</a>. This is a complicated way of saying that some 20 odd years ago some university nerds around your age decided to build their own operating system for shits and giggles and eventually turned it into one of the most popular things to rock the world of computer science.
