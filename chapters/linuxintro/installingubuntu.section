@@ -1,25 +1,30 @@
 {{NL2BR}}
-It is crucial to get to know a GNU/Linux system in your own time, preferably on your own computer. The following steps outline your choices on running your own GNU/Linux distribution.
+For this course we'll be assuming you're running some sort of Linux distribution. 
 
-Although you can do the course in Windows, it will be to your extreme advantage to learn to use a Linux system. Unfortunately, Visual Studio on Windows may not always compile all the code we write (POSIX C), so the only options you have are:
+Below, we outline some ways in which you can install <a href='http://www.ubuntu.com'>Ubuntu</a> on your home computer and give you some good keywords you can type into Google and figure shit out for yourself.
+
+If you can't be bothered, you can always just choose to work on your assignments at the CSE labs, which all run Linux by default.
+
+<h2>If you are a Windows user:</h2>
+Unlike Macfags, you pretty much <em>have</em> to install Linux if you want to do well in this course (unless, of course, you're willing to spend all your free time in the CSE labs, but surely your mother's basement is far more comfortable).
+
+Windows users can choose any of these three options:
 
 {{NONL2BR}}
 <ul>
-<li>Write your code in a text editor in Windows, such as Notepad, and compile/run it using Cygwin. <strong>NOT RECOMMENDED</strong> because it's actually harder than some of the other options on this list.</li>
-<li>Use only the CSE lab computers for all your work. <strong>NOT RECOMMENDED</strong>. Why would you spend your whole day in a CSE lab when you can spend it in your parents' basement instead?</li>
-<li>Run a Linux distribution, likely Ubuntu, inside a virtual machine in Windows.<br/>This is <s>far simpler than the next option</s> the pussy's way out, so it is not recommended for CSE students. However, those who are not studying a real degree can go ahead and do this while we sit back and laugh. Hah, Digital Media...</li>
-<li>Dual-boot a Linux distribution, preferably Ubuntu. This means basically having both Windows/Mac and Linux on the same machine.<br/>This is highly recommended for CSE students as you will eventually grow tired of using a virtual machine and will need to learn to do this sooner or later. You can also receive help doing this from the real men at <a href='http://csesoc.unsw.edu.au'>CSESoc</a>.</li>
-<li>Go hardcore. Expunge the evil that is Windows/Mac from your hard-drive entirely and install a pristine distribution of Linux. Not recommended if you don't know what you're doing or lack balls of steel.</li>
+<li>Virtual machine</li>
+<li>Dual-boot</li>
+<li>HARDCORE MODE (requires balls of steel)</li>
 </ul>
 {{NL2BR}}
 
-As these options are slightly outside of the scope of this course for the moment, we will leave it up to you to figure these out. We will post an update with instructions later.
+We will post an update with more information on these methods later.
 
 <h2>If you are a Mac OSX user:</h2>
-Mac OSX, while still being a steaming pile of shit, has the added benefit that it is Unix-based. Linux is also Unix-based, and as such you should be able to follow most of the same advise we provide on using a GNU/Linux system, although you are probably better off running a Linux distribution. Then again, you are also probably better off smashing your overpriced brick against a wall to cleanse yourself from the insult of having been blinded by the marketing evil of Apple.
+Mac OSX, while still being a steaming pile of shit, has the added benefit that it is Unix-based. Linux is also Unix-based, and as such you should be able to follow along with most of the course, although you too are probably better off running a Linux distribution. Then again, you are also probably better off smashing your overpriced novelty brick against a wall to redeem yourself from the insult of succumbing to Apple's will.
 
 Use CMD+SPACE to open spotlight. Type &quot;terminal&quot; into the search field. Click on Terminal (the black box icon). You will be using this a lot throughout the course.
 NOTE: Even if you use a Mac, don't disregard the notes for GNU/Linux as this is the operating system that you will use on the CSE lab computers.
 
-<h2>If you are a Linux user:</h2>
-Congratulations on using a civilised operating system!
+<h2>If you are already a Linux user:</h2>
+Congratulations on using a civilised operating system! Have a cookie.
