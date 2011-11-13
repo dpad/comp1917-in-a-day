@@ -47,6 +47,8 @@ function printSection($chapter_dir, $section){
                 } else {
                     $string .= codeToHtml($chapter_dir.$matches[1])."<br/>";
                 }
+            } else if (preg_match("/\[\[(.+)\]\]/", $line, $matches) > 0){
+                $string .= "<div class='footnote'>".$matches[1]."</div>";
             } else {
                 $string .= $line;
 
