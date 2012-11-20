@@ -1,124 +1,131 @@
 </div><div class='section warning packed'><strong>WARNING!</strong>
 This section contains <strong>awesome explosions</strong>. Proceed at your own risk.</div><div class="section">
-Now that you have a Linux distribution installed (or are running Mac OSX), we can get started with the command line. (Note: See above for Mac OSX instructions)
+Now that you have a Linux distribution installed (or are running Mac OSX), we can get started with the command line.
 
-<strong>If you are running Ubuntu</strong>, begin by clicking on System -> Preferences -> Keyboard Shortcuts. Add a shortcut for "Terminal", something like Alt-T is recommended. You should now be able to open the terminal (a black rectangle) by pressing this shortcut. If not, you can still open the Terminal by clicking on Applications -> Accessories -> Terminal.
+<strong>Depending on your Linux distribution</strong>, you will need to find how to open the terminal application. Look through the menus, google it, and so on until you find it.
 
-If you are not running Ubuntu we'll assume you have enough knowledge to find the terminal yourself.
+An example for an older version of Ubuntu might be to begin by clicking on System -> Preferences -> Keyboard Shortcuts. Add a shortcut for "Terminal", something like Alt-T is recommended. You should now be able to open the terminal (a black rectangle) by pressing this shortcut. If not, you can still open the Terminal by clicking on Applications -> Accessories -> Terminal.
 
 Once you know how to open the terminal, do so. You will be greeted by a black rectangle with text like this:
 [[steve$
 ]]
-Did you expect something more exciting?
-As bland as this may look, most of your work for COMP1917 will be done in this boring black box. But don't worry, soon you'll come to love it*!
-<sub>*Results may vary.</sub>
+Isn't that phenomenally exciting?
+As bland as this may look, most of your work for COMP1917 will be done in this black box. 
 
-So, what can we do in this boring black box?
-
+<h2>What is the point?</h2>
 The terminal is basically a simple way of interacting with your computer. It gets rid of all the useless clutter on the screen and presents you with only the information you need precisely when you ask for it. What can you do in the terminal? Practically everything!
 
-Before we begin, notice the blinking white block. This is your "prompt", that is, where you type in commands. Try the commands shown below (write the text after steve$)
-[[steve$ pwd
+<h2>Using the terminal</h2>
+Before we begin, notice the blinking white block. This is your "prompt", that is, where you type in commands. Try the command shown below (write the text after steve$)
+[[steve$ <strong>pwd</strong>
 /home/steve]]
-This is the directory you are currently in, also known as your "working" directory. In fact, "pwd" stands for "print working directory". 
-/home/yourusername is your home folder, a shortcut for this is ~.
-[[steve$ ls
+This is the directory you are currently in, also known as your "working" directory. In fact, "pwd" stands for "print working directory". A directory is the Linux nerd's name for a folder.
+
+Below are the files and directories currently inside your working directory. "ls" stands for "list".
+[[steve$ <strong>ls</strong>
 Desktop
 Documents
 Music]]
-These are the files and folders currently inside your working directory. "ls" stands for "list".
-[[steve$ cd Documents
-steve$ pwd
+You can move to different directories. This moves you into the Documents directory, so now you are at /home/yourusername/Documents, or ~/Documents in shorthand.
+[[steve$ <strong>cd Documents</strong>
+steve$ <strong>pwd</strong>
 /home/steve/Documents
-steve$ ls
+steve$ <strong>ls</strong>
 assignment.txt]]
-This moves you into the Documents folder, so now you are at /home/yourusername/Documents, or ~/Documents in shorthand.
-[[steve$ mkdir comp1917
-steve$ ls
+/home/yourusername is your home diretory. If you're lazy, you can type <strong>~</strong> instead, so that ~ is your home diretory and ~dan is dan's home diretory.
+[[steve$ <strong>cd ~dan</strong>
+steve$ <strong>pwd</strong>
+/home/dan
+steve$ <strong>cd ~</strong>
+steve$ <strong>pwd</strong>
+/home/steve]]
+You can create directories! Here, we create a directory called "comp1917". "mkdir" stands for "make directory".
+[[steve$ <strong>cd Documents</strong>
+steve$ <strong>mkdir comp1917</strong>
+steve$ <strong>ls</strong>
 assignment.txt
 comp1917]]
-We have just created a folder called "comp1917"! "mkdir" stands for "make directory".
-[[steve$ cd comp1917
-steve$ pwd
+You can also move up the directory structure.
+[[steve$ <strong>cd comp1917</strong>
+steve$ <strong>pwd</strong>
 /home/steve/Documents/comp1917
-steve$ cd ..
-steve$ pwd
-/home/steve/Documents
-steve$ cd ~
-steve$ pwd
-/home/steve]]
+steve$ <strong>cd ..</strong>
+steve$ <strong>pwd</strong>
+/home/steve/Documents]]
 In this example we moved around in different directories. Make sure you remember the following shorthand symbols:
 <strong>~</strong> means /home/yourusername
 <strong>..</strong> means the parent directory of the current (working) directory
 <strong>.</strong> means the current (working) directory
 
 Some commands we learned from the examples above are:
-<strong>ls</strong> - list the files and folders in the working directory
+<strong>ls</strong> - list the files and directories in the working directory
 <strong>pwd</strong> - print the working directory. Effectively, "where am I?"
 <strong>cd directory</strong> - go into "directory", i.e. change the working directory
 
-ls, pwd, cd are all examples of commands. The computer recognises that we want to run a specific program, say, "pwd" for example, and finds it in its program library.
+ls, pwd, cd are all examples of commands. The terminal recognises that we want to run a specific program, for example, the "pwd" program, and finds it in its program library.
 
-Remember, all UNIX commands are <strong>case-sensitive</strong>. So, "ls" is <em>not</em> the same as "LS" (the latter will not work).
+Linux files and directories are <strong>case-sensitive</strong>. So, "ls" is <em>not</em> the same as "LS" and "Documents" is not the same as "documents".
 
 If you want to run the last command you typed again, simply press the up arrow key on your keyboard. This will copy the last command you executed into the prompt. Press up again and it will copy the second last command, and so on.
 
 <em>Don't worry, you'll remember all of this with practice.</em>
 
-If you need to know what a given command does, simply run the command "man" with an argument of your command. What is all this nonsense I just said?
-The "man" command runs a "manual" program. An "argument" is something you type after the command. For example, when you use the "cd" command, you have to specify a folder for it to change into. The folder you specify is the "argument" you pass into the command "cd".
-So, in a similar sense, if I want to know what "cd" does, I can pass "cd" as an argument into the "man" command, like so:
-[[steve$ man cd
+<h2>Man up!</h2>
+If you need to know what a given command does, simply run the command "man" with an argument of your command. The "man" command runs the "man" program, short for "<strong>man</strong>ual". Go ahead and run it now:
+
+[[steve$ <strong>man</strong>
+What manual page do you want?]]
+An "<strong>argument</strong>" is something you give to the command, a form of input. In the terminal, you can give arguments to commands by simply typing them after the command name.
+
+For example, when you use the "cd" command, you have to specify a directory for it to change into. The directory you specify is the "argument" you pass into the command "cd".
+
+Depending on the command/program you run, it may or many not accept, expect, or even rely on arguments. In order to know what arguments it accepts, you should consult its <strong>man</strong>ual page. The "man" command takes one argument: the page you want to read.[[Actually, it takes many, many more arguments, but none that you will need to use for quite some time yet.]]
+
+So, in a similar sense, if you want to know what "cd" does, you can pass "cd" as an argument into the "man" command, like so:
+[[steve$ <strong>man cd</strong>
 ... lots of text in here ...]]
 Press the up and down arrow keys to read the manual, or "q" to exit out of the manual.
 
 <h2>Some more tips:</h2>
 Ctrl+C kills the current command. Use it to exit your programs if you are ever stuck in an infinite loop or taking too long to run.
 
-Ctrl+D enters the end of file (EOF) character. It is a more elegant way of closing your programs, and closes the terminal if entered at the prompt. You will learn more about this later, especially during the <strong>Input</strong> chapter.
+Ctrl+D enters the end of file (EOF) character. It is a more elegant way of closing some programs, and closes the terminal if entered at the prompt. You will learn more about this later, especially during the <strong>Input</strong> chapter.
 
 To close a terminal in Mac OSX, press Cmd+W.
 
 <h2>TAB Completion</h2>
-Tab completion is an extremely useful feature in command lines which helps you be lazy... and who doesn't love being lazy?
+Tab completion is an extremely useful feature in command lines which helps you be even lazier. By now, you should be seeing a pattern emerge of computer scientists' heavy reliance on laziness.
 
-Tab completion essentially completes a command you have half-typed out so you don't have to waste precious milliseconds writing the rest of it!
+Tab completion essentially completes a command you have half-typed out so you don't have to waste precious milliseconds writing the rest of it. It is literally magical.
 
-For example, let's say I have a folder called "antidisestablishmentarianism". Don't question why anyone would name a folder like that. Now let's say I want to go to that folder.
+For example, let's say we have a directory called "antidisestablishmentarianism". Don't ask why someone would name a directory like that, that's above your pay grade, code monkey! 
 
-Rather than this:
-[[steve$ pwd
-/home/steve
-steve$ cd antidisestablishmentarianism
-steve$ pwd
+Now let's say we want to go to that directory.
+
+Rather than typing this:
+[[steve$ <strong>cd antidisestablishmen screw this</strong>
+cd:cd:10: too many arguments]]
+We can instead do this:
+[[steve$ <strong>cd an</strong>[TAB KEY][ENTER]
+steve$ <strong>pwd</strong>
 /home/steve/antidisestablishmentarianism
 ]]
-I can choose to do this:
-[[steve$ cd an[TAB KEY]
-steve$ cd antidisestablishmentarianism[ENTER]
-steve$ pwd
-/home/steve/antidisestablishmentarianism
-]]
-Look at all those delicious seconds we saved! Seconds that can be used in astonishing you with random explosions!
+Holy fucking shit.
 
 {{img/explosion.png|Look quickly! It's Michael Bay!}}
 
-But wait, what happened if I had two folders, and one of them was called "antidisestablishmentawesome". (Seriously, what kind of fool would make these two folders? This one's not even a real word!)
-[[steve$ ls
+But wait, what would happen if we had two directories, and one of them was called "antidisestablishmentawesome"??
+[[steve$ <strong>ls</strong>
 antidisestablishmentawesome
 antidisestablishmentarianism
-steve$ cd an[TAB KEY]
-steve$ cd antidisestablishmenta
-]]
-Oh noes! It didn't complete the whole folder name and now I have wasted precious time! Why would it do this to me!?!?
+steve$ <strong>cd an</strong>[TAB KEY]
+steve$ <strong>cd antidisestablishmenta</strong>]]
+Oh noes! It didn't complete the whole directory name and now we have wasted precious milliseconds of our lives that we'll never get back!
 
-The reason is that, since you have two folders that both start with "an", the tab completion decided to fill in the rest of what you were typing, which was almost surely "antidisestablishmenta", but then after that there are two choices and so it left you to complete the rest.
+Since we have two directories that both start with "an", the tab completion decided to fill in the rest of what you were typing, which was almost surely "antidisestablishmenta", but then there are two choices and so it left us to complete the rest.[[Note that this sort of behaviour, while default in some terminals, is not guaranteed to always be this way. Play around with tab completion in your terminal to see what it can and, most importantly, can't do for you.]]
 
-So, what do we do?
-[[steve$ cd an[TAB KEY]
-steve$ cd antidisestablishmenta[w KEY][TAB KEY]
-steve$ cd antidisestablishmentawesome[ENTER]
-]]
-And all is right with the world!
-
-Note that the command will not actually run until you press ENTER.
+All you have to do now therefore is show the terminal which one you want by adding an extra character to differentiate between them. That is, if you add a "w":
+[[steve$ <strong>cd antidisestablishmentaw</strong>[TAB KEY]
+steve$ pwd 
+/home/steve/antidisestablishmentawesome]]
+Note that commands will not actually run until you press ENTER.

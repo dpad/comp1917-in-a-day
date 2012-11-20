@@ -1,41 +1,41 @@
 {{NL2BR}}
-To be a good programmer, you must have good tools at your disposal. Below are some suggestions at text editors you may choose to use.
+To be a good programmer, you must have good tools at your disposal. A text editor, surprisingly, does exactly what it claims to: edit text. It may come as a shock to you now, but "programming" is essentially shorthand for "writing lots of random text that makes the computer do stuff".
 
 <h2>A Note on Style</h2>
-CSE has a style guide that you must adhere to. 
-Part of that is 'soft' tabs. This is when your TAB key inserts spaces to emulate the behaviour of an actual TAB.
-Also, CSE requires that your tab width be 3 or 4 spaces wide. 
+CSE has a style guide that you must adhere to. Part of that is 'soft' tabs. This is when your TAB key inserts spaces to emulate the behaviour of an actual TAB. Also, CSE requires that your tab width be 3 or 4 spaces wide. 
+
+If this makes no sense to you, don't worry, just find the "soft tab" option in your text editor and make sure it's set to 4 spaces.
+
+<h2>Picking your poison</h2>
+Before we dive into programming, you should first decide what tool you will use in order to make your life as painless as possible.
+
+Below are some suggestions of text editors you may choose to use.
 
 <h2>gedit</h2>
-gedit is the default text editor in Ubuntu. It featuers syntax highlighting and all the other cool stuff you need for programming, and it's extremely simple to use.
-You can also find it on the CSE computer lab machines.
+gedit is the default text editor in Ubuntu and its derivatives. It features syntax highlighting and all the other cool stuff you need for programming, and it's extremely simple to use. You can also find it on the CSE computer lab machines.
 
-gedit is recommended for beginners.
+We recommend <strong>gedit</strong> for beginners.
 
-Here is a link for gedit for Mac users:
-<a href=http://ftp.gnome.org/pub/GNOME/binaries/mac/gedit/2.30/gedit-2.30.2.dmg>gedit for Mac</a>
+Mac users, in their superiority complex, can feel satisfied in that <a href=http://ftp.gnome.org/pub/GNOME/binaries/mac/gedit/2.30/gedit-2.30.2.dmg>gedit is also available for Mac</a>.
 
 Make sure you change gedit's default configuration (Editor -> Preferences) to adhere to CSE's style guide.
 
 <h2>vi/vim</h2>
 vi vi vi, the text editor used by the devil himself!
 
-vi and vim (<em>vi i</em>mproved) are two text editors that are completely command line based. This means you can edit files whilst still in the command line! This also means that generally every installation of Linux will come with at least vi installed.
+vi and <strong>vim</strong> (<em>vi </em>i<em>m</em>proved) are two text editors that are completely command line based. This means you can edit files and never leave the comfort and safety of the command line! This also means that generally every installation of Linux will come with at least vi, usually vim, installed.
 
-vi/vim is <strong>not recommended</strong> for anyone who is not familiar with command lines.
+vi/vim is <strong>not recommended</strong> for anyone who is not familiar with command lines. 
 
-It is also <strong>not recommended</strong> for anyone with any remaining trace of a stable mind. vi/vim is extremely hard to learn, with a difficulty curve not unlike an immovable brick wall and learning it as painful as smashing your head repeatedly against said wall.
+It is also <strong>not recommended</strong> for anyone with any remaining trace of a stable mind. vi/vim is <strong>extremely difficult to learn</strong>, with a difficulty curve not unlike an immovable brick wall and learning it equivalent to moving past said wall by smashing your head repeatedly against it.
 
-However, if you are willing to put in the effort it takes to learn vi/vim, you will see why it is the preferred choice of text editor for programmers worldwide*.
-<sub>*Emacs? Wtf is Emacs?</sub>
+<strong>However,</strong> if you are willing to put in the effort it takes to learn vi/vim, you will see why it is the preferred choice of text editor for programmers worldwide.[[Emacs? Get the fuck out.]]
 
-Did you know this entire website is coded entirely in vim?
+<strong>Did you know:</strong> this entire website is coded entirely using vim.
 
 <h2>nano/pico</h2>
-The kiddy-friendly version of vi/vim.
+Known as the kiddy-friendly version of vi/vim. Essentially gedit, but in the command line!
 
-Essentially gedit/notepad, but in the command line!
+If you decide to skip on gedit and the bloodbath that is vim, opt for <strong>nano</strong>.
 
-If you decide to skip on gedit and the blood-bath that is vim, opt for nano.
-
-pico is basically a non-free (as in speech) version of nano, so don't use it.
+pico is basically a non-free[[Non-free as in speech - that is, it's free but not open source.]] version of nano, so don't use it.

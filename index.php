@@ -12,10 +12,11 @@ function getTemplate($template){
     return ob_get_clean();
 }
 
-function printSection($chapter_dir, $section){
+function printSection($chapter_dir, $section, $i){
     $section = explode("\n", getTemplate($chapter_dir.$section.".section"));
     $nl2br = true;
     $last  = true;
+    $in_pre = false;
 
     $string = "";
     $footnotes = array();
@@ -42,9 +43,11 @@ function printSection($chapter_dir, $section){
                 $nl2br = $last;
             } else if (preg_match("/^\[\[(.*)$/i", $line, $matches) > 0){
                 $string .= "<pre class='code'>".$matches[1];
+                $in_pre = true;
                 $nl2br = false;
-            } else if (preg_match("/(.*)\]\]$/i", $line, $matches) > 0){
+            } else if (preg_match("/(.*)\]\]$/i", $line, $matches) > 0 && $in_pre){
                 $string .= $matches[1]."</pre>";
+                $in_pre = false;
                 $nl2br = $last;
             } else if (preg_match("/^{{(.+)}}(!)?$/i", $line, $matches) > 0){
                 if ($matches[2] == "!"){
@@ -56,7 +59,7 @@ function printSection($chapter_dir, $section){
                 foreach ($matches[1] as $match){
                     array_push($footnotes, $match);
                     $footnote = count($footnotes);
-                    $line = preg_replace("/\[\[(.+?)\]\]/", "<sup class='footnote'><a name='head-$footnote' class='anchor'></a><a href='#foot-$footnote'>$footnote</a></sup>", $line, 1);
+                    $line = preg_replace("/\[\[(.+?)\]\]/", "<sup class='footnote'><a name='head-$i-$footnote' class='anchor'></a><a href='#foot-$i-$footnote'>$footnote</a></sup>", $line, 1);
                 }
                 $string .= $line;
             } else {
@@ -74,9 +77,9 @@ function printSection($chapter_dir, $section){
 
     if (count($footnotes) > 0){
         $string .= "<hr class='footnote'/>";
-        foreach ($footnotes as $i => $footnote){
-            $i += 1;
-            $string .= "<div class='footnote'><a name='foot-$i' class='anchor'></a><a href='#head-$i' class='footanchor'>^$i</a>$footnote</div>\n";
+        foreach ($footnotes as $j => $footnote){
+            $j += 1;
+            $string .= "<div class='footnote'><a name='foot-$i-$j' class='anchor'></a><a href='#head-$i-$j' class='footanchor'>^$j</a>$footnote</div>\n";
         }
     }
 
@@ -183,12 +186,14 @@ if (isset($_GET['link'])){
 
         // Add each section to the content
         $content = "";
+        $i = 0;
         foreach ($section_list as $link => $section){
+            $i++;
             if ($link != ""){
                 $content .= "<a name='$link'></a>";
                 $content .= "<div class='section'>";
                 $content .= "<h1>$section</h1>";
-                $content .= printSection(CHAPTERS_DIR.$_GET['link']."/", $link);
+                $content .= printSection(CHAPTERS_DIR.$_GET['link']."/", $link, $i);
                 $content .= "</div>";
             }
         }

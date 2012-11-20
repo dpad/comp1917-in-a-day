@@ -1,41 +1,50 @@
 {{NL2BR}}
-<h2>gcc</h2>
-gcc (the GNU C Compiler) is what we will be using to compile our code. 
+We will be using a program known as gcc (the <strong>G</strong>NU <strong>C C</strong>ompiler) to compile our code into programs.
 
-<strong>Linux users should already have it.</strong> 
-[[steve$ which gcc
+<h2>Compile? What?</h2>
+We'll get to that. Don't worry. First, we need to check if you have it installed:
+
+<h2>Linux</h2>
+Note that generally Linux distributions come with gcc pre-installed. You can check whether you have it installed:
+[[steve$ <strong>which gcc</strong>
 /usr/bin/gcc
 ]]
-Means it is installed. But:
-[[steve$ which gcc
+[[steve$ <strong>which gcc</strong>
 gcc not found
-steve$ sudo apt-get install gcc
+steve$ <strong>sudo apt-get install gcc</strong>
 ... installs gcc ...
 ]]
-Note that the apt-get command only works in Ubuntu (and perhaps some other Linux distributions).
+Note that the "sudo apt-get" command only works in Ubuntu (and similar distributions). You'll need to google how to install gcc on your own distribution if you do not already have it.
 
+<h2>Mac</h2>
 Mac users will need to install X Code which is available from the Apple website. Once X Code is installed, gcc can be run from the command line.
 
-There are some options that should be used when compiling your C code with gcc.
-Options follow the command on the command line and are usually prefixed with a '-'. 
+<h2>A note on compiling</h2>
+There are some options that should be used when compiling your C code with gcc. Options are arguments, they follow the command and are usually prefixed with a <strong>-</strong>. 
 
 When compiling code with gcc for COMP1917, your command line should look like this:
-[[steve$ gcc -Wall -Werror -O -o myprogram myprogram.c
+[[steve$ <strong>gcc -Wall -Werror -O -o myprogram myprogram.c</strong>
 ]]
-gcc: the GNU C Compiler
--Wall: show all warnings
--Werror: all warnings are treated as errors
--O: automatically optimises your code to improve performance
--o myprogram: produce a binary program named &quot;myprogram&quot;
-myprogram.c: the file containing the c code (source code) for the program.
+That should make no sense to you right now. If it does, you're a magical genius and should be applauded by all your friends and enemies. Or you're a cheating bastard who already knows how to do this.
+
+Here's a quick explanation:
+<strong>gcc</strong>: the command we're running, specifically the GNU C Compiler
+<strong>-Wall</strong>: show all warnings
+<strong>-Werror</strong>: all warnings are treated as errors 
+<strong>-O</strong>: automatically optimise the code to improve performance
+<strong>-o myprogram</strong>: produce a binary executable named &quot;myprogram&quot;
+<strong>myprogram.c</strong>: the file containing the C code (source code) for the program
 
 A <strong>warning</strong> is when the compiler finds something unusual in your code, but it is still capable of being compiled.
 
 An <strong>error</strong> is when the compiler finds a mistake in your code which means that it cannot be compiled.
 
-<h2>Why do we treat all warnings as errors?</h2>
+<h2>Why treat all warnings as errors?</h2>
 Even though warnings don't mean your code is broken, when a warning is invoked it is likely that your code doesn't mean exactly what you think it means. 
 
-Maybe you forgot something, maybe you used valid C syntax in an inappropriate way.
+Maybe you forgot something, maybe you used valid C syntax in an inappropriate way, or maybe you're just stupid. The compiler likes to warn against that.
 
 Treating warnings as errors means that your code will not compile with warnings, so you have to deal with any problems early, leaving your code easier to debug.
+
+<h2>Debug? Slow down with the technobabble!</h2>
+Debug basically means to fix "bugs" (basically, errors) in your program. Don't worry, all this stuff will be explained in time.
