@@ -7,8 +7,7 @@ Now that you have a Linux distribution installed (or are running Mac OSX), we ca
 An example for an older version of Ubuntu might be to begin by clicking on System -> Preferences -> Keyboard Shortcuts. Add a shortcut for "Terminal", something like Alt-T is recommended. You should now be able to open the terminal (a black rectangle) by pressing this shortcut. If not, you can still open the Terminal by clicking on Applications -> Accessories -> Terminal.
 
 Once you know how to open the terminal, do so. You will be greeted by a black rectangle with text like this:
-[[steve$
-]]
+[[steve$]]
 Isn't that phenomenally exciting?
 As bland as this may look, most of your work for COMP1917 will be done in this black box. 
 
@@ -17,40 +16,40 @@ The terminal is basically a simple way of interacting with your computer. It get
 
 <h2>Using the terminal</h2>
 Before we begin, notice the blinking white block. This is your "prompt", that is, where you type in commands. Try the command shown below (write the text after steve$)
-[[steve$ <strong>pwd</strong>
+[[steve$ pwd
 /home/steve]]
 This is the directory you are currently in, also known as your "working" directory. In fact, "pwd" stands for "print working directory". A directory is the Linux nerd's name for a folder.
 
 Below are the files and directories currently inside your working directory. "ls" stands for "list".
-[[steve$ <strong>ls</strong>
+[[steve$ ls
 Desktop
 Documents
 Music]]
 You can move to different directories. This moves you into the Documents directory, so now you are at /home/yourusername/Documents, or ~/Documents in shorthand.
-[[steve$ <strong>cd Documents</strong>
-steve$ <strong>pwd</strong>
+[[steve$ cd Documents
+steve$ pwd
 /home/steve/Documents
-steve$ <strong>ls</strong>
+steve$ ls
 assignment.txt]]
 /home/yourusername is your home diretory. If you're lazy, you can type <strong>~</strong> instead, so that ~ is your home diretory and ~dan is dan's home diretory.
-[[steve$ <strong>cd ~dan</strong>
-steve$ <strong>pwd</strong>
+[[steve$ cd ~dan
+steve$ pwd
 /home/dan
-steve$ <strong>cd ~</strong>
-steve$ <strong>pwd</strong>
+steve$ cd ~
+steve$ pwd
 /home/steve]]
 You can create directories! Here, we create a directory called "comp1917". "mkdir" stands for "make directory".
-[[steve$ <strong>cd Documents</strong>
-steve$ <strong>mkdir comp1917</strong>
-steve$ <strong>ls</strong>
+[[steve$ cd Documents
+steve$ mkdir comp1917
+steve$ ls
 assignment.txt
 comp1917]]
 You can also move up the directory structure.
-[[steve$ <strong>cd comp1917</strong>
-steve$ <strong>pwd</strong>
+[[steve$ cd comp1917
+steve$ pwd
 /home/steve/Documents/comp1917
-steve$ <strong>cd ..</strong>
-steve$ <strong>pwd</strong>
+steve$ cd ..
+steve$ pwd
 /home/steve/Documents]]
 In this example we moved around in different directories. Make sure you remember the following shorthand symbols:
 <strong>~</strong> means /home/yourusername
@@ -72,8 +71,7 @@ If you want to run the last command you typed again, simply press the up arrow k
 
 <h2>Man up!</h2>
 If you need to know what a given command does, simply run the command "man" with an argument of your command. The "man" command runs the "man" program, short for "<strong>man</strong>ual". Go ahead and run it now:
-
-[[steve$ <strong>man</strong>
+[[steve$ man
 What manual page do you want?]]
 An "<strong>argument</strong>" is something you give to the command, a form of input. In the terminal, you can give arguments to commands by simply typing them after the command name.
 
@@ -82,7 +80,7 @@ For example, when you use the "cd" command, you have to specify a directory for 
 Depending on the command/program you run, it may or many not accept, expect, or even rely on arguments. In order to know what arguments it accepts, you should consult its <strong>man</strong>ual page. The "man" command takes one argument: the page you want to read.[[Actually, it takes many, many more arguments, but none that you will need to use for quite some time yet.]]
 
 So, in a similar sense, if you want to know what "cd" does, you can pass "cd" as an argument into the "man" command, like so:
-[[steve$ <strong>man cd</strong>
+[[steve$ man cd
 ... lots of text in here ...]]
 Press the up and down arrow keys to read the manual, or "q" to exit out of the manual.
 
@@ -103,29 +101,28 @@ For example, let's say we have a directory called "antidisestablishmentarianism"
 Now let's say we want to go to that directory.
 
 Rather than typing this:
-[[steve$ <strong>cd antidisestablishmen screw this</strong>
+[[steve$ cd antidisestablishmen screw this
 cd:cd:10: too many arguments]]
 We can instead do this:
-[[steve$ <strong>cd an</strong>[TAB KEY][ENTER]
-steve$ <strong>pwd</strong>
-/home/steve/antidisestablishmentarianism
-]]
+[[steve$ cd an[TAB KEY][ENTER]
+steve$ pwd
+/home/steve/antidisestablishmentarianism]]
 Holy fucking shit.
 
 {{img/explosion.png|Look quickly! It's Michael Bay!}}
 
-But wait, what would happen if we had two directories, and one of them was called "antidisestablishmentawesome"??
-[[steve$ <strong>ls</strong>
+But wait, what would happen if we had two directories, and one of them was called "antidisestablishmentawesome"?
+[[steve$ ls
 antidisestablishmentawesome
 antidisestablishmentarianism
-steve$ <strong>cd an</strong>[TAB KEY]
-steve$ <strong>cd antidisestablishmenta</strong>]]
+steve$ cd an[TAB KEY]
+steve$ cd antidisestablishmenta]]
 Oh noes! It didn't complete the whole directory name and now we have wasted precious milliseconds of our lives that we'll never get back!
 
 Since we have two directories that both start with "an", the tab completion decided to fill in the rest of what you were typing, which was almost surely "antidisestablishmenta", but then there are two choices and so it left us to complete the rest.[[Note that this sort of behaviour, while default in some terminals, is not guaranteed to always be this way. Play around with tab completion in your terminal to see what it can and, most importantly, can't do for you.]]
 
 All you have to do now therefore is show the terminal which one you want by adding an extra character to differentiate between them. That is, if you add a "w":
-[[steve$ <strong>cd antidisestablishmentaw</strong>[TAB KEY]
+[[steve$ cd antidisestablishmentaw[TAB KEY]
 steve$ pwd 
 /home/steve/antidisestablishmentawesome]]
 Note that commands will not actually run until you press ENTER.

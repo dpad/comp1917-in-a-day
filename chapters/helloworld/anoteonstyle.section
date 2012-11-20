@@ -1,7 +1,6 @@
 {{NL2BR}}
-CSE has a style guide, and it is worth noting a few aspects of it now:
+CSE has a style guide, and it is again worth noting a few aspects of it:
 
-You lines of code should not be any longer than 70 characters. This includes comments. 
-gedit has the current column in the status bar on the bottom right corner.
+You lines of code should not be longer than 70 characters, including trailing comments. In practice, a maximum of 80 characters is generally good. Note that gedit has the current character column in the status bar on the bottom right corner of the screen. You can also set the "display right margin" option.
 
-Always indent your code when entering a new structure. A rule of thumb is, if you end a line with "{", indent the next line, and remove an indent on a line with "}".
+Always indent your code when entering a new structure. A rule of thumb is, if you end a line with "{", indent the next line, and remove an indent on a line with "}". You'll learn about structures soon.

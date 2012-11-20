@@ -1,44 +1,62 @@
 {{NL2BR}}
-To keep the computer gods happy, we must begin with writing a helloworld program. This is a program that does nothing more than print the text &quot;Hello World!&quot;. So without further ado:
-{{helloworld.c}}
-Make a directory for your C programs and navigate to it, then create a new file in gedit (or your preferred text editor):
-[[steve$ mkdir helloworld
+To appease the computer gods, we must begin by writing a "Hello, World!" program.  This is an ancient ritual, passed down by generation upon generation of programmers, which must be performed any time a programmer begins to learn a new programming language.
+
+The "Hello, World!" program is a program that does nothing more than print out the text "Hello, World!", in all its textual glory.
+
+So without further ado, open up your preferred text editor, type in the following (without the line numbers), and save it as "helloworld.c".
+{{helloworld.c|c}}!
+If you're a bit lost, you can follow this procedure: make a directory for your C programs and navigate to it, then create a new file in gedit (or your preferred text editor):
+[[bash|steve$ mkdir helloworld
 steve$ cd helloworld
-steve$ gedit helloworld.c
-]]
+steve$ gedit helloworld.c]]
 Save the file in your C directory with the name helloworld.c.
 
-Now we can compile it with gcc:
+Now we can compile it with gcc. Remember this command?
 [[steve$ gcc -Wall -Werror -O -o helloworld helloworld.c
-]]
-And finally, we can run the program:
+.... compiles ....]]
+If there are any errors or warnings, simply make sure you typed the program in exactly.
+
+Finally, we can run the program. Remember that <strong>.</strong> is shorthand for "current directory".
 [[steve$ ./helloworld
-]]
+Hello, World!]]
 Congratulations! You just compiled and executed your first C program!
 
 {{img/patyourselfontheback.jpg|Pat yourself on the back!}}
 
 <h2>What does this mean!?</h2>
-Line 1:
-stdio.h is a header file that contains function definitions for functions used for reading and writing on the screen. 
-#include is a keyword in C that places the entire contents of the included file with the source code when it is compiled. It is essentially the same as copying all the code in the header file into your source file. This line is necessary in any program that reads from or writes to the command line (which will be most of your programs).
-
-Line 2:
-White space - C ignores white space (spaces, tabs and new lines). This means that you can space out your code as much as you like. This helps make it easy to read, so don't feel that you have to cram all your code into as little space as possible.
-
-Line 3:
-Beginning of definition of main function. In C, the main function is the only function that is called when the program is executed. Here is a breakdown of this line.
-int - (integer) the "return" type of this function. We'll learn more about this when we learn about functions.
-main - the name of the function
-(int argc, char *argv[]) - a list of arguments. For the main function, arguments are entered at the command line following the program name when the program is executed. argc is an integer that refers to the number of arguments given. argv is a list of strings that are the actual arguments.
-</div><div class="section warning packed"><em>Don't stress if none of this makes any sense to you yet.</em>
+</div><div class="section warning packed"><strong>Don't stress if these explanations make no sense to you yet.</strong>
 Keep reading through the course and more and more will begin to make sense.
 </div><div class="section">
-Line 4:
-A comment (something C ignores completely). Single line comments in C are started with "//". Comments can follow code. Multiline comments begin with /* and end with */. A useful debuging trick is using comments to disable certain parts of code so you can see which part is problematic.
+<h3>Line 1:</h3>
+<strong>#include</strong> is a keyword in C that places the entire contents of the included file into the source code when it is compiled. It is essentially the same as copy and pasting all the code in the included file into your code. 
 
-Line 5:
-printf - the f stands for formatted - but more on that later. printf is used to print text to standard output (in other words, the command line you're running the program in). The '\n' is a newline character (essentially what happens if you press ENTER in a text editor). '\' is used to escape certain characters to make special characters. '\n' is used very often.
+"stdio.h" is a <strong>header file</strong> that contains <strong>function definitions</strong> for <strong>functions</strong> used for reading and writing on the screen. 
 
-Line 7:
-Specifies the return value of the function. For the main function, it is always 0. This tells the operating system that the program terminated correctly.
+This specific line is necessary in any program that reads from or writes to the command line (in other words, pretty much every program you write in this course).
+
+<h3>Line 2:</h3>
+A blank line, also known as white space. C ignores white space (spaces, tabs and new lines). This means that you can space out your code as much as you like. This helps make it easy to read, so don't feel that you have to cram all your code into as little space as possible.
+
+<h3>Line 3:</h3>
+Beginning of definition of the "main" **function**.
+
+In C, the main function is the only function that is called when the program is executed. Here is a breakdown of this line.
+
+**int** - (integer) the "return" type of this function. We'll learn more about functions later.
+**main** - the name of the function
+**(int argc, char *argv[])** - a list of arguments. For the main function, arguments are entered at the command line following the program name.
+
+<h3>Line 4:</h3>
+This line is a comment. A **comment** is something C ignores completely. 
+
+Single line comments in C are started with "//". Comments can follow code on the same line. Multi-line comments begin with /* and end with */. 
+
+A useful debugging trick is using comments to disable certain parts of code so you can see which part is problematic. You'll learn more about debugging later.
+
+<h3>Line 5:</h3>
+**printf** - the f stands for formatted, but more on that later. 
+
+printf is used to print text to "standard output" (in other words, the command line you're running the program in). The '\n' is a newline character (essentially what happens if you press ENTER in a text editor). '\' is used to escape certain characters to make special characters. '\n' is used very often.
+
+<h3>Line 7:</h3>
+Specifies the return value of the function. For the main function, it should always be 0. This tells the operating system that the program terminated correctly.

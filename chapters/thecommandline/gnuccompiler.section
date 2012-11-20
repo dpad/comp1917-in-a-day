@@ -6,14 +6,12 @@ We'll get to that. Don't worry. First, we need to check if you have it installed
 
 <h2>Linux</h2>
 Note that generally Linux distributions come with gcc pre-installed. You can check whether you have it installed:
-[[steve$ <strong>which gcc</strong>
-/usr/bin/gcc
-]]
-[[steve$ <strong>which gcc</strong>
+[[steve$ which gcc
+/usr/bin/gcc]]
+[[steve$ which gcc
 gcc not found
-steve$ <strong>sudo apt-get install gcc</strong>
-... installs gcc ...
-]]
+steve$ sudo apt-get install gcc
+... installs gcc ...]]
 Note that the "sudo apt-get" command only works in Ubuntu (and similar distributions). You'll need to google how to install gcc on your own distribution if you do not already have it.
 
 <h2>Mac</h2>
@@ -23,8 +21,7 @@ Mac users will need to install X Code which is available from the Apple website.
 There are some options that should be used when compiling your C code with gcc. Options are arguments, they follow the command and are usually prefixed with a <strong>-</strong>. 
 
 When compiling code with gcc for COMP1917, your command line should look like this:
-[[steve$ <strong>gcc -Wall -Werror -O -o myprogram myprogram.c</strong>
-]]
+[[steve$ gcc -Wall -Werror -O -o myprogram myprogram.c]]
 That should make no sense to you right now. If it does, you're a magical genius and should be applauded by all your friends and enemies. Or you're a cheating bastard who already knows how to do this.
 
 Here's a quick explanation:

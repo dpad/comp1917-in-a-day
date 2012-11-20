@@ -16,7 +16,7 @@ h1 {
     letter-spacing:-2px;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family:Verdana, sans-serif;
     text-transform:uppercase;
     font-weight:bold;
@@ -26,6 +26,12 @@ h2 {
     font-size:16px;
     line-height:21px;
     margin: 30px 0px -10px 0px;
+}
+
+h3 {
+    font-size:13px;
+    line-height:15px;
+    margin: 10px 0px -20px 0px;
 }
 
 h1#header {
@@ -71,13 +77,17 @@ div.packed, div.section.packed, div.warning.packed, div.small.packed {
     margin: -30px auto;
 }
 
-.code {
+div.code, pre.code {
     display:block;
     background-color:rgba(255, 255, 255, 8);
     margin: 10px 0px;
     padding:10px;
 }
-pre {
+div.code ol {
+    margin: 0px 0px 0px 50px;
+}
+
+pre, pre * {
     font-family:monospace;
 }
 

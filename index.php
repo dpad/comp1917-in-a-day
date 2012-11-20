@@ -6,6 +6,8 @@
   Index page.
 ============================================*/
 
+include_once 'geshi/geshi.php';
+
 function getTemplate($template){
     ob_start();
     require_once($template);
@@ -41,19 +43,34 @@ function printSection($chapter_dir, $section, $i){
             } else if (preg_match("/<\/pre>$/i", $line) > 0){
                 $string .= $line;
                 $nl2br = $last;
-            } else if (preg_match("/^\[\[(.*)$/i", $line, $matches) > 0){
-                $string .= "<pre class='code'>".$matches[1];
+            } else if (preg_match("/^\[\[((.*?)\|)?(.*)$/i", $line, $matches) > 0){
+                $pre = "";
+                if ($matches[1] == "|"){
+                    $pre_syntax = false;
+                } else {
+                    $pre_syntax = $matches[2];
+                }
+                $pre .= $matches[3];
                 $in_pre = true;
                 $nl2br = false;
             } else if (preg_match("/(.*)\]\]$/i", $line, $matches) > 0 && $in_pre){
-                $string .= $matches[1]."</pre>";
+                if ($matches[1] != ""){
+                    $pre .= "\n".$matches[1];
+                }
+                $pre = codeToHtml($pre, $pre_syntax);
+                $string .= $pre;
                 $in_pre = false;
+                $pre = "";
+                $pre_syntax = false;
                 $nl2br = $last;
-            } else if (preg_match("/^{{(.+)}}(!)?$/i", $line, $matches) > 0){
-                if ($matches[2] == "!"){
-                    $string .= codeToHtml($chapter_dir.$matches[1], false)."<br/>";
+            } else if (preg_match("/^{{(.+?)(\|(.+))?}}(!)?$/i", $line, $matches) > 0){
+                if ($matches[3] == ""){
+                    $matches[3] = false;
+                }
+                if ($matches[4] == "!"){
+                    $string .= fileToHtml($chapter_dir.$matches[1], false, $matches[3])."<br/>";
                 } else {
-                    $string .= codeToHtml($chapter_dir.$matches[1])."<br/>";
+                    $string .= fileToHtml($chapter_dir.$matches[1], true, $matches[3])."<br/>";
                 }
             } else if (preg_match_all("/\[\[(.+?)\]\]/", $line, $matches) > 0){
                 foreach ($matches[1] as $match){
@@ -63,7 +80,11 @@ function printSection($chapter_dir, $section, $i){
                 }
                 $string .= $line;
             } else {
-                $string .= $line;
+                if ($in_pre){
+                    $pre .= "\n".$line;
+                } else {
+                    $string .= $line;
+                }
             }
 
             if ($nl2br){
@@ -83,48 +104,51 @@ function printSection($chapter_dir, $section, $i){
         }
     }
 
+    $string = preg_replace("/\*\*(.+?)\*\*/", "<strong>\\1</strong>", $string);
+    $string = preg_replace("/\*\*\*(.+?)\*\*\*/", "<em>\\1</em>", $string);
+    $string = preg_replace("/___(.+?)___/", "<u>\\1</u>", $string);
+    $string = preg_replace("/\?\?\?(.+?)\?\?\?/", "<span style='color:red'>\\1</span>", $string);
+
     return $string;
 }
 
-function codeToHtml($code_file, $download = true){
+function fileToHtml($code_file, $download = true, $syntax = false){
     ob_start();
     require_once($code_file);
     $code = explode("\n", ob_get_clean());
+    array_pop($code);
+    $code = implode("\n", $code);
 
     if ($download){
-        $string = "<div class='code'><strong>Download: <a href='".FULL_DIR."$code_file'>$code_file</a></strong>";
-        $string .= "<br/><a href=\"javascript:toggleLineNos('".md5($code_file)."');\">Toggle line numbers</a><pre id='".md5($code_file)."lines'>";
-
-        $digits = 0;
-        $lines = sizeof($code);
-        while($lines >= 1){
-            $lines = $lines / 10;
-            $digits++;
-        }
-
-        foreach ($code as $i => $line){
-            if (!($i == sizeof($code)-1 && $line == "")){
-                $i = str_pad($i+1, $digits, "0", STR_PAD_LEFT);
-                $string .= $i.": ".htmlspecialchars($line)."\n";
-            }
-        }
+        $string = "<div class='code'><strong>Download: <a href='".FULL_DIR."$code_file'>$code_file</a></strong><br/><br/>";
     } else {
-        $string .= "<pre class='code'>";
+        $string = "<div class='code'>";
     }
 
-    // Annoying redundancy but saves us from having to embed jquery
-    if ($download){ $string .= "</pre><pre style='display:none;' id='".md5($code_file)."nolines'>"; }
-    foreach ($code as $i => $line){
-        if (!($i == sizeof($code)-1 && $line == "")){
-            $i = str_pad($i+1, $digits, "0", STR_PAD_LEFT);
-            $string .= htmlspecialchars($line)."\n";
-        }
+    return $string.codeToHtml($code, $syntax, false);
+}
+
+function codeToHtml($code, $syntax = false, $self = true){
+    if ($self){
+        $string = "<div class='code'>";
     }
 
-    $string .= "</pre>";
-    if ($download){
-        $string .= "</div>";
+    if ($syntax === ""){
+        $syntax = "bash";
     }
+    $code = new GeSHi($code, $syntax);
+    $code->set_overall_id(md5($code_file)."lines");
+    if ($syntax && ($syntax != "bash")){
+        $code->enable_line_numbers(GESHI_NORMAL_LINE_NUMBERS);
+        $code->set_overall_style('background:#fcfcfc; margin:-10px; color:#000;');
+        $code->set_line_style('background:#fff; padding-left:10px; border-left:1px solid #eee;');
+    } else {
+        $code->enable_line_numbers(false);
+        $code->set_line_style('background:#fff;');
+    }
+    $code->enable_keyword_links(false);
+    $string .= $code->parse_code();
+    $string .= "</div>";
 
     return $string;
 
@@ -225,9 +249,9 @@ if (isset($_GET['link'])){
     $content .= "<div class='section'>".$toc."</div>";
     $content .= "<div class='section'><p><h2>For the love of code...</h2>";
     $content .= "<pre id='heartoutnolines' class='code'>";
-    $content .= codeToHtml("heart.out", false);
+    $content .= fileToHtml("heart.out", false, false);
     $content .= "</pre>";
-    $content .= codeToHtml("heart.c");
+    $content .= fileToHtml("heart.c", true, "c");
     $content .= "</div>";
 
     // Build the layout
