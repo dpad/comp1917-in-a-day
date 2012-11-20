@@ -1,30 +1,31 @@
 For the sake of simplicity, we'll say that most of the computer users in the world, and likely you, fall into one of three groups:
 {{NONL2BR}}
 <ul>
-<li>Those who use Windows (XP, Vista, 7, etc.)</li>
+<li>Those who use Windows (XP, 7, and the shittier ones)</li>
 <li>Those who use Macs (OSX, and whatever other crap they put out)</li>
 <li>Those who use Linux</li>
 </ul>
 {{NL2BR}}
 All three of these things are known as <strong>operating systems</strong>.
 
-If you're still reading this chapter then it's likely you fall into one of the inferior first two groups. In this course, we'll teach you how to join the elite group of men and <s>women</s> men in the exhalted third group.
+<h2>So what?</h2>
+If you're still reading this chapter then it's likely you fall into one of the first two groups. In this course, we'll teach you how to join the elite group of men and <s>women</s> men in the exhalted third group.
 
 Although this course can likely be completed using either of the first two options, <em><u>it will be to your significant advantage</u></em>, <em>especially</em> if you are a Windows user, to learn to use a variant of the third option, <strong>Linux</strong>. CSE courses in general will assume you have some knowledge of Linux systems, and all CSE lab machines run Linux by default.
 
-<h2>But what is an Operating System?</h2>
-An operating system is, very simply put, the set of tools and mechanisms which allow you to run applications on your computer.
+<h2>Hang on, what's an Operating System?</h2>
+An operating system is, very simply put, the set of tools which allow you to run applications on your computer.
 
-Windows 7 is an operating system. Mac OSX is an operating system. The operating systems define what your computer can and cannot do, and provide applications with access to your computer (such as being able to access your hard drive, or your screen).
+Windows 7 is an operating system. Mac OSX is an operating system. The operating systems define what your computer can and cannot do, and provide applications with access to your computer's hardware (like the hard drive, the screen, the keyboard, or your mother).
 
-If you're a Windows user then you may know that every time you run an application, you essentially run a ".exe" file. But how does the computer know what to do with that file? The operating system takes care of figuring that out. If you're a Mac user then think of a related example so we don't have to bother figuring out how your terrible piece of over-designed junk works.
+If you're a Windows user then you may know that every time you run an application, you essentially run a ".exe" file. But how does the computer know what to do with that file? The operating system takes care of figuring that shit out. If you're a Mac user then simply imagine a relevant example, then throw your terrible piece of over-designed junk out the nearest window.
 
-<h2>Linux: Why it rocks bollocks</h2>
-<strong>Linux</strong> is a (somewhat misused) term for a collection of operating systems built upon the <a href='http://wikipedia.org/wiki/Linux_kernel'>Linux kernel</a> and <a href='http://wikipedia.org/wiki/GNU_Project'>GNU Project</a>. This is a complicated way of saying that some 20 odd years ago some university nerds around your age decided to build their own operating system for shits and giggles and eventually turned it into one of the most popular things to rock the world of computer science.
+<h2>Linux: Why it rocks the bollocks</h2>
+<strong>Linux</strong> is a somewhat misused term[[To appease to the neckbeards and Stallman fanboys out there, in truth we really should be calling Linux distributions as "GNU/Linux distributions", as they tend to be packaged together, or possibly "Unix-based operating systems". But for the sake of simplicity, we'll be referring to them only as Linux systems.]] for a collection of operating systems built upon the <a href='http://wikipedia.org/wiki/Linux_kernel'>Linux kernel</a> and <a href='http://wikipedia.org/wiki/GNU_Project'>GNU Project</a>. This is a complicated way of saying that some 20 odd years ago some university nerds around your age decided to build their own operating system for shits and giggles which eventually turned into one of the coolest things in the world of computer science.
 
-An important aspect of GNU/Linux operating systems are that they are <strong>free</strong>. Completely. You pay zilch, zero, nada. You may not realise it, but when you buy a computer with either Windows or Mac OSwhateverthefuck, there is a percentage of the fee going directly towards the price of running that operating system. 
+An important aspect of Linux operating systems is that they are <strong>free</strong>. Completely. Utterly. They cost zilch. Zero. Nada. You may not realise it, but when you buy a computer with either Windows or Mac OSsomethingorother, there is a percentage of the cost going directly towards the price of using that operating system. 
 
-GNU/Linux is also free in that you are free to do anything and everything you want with it, including modifying the operating system itself for your own purposes.[[Not that we expect you to be able to yet, or even to understand what it means to modify an operating system.]] You have the option to install whichever "flavour" of GNU/Linux you want, whenever you want, on whatever computer you want, in whatever way you want. This makes it exceptionally popular in the field of computer science as you are able to run whatever the fuck you want without any dictator deciding which way your computer should behave.
+Linux is also free in that you are free to do anything and everything you want with it, including modifying the operating system itself for your own purposes.[[Not that we expect you to be able to yet, or even to understand what it means to modify an operating system.]] You have the option to install whichever "flavour" of Linux you want, whenever you want, on whatever computer you want, in whatever way you want. This makes it exceptionally popular in the field of computer science as you are able to run whatever the fuck you want without any dictator deciding which way your computer should behave.
 
 {{img/mac_hitler.jpg|That means none of this shit.}}
 
@@ -33,10 +34,10 @@ GNU/Linux is also free in that you are free to do anything and everything you wa
 
 {{img/im_a_macfag.png|Hello, I'm a douchebag.}}
 
-The vast superiorities of running a GNU/Linux distribution as your operating system rather than Windows or Mac are already well-documented in numerous nerd battles throughout the internet so we will not bother replicating them here. The following points, however, are notworthy of mention:
+The vast superiorities of running a Linux distribution as your operating system rather than Windows or Mac are already well-documented in numerous nerd battles throughout the internet so we will not bother replicating them here. The following points, however, are notworthy of mention:
 {{NONL2BR}}
 <ul>
-<li>GNU/Linux is completely[[Technically not completely. Certain Linux kernels include "closed-source" parts such as specific drivers. Some GNU/Linux distributions, such as Gentoo, modify the Linux kernel to remove these parts in order to be able to call themselves <strong>completely</strong> free. Similarly, some distributions are not free of cost - some distributions are directly sold to enterprises with the cost going towards providing support.]] free and open source, and, much like <a href='/img/fezzes_are_cool.jpg' title='If you get this reference, then you, too, are cool.'>bowties and fezzes</a>, open source is cool.</li>
+<li>Linux is completely[[Technically not completely. Certain Linux kernels include "closed-source" parts such as specific drivers. Some Linux distributions, such as Gentoo, modify the Linux kernel to remove these parts in order to be able to call themselves <strong>completely</strong> free. Similarly, some distributions are not free of cost - some distributions are directly sold to enterprises with the cost going towards providing support.]] free and open source, and, much like <a href='/img/fezzes_are_cool.jpg' title='If you get this reference, then you, too, are cool.'>bowties and fezzes</a>, open source is cool.</li>
 <li>Linux has access to superior development platforms and standardised toolsets. Mmm buzzwords.</li>
 <li>You will require access to a powerful command line. Windows' command line is severely lacking.</li>
 <li>Courses in CSE are taught using Linux and will assume that you will be learning to use Linux. Furthermore, all computers in CSE labs run Linux by default.</li>
@@ -46,9 +47,9 @@ The vast superiorities of running a GNU/Linux distribution as your operating sys
 {{NL2BR}}
 
 <h2>Okay, you've convinced me. How do I get Linux?</h2>
-Unlike Windows and Mac, there is no single company developing every version of Linux. Everyone has their own idea of what an ideal operating system is, and as such many people and groups of people choose to develop their own versions of GNU/Linux, known as "GNU/Linux distributions".
+Unlike Windows and Mac, there is no single company developing every version of Linux. Everyone has their own idea of what an ideal operating system is, and as such many people and groups of people choose to develop their own versions of Linux, known as "Linux distributions".
 
-Some GNU/Linux distributions are better at different things than others, so you are encouraged to look up some of the more popular alternatives yourself. 
+Some Linux distributions are better at different things than others, so you are encouraged to look up some of the more popular alternatives yourself. 
 
 But you won't look it up, because, like us, you're a lazy fuck; after all, no truly motivated person would be reading a website claiming to teach an entire university course in a single day, would they?
 
@@ -81,4 +82,4 @@ If you don't like that idea, here are the other distributions we recommend:
 <h2>By the way...</h2>
 Did we also mention the official mascot of Linux is <a href='http://en.wikipedia.org/wiki/Tux'>Tux the penguin</a>? If you don't think that in itself is bad-ass then you have no heart.
 
-{{img/tux_is_no_ordinary_penguin.png|He's so cute!|300}}
+{{img/tux_is_no_ordinary_penguin.png|Cute penguins get more action than you.|300}}

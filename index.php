@@ -18,6 +18,7 @@ function printSection($chapter_dir, $section){
     $last  = true;
 
     $string = "";
+    $footnotes = array();
 
     foreach ($section as $line){
         if (preg_match("/^{{NL2BR}}$/i", $line) > 0){
@@ -52,7 +53,10 @@ function printSection($chapter_dir, $section){
                     $string .= codeToHtml($chapter_dir.$matches[1])."<br/>";
                 }
             } else if (preg_match("/\[\[(.+?)\]\]/", $line, $matches) > 0){
-                $string .= preg_replace("/\[\[(.+?)\]\]/", "<div class='footnote'>\\1</div>", $line);
+                array_push($footnotes, $matches[1]);
+                $footnote = count($footnotes);
+                $line = preg_replace("/\[\[(.+?)\]\]/", "<sup><a name='head-$footnote'></a><a href='#foot-$footnote'>$footnote</a></sup>", $line);
+                $string .= $line;
             } else {
                 $string .= $line;
             }
@@ -64,6 +68,11 @@ function printSection($chapter_dir, $section){
             }
 
         }
+    }
+
+    foreach ($footnotes as $i => $footnote){
+        $i += 1;
+        $string .= "<div class='footnote'><a name='foot-$i' href='#head-$i' class='footanchor'>$i</a>$footnote</div>\n";
     }
 
     return $string;
@@ -202,7 +211,7 @@ if (isset($_GET['link'])){
 
 } else {
 
-    $content = "<div class='section warning small'><strong>WARNING!</strong><br/>This guide contains strong language, hipster-bashing, blatant sexism, and other acts which may be perceived as inappropriate.<br/>If you can not tolerate pure awesomeness, have a weak stomach, or lack balls of steel, then don't say we didn't warn you.</div>";
+    $content = "<div class='section warning small'><strong>WARNING!</strong><br/>This guide contains strong language, hipster-bashing, parody machismo, and other acts which may be perceived as inappropriate.<br/>If you can not tolerate pure awesomeness, have a weak stomach, or lack balls of steel, then don't say we didn't warn you.</div>";
     $content .= "<div class='section'>".$toc."</div>";
     $content .= "<div class='section'><p><h2>For the love of code...</h2>";
     $content .= "<pre id='heartoutnolines' class='code'>";

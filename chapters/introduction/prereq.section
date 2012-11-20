@@ -1,5 +1,7 @@
-This course assumes no prior experience with programming of any kind. We aim to take you from zero knowledge to a fairly good base in programming with C. For those of you have never heard of C, and have no idea what we mean by "programming", don't worry, we've got you covered too.
+This course assumes no prior experience with programming of any kind. We aim to take you from zero knowledge to a fairly good base in <s>programming</s> bad-assery with C. For those of you have never heard of C, and have no idea what we mean by "programming", don't worry, we've got your asses covered too.
 
-Those with previous programming knowledge, but none in C, may want to skim through most of the chapters to gain knowledge in C syntax. Of particular note are the chapters about <strong>memory</strong> and <strong>pointers</strong>, as these are important aspects of C not generally found in higher-level programming. Please also pay close attention to the information about <strong>style</strong>. 
+Those with previous programming knowledge, but none in C, may want to skim through most of the chapters to gain knowledge in C syntax. Of particular note are the chapters about <strong>memory</strong> and <strong>pointers</strong>, as these are important aspects of C not generally found in higher-level programming. Pay close attention to the information about <strong>style</strong>, because we expect you to program like classy gentlemen here. 
 
 Those with previous C knowledge may skip through most of the course, but reading through the information on style is important, as following style guidelines is a major part of COMP1917.
+
+Finally, as this course is primarily <s>stolen</s> derived from the COMP1917 syllabus, we will assume you are a first year student in the School of Computer Science at UNSW. If you're not, then pretend you are.
