@@ -52,7 +52,7 @@ div.section {
     line-height:23px;
 }
 
-ul {
+ul, ol {
     margin: 0px 20px;
 }
 
@@ -197,5 +197,20 @@ div.footnote {
 div.footnote a.footanchor {
     text-decoration:none;
     display:inline-block;
-    width: 15px;
+    width: 25px;
+}
+
+sup.footnote, div.footnote {
+    position:relative;
+}
+
+sup.footnote a.anchor, div.footnote a.anchor {
+    position:absolute;
+    top: -50px;
+}
+
+hr.footnote {
+    border:0px;
+    border-top: 1px solid #aaa;
+    margin: 50px 0px 20px 0px;
 }

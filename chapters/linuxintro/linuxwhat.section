@@ -23,63 +23,68 @@ If you're a Windows user then you may know that every time you run an applicatio
 <h2>Linux: Why it rocks the bollocks</h2>
 <strong>Linux</strong> is a somewhat misused term[[To appease to the neckbeards and Stallman fanboys out there, in truth we really should be calling Linux distributions as "GNU/Linux distributions", as they tend to be packaged together, or possibly "Unix-based operating systems". But for the sake of simplicity, we'll be referring to them only as Linux systems.]] for a collection of operating systems built upon the <a href='http://wikipedia.org/wiki/Linux_kernel'>Linux kernel</a> and <a href='http://wikipedia.org/wiki/GNU_Project'>GNU Project</a>. This is a complicated way of saying that some 20 odd years ago some university nerds around your age decided to build their own operating system for shits and giggles which eventually turned into one of the coolest things in the world of computer science.
 
-An important aspect of Linux operating systems is that they are <strong>free</strong>. Completely. Utterly. They cost zilch. Zero. Nada. You may not realise it, but when you buy a computer with either Windows or Mac OSsomethingorother, there is a percentage of the cost going directly towards the price of using that operating system. 
+An important aspect of Linux operating systems is that they are <strong>free</strong>. Completely, utterly free. They cost zilch. Zero. Nada. You may not realise it, but when you buy a computer with either Windows or Mac OSsomethingorother, there is a percentage of the cost going directly towards the price of using that operating system. 
 
-Linux is also free in that you are free to do anything and everything you want with it, including modifying the operating system itself for your own purposes.[[Not that we expect you to be able to yet, or even to understand what it means to modify an operating system.]] You have the option to install whichever "flavour" of Linux you want, whenever you want, on whatever computer you want, in whatever way you want. This makes it exceptionally popular in the field of computer science as you are able to run whatever the fuck you want without any dictator deciding which way your computer should behave.
+Linux is also free in that you are free to do anything and everything you want with it, including modifying the operating system itself for your own purposes.[[Not that we expect you to be able to yet, or even to understand what it means to modify an operating system.]] You have the option to install whichever "flavour" of Linux you want, whenever you want, on whatever computer it may support, in whatever way you want. This makes it exceptionally popular in the field of computer science as you are able to run whatever the hell you want without some turtleneck bitch dictating exactly how your computer should behave.
 
-{{img/mac_hitler.jpg|That means none of this shit.}}
+{{img/steve_jobs_pointing.jpg|Get back in line, citizen!}}
 
 <h2>Why you should care</h2>
-<em>Pfft,</em> you scoff, <em>I am well-established financially and can afford to buy overpriced flashy hipster products which cater to my secret desire to be spoon-fed and give me the illusion of freedom. How dare you insult me with your lowly peasantries?</em>
+<em>"Pfft,"</em> you scoff, <em>"I am well-established financially and can afford to buy overpriced trinkets to satisfy my deep desire to be spoon-fed while maintaining my illusion of freedom. How dare you push me with your lowly peasantries?"</em>
 
 {{img/im_a_macfag.png|Hello, I'm a douchebag.}}
 
-The vast superiorities of running a Linux distribution as your operating system rather than Windows or Mac are already well-documented in numerous nerd battles throughout the internet so we will not bother replicating them here. The following points, however, are notworthy of mention:
+The vast superiorities of running a Linux distribution as your operating system rather than Windows or Mac are already well-documented in nerd battles throughout the internet so we will not bother replicating them here. The following points, however, are notworthy of mention:
 {{NONL2BR}}
 <ul>
-<li>Linux is completely[[Technically not completely. Certain Linux kernels include "closed-source" parts such as specific drivers. Some Linux distributions, such as Gentoo, modify the Linux kernel to remove these parts in order to be able to call themselves <strong>completely</strong> free. Similarly, some distributions are not free of cost - some distributions are directly sold to enterprises with the cost going towards providing support.]] free and open source, and, much like <a href='/img/fezzes_are_cool.jpg' title='If you get this reference, then you, too, are cool.'>bowties and fezzes</a>, open source is cool.</li>
-<li>Linux has access to superior development platforms and standardised toolsets. Mmm buzzwords.</li>
+<li>Linux is completely[[Technically not completely. Certain Linux kernels include "closed-source" parts such as specific drivers. Some Linux distributions, such as Gentoo, modify the Linux kernel to remove these parts in order to be able to call themselves <strong>completely</strong> free. Similarly, some distributions are not free of cost - some distributions are directly sold to enterprises with the cost going towards providing support.]] free and open source[["Open source" means you can directly view the source code comprising some piece of software, in this case the Linux operating system you choose.]], and, much like <a href='/img/fezzes_are_cool.jpg' title='If you get this reference, then you, too, are cool.'>bowties and fezzes</a>, open source is cool.</li>
+<li>Linux has access to subjectively superior development platforms and standardised toolsets.</li>
 <li>You will require access to a powerful command line. Windows' command line is severely lacking.</li>
 <li>Courses in CSE are taught using Linux and will assume that you will be learning to use Linux. Furthermore, all computers in CSE labs run Linux by default.</li>
-<li>Linux is used in over 90% of the world's fastest supercomputers, including in the top 10 fastest. Needless to say, performance in Linux far outweighs that of Windows or Mac.</li>
+<li>Linux is used in over 90% of the world's fastest supercomputers, including in the top 10 fastest. If that isn't bad-ass enough for you, then get out.</li>
 <li>Learning to use Linux will teach you far more about computers than you can imagine, and get you laid.[[Your mileage may vary.]]</li>
 </ul>
 {{NL2BR}}
 
-<h2>Okay, you've convinced me. How do I get Linux?</h2>
-Unlike Windows and Mac, there is no single company developing every version of Linux. Everyone has their own idea of what an ideal operating system is, and as such many people and groups of people choose to develop their own versions of Linux, known as "Linux distributions".
+<h2>Okay, you've convinced me. How do I get the Linux?</h2>
+Unlike Windows and Mac, there is no single company developing every version of Linux. Everyone has their own idea of what an ideal operating system is, and as such many people and groups of people choose to develop their own versions of Linux, known as "<strong>Linux distributions</strong>".
 
 Some Linux distributions are better at different things than others, so you are encouraged to look up some of the more popular alternatives yourself. 
 
-But you won't look it up, because, like us, you're a lazy fuck; after all, no truly motivated person would be reading a website claiming to teach an entire university course in a single day, would they?
+But you're not going to look it up, are you, you lazy shit? After all, no truly motivated person would be reading a website claiming to teach an entire university course in a single day, would they?
 
 So, if you're still stuck on choosing a Linux distribution, then take our advice and choose:
 
-<a href='http://www.ubuntu.com'>Ubuntu</a>
+<a href='http://www.xubuntu.org'>
+{{img/xubuntu.png|Xubuntu, an Ubuntu-based Linux distribution}}
+</a>
 
-<h2>Why should I use Ubuntu?</h2>
+<h2>Why should I use Xubuntu?</h2>
 Because fuck you is why.
 
 <h2>No, really, why?</h2>
 The basic gist of it is this:
 {{NONL2BR}}
 <ul>
-<li>Ubuntu is easy to install and easy to use.</li>
-<li>Ubuntu is currently the most popular Linux distribution in use.</li>
+<li>Xubuntu is easy to install and easy to use.</li>
+<li>Ubuntu (which Xubuntu is built on) is currently one of the most popular Linux distribution in use.</li>
+<li>Xubuntu is essentially Ubuntu without the poor design choices.</li>
 <li>There is a large support community, if you ever get stuck.</li>
-<li>CSE provides an easy-to-install virtual machine set up with Ubuntu. See the next section for more details.</li>
 </ul>
 {{NL2BR}}
 
-If you don't like that idea, here are the other distributions we recommend:
+If you don't like that idea, here are some other distributions we recommend:
 {{NONL2BR}}
 <ul>
-<li><a href='http://www.xubuntu.org'>Xubuntu</a> is Ubuntu minus the recent bullshit developments in the user interface. Also, it comes with an application dock by default, so Macfags can feel right at home.</li>
-<li><a href='http://www.linuxmint.com'>Linux Mint</a> is an easy-to-use works-out-of-the-box distribution which looks familiar to Windows users, and has recently overtaken Ubuntu in popularity.</li>
+<li><a href='http://www.ubuntu.com'>Ubuntu</a> is arguably the most popular Linux distribution of all time. Unfortunately, due to some recent poor design decisions, Ubuntu is quickly falling behind in popularity. Ubuntu-based distributions remain strong though thanks to its large community.</li>
+<li><a href='http://www.linuxmint.com'>Linux Mint</a> is an easy-to-use works-out-of-the-box distribution which looks familiar to Windows users, and has recently become the most popular distribution available for beginners. Linux Mint was itself originally based on Ubuntu.</li>
+<li><a href='http://www.debian.org'>Debian</a> is the grand-daddy of a lot of popular distributions, including all of the ones mentioned above. It is known for its stability, but also for its relative age compared to the others (who like to live on the edge with newer but less tested designs). It is a good choice in general but perhaps a little less beginner-friendly than the others.</li>
 </ul>
 {{NL2BR}}
 
+Honestly, it doesn't matter much which one you pick as long as you do pick one and learn how to use the command line (we'll get to that later). Whichever one makes it easiest to do that (which, for now, we recommend Xubuntu) for you is the one you should use to begin with.
+
 <h2>By the way...</h2>
-Did we also mention the official mascot of Linux is <a href='http://en.wikipedia.org/wiki/Tux'>Tux the penguin</a>? If you don't think that in itself is bad-ass then you have no heart.
+Did we also mention the official mascot of Linux is <a href='http://en.wikipedia.org/wiki/Tux'>Tux the penguin</a>? If you don't think that in itself is awesome then you have no heart.
 
 {{img/tux_is_no_ordinary_penguin.png|Cute penguins get more action than you.|300}}

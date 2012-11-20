@@ -1,0 +1,38 @@
+{{NL2BR}}
+For this course we'll be assuming you're running some sort of Linux distribution. 
+
+Below, we outline some ways in which you can install <a href='http://www.xubuntu.org'>Xubuntu</a> on your home computer and give you some good keywords you can type into Google and figure shit out for yourself.
+
+If you can't be bothered, you can always just choose to work on your assignments at the CSE labs, which all run a Linux distribution by default.
+
+<h2>If you are a Windows user:</h2>
+Unlike Macfags, you pretty much <em>have</em> to install Linux if you want to do well in this course (unless, of course, you're willing to spend all of your free time in the CSE labs, but surely your mother's basement is far more comfortable).
+
+Windows users can choose any of these three options:
+{{NONL2BR}}
+<ul>
+<li>Virtual machine &mdash; essentially running Linux while inside Windows. It usually runs a lot slower and you may encounter other issues.</li>
+<li>Dual-boot &mdash; this means having both Windows and Linux on your computer <em>at the same time</em></li>
+<li>HARDCORE MODE &mdash; erasing Windows from your life entirely and converting to the Church of Linux (requires balls of steel)</li>
+</ul>
+{{NL2BR}}
+
+The easiest procedure to install in dual-boot mode is as below:
+{{NONL2BR}}
+<ol>
+<li>Download a copy of the Xubuntu disc image.</li>
+<li>Burn the image onto a CD. Look up <a href='http://www.imgburn.com'>ImgBurn</a> if you don't know how.</li>
+<li>Put the CD into your computer and restart it.</li>
+<li>Follow the instructions, making sure you pay close attention to the partition so that you correctly set up Linux as a dual-boot environment. <strong>WARNING:</strong> Pay attention, or you will mess with and possibly lose all of your existing documents.</li>
+<li>If you just go back to Windows, you'll need to figure out how to change the boot order so that you can boot from CD. Google that shit.</li>
+</ol>
+{{NL2BR}}
+
+<h2>If you are a Mac OSX user:</h2>
+Mac OSX, while still being a steaming pile of dictated manure, has the added benefit that it is Unix-based. Linux is also Unix-based, and as such you should be able to follow along with most of the course, although you too are probably better off running a Linux distribution. Then again, you are also probably better off smashing your overpriced novelty brick against a wall to redeem yourself from the insult of succumbing to Apple's will.
+
+Use CMD+SPACE to open spotlight. Type &quot;terminal&quot; into the search field. Click on Terminal (the black box icon). You will be using this a lot throughout the course.
+NOTE: Even if you use a Mac, don't disregard the notes for Linux as this is the operating system that you will use on the CSE lab computers.
+
+<h2>If you are already a Linux user:</h2>
+Congratulations on using a civilised operating system! Have a cookie.

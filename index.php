@@ -52,10 +52,12 @@ function printSection($chapter_dir, $section){
                 } else {
                     $string .= codeToHtml($chapter_dir.$matches[1])."<br/>";
                 }
-            } else if (preg_match("/\[\[(.+?)\]\]/", $line, $matches) > 0){
-                array_push($footnotes, $matches[1]);
-                $footnote = count($footnotes);
-                $line = preg_replace("/\[\[(.+?)\]\]/", "<sup><a name='head-$footnote'></a><a href='#foot-$footnote'>$footnote</a></sup>", $line);
+            } else if (preg_match_all("/\[\[(.+?)\]\]/", $line, $matches) > 0){
+                foreach ($matches[1] as $match){
+                    array_push($footnotes, $match);
+                    $footnote = count($footnotes);
+                    $line = preg_replace("/\[\[(.+?)\]\]/", "<sup class='footnote'><a name='head-$footnote' class='anchor'></a><a href='#foot-$footnote'>$footnote</a></sup>", $line, 1);
+                }
                 $string .= $line;
             } else {
                 $string .= $line;
@@ -70,9 +72,12 @@ function printSection($chapter_dir, $section){
         }
     }
 
-    foreach ($footnotes as $i => $footnote){
-        $i += 1;
-        $string .= "<div class='footnote'><a name='foot-$i' href='#head-$i' class='footanchor'>$i</a>$footnote</div>\n";
+    if (count($footnotes) > 0){
+        $string .= "<hr class='footnote'/>";
+        foreach ($footnotes as $i => $footnote){
+            $i += 1;
+            $string .= "<div class='footnote'><a name='foot-$i' class='anchor'></a><a href='#head-$i' class='footanchor'>^$i</a>$footnote</div>\n";
+        }
     }
 
     return $string;
