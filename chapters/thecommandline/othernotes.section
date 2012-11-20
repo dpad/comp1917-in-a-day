@@ -7,7 +7,8 @@ Now that you have a Linux distribution installed (or are running Mac OSX), we ca
 An example for an older version of Ubuntu might be to begin by clicking on System -> Preferences -> Keyboard Shortcuts. Add a shortcut for "Terminal", something like Alt-T is recommended. You should now be able to open the terminal (a black rectangle) by pressing this shortcut. If not, you can still open the Terminal by clicking on Applications -> Accessories -> Terminal.
 
 Once you know how to open the terminal, do so. You will be greeted by a black rectangle with text like this:
-[[steve$]]
+[[steve$
+]]
 Isn't that phenomenally exciting?
 As bland as this may look, most of your work for COMP1917 will be done in this black box. 
 

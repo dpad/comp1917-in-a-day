@@ -21,7 +21,7 @@ Windows 7 is an operating system. Mac OSX is an operating system. The operating 
 If you're a Windows user then you may know that every time you run an application, you essentially run a ".exe" file. But how does the computer know what to do with that file? The operating system takes care of figuring that shit out. If you're a Mac user then simply imagine a relevant example, then throw your terrible piece of over-designed junk out the nearest window.
 
 <h2>Linux: Why it rocks the bollocks</h2>
-<strong>Linux</strong> is a somewhat misused term[[To appease to the neckbeards and Stallman fanboys out there, in truth we really should be calling Linux distributions as "GNU/Linux distributions", as they tend to be packaged together, or possibly "Unix-based operating systems". But for the sake of simplicity, we'll be referring to them only as Linux systems.]] for a collection of operating systems built upon the <a href='http://wikipedia.org/wiki/Linux_kernel'>Linux kernel</a> and <a href='http://wikipedia.org/wiki/GNU_Project'>GNU Project</a>. This is a complicated way of saying that some 20 odd years ago some university nerds around your age decided to build their own operating system for shits and giggles which eventually turned into one of the coolest things in the world of computer science.
+<strong>Linux</strong> is a somewhat misused term[[To appease to the neckbeards and Stallman fanboys out there, in truth we really should be calling Linux distributions as "GNU/Linux distributions", as they tend to be packaged together, or possibly "Unix-based operating systems". But for the sake of simplicity, we'll be referring to them only as Linux distributions.]] for a collection of operating systems built upon the <a href='http://wikipedia.org/wiki/Linux_kernel'>Linux kernel</a> and <a href='http://wikipedia.org/wiki/GNU_Project'>GNU Project</a>. This is a complicated way of saying that some 20 odd years ago some university nerds around your age decided to build their own operating system for shits and giggles which eventually turned into one of the coolest things in the world of computer science.
 
 An important aspect of Linux operating systems is that they are <strong>free</strong>. Completely, utterly free. They cost zilch. Zero. Nada. You may not realise it, but when you buy a computer with either Windows or Mac OSsomethingorother, there is a percentage of the cost going directly towards the price of using that operating system. 
 
@@ -67,7 +67,7 @@ The basic gist of it is this:
 {{NONL2BR}}
 <ul>
 <li>Xubuntu is easy to install and easy to use.</li>
-<li>Ubuntu (which Xubuntu is built on) is currently one of the most popular Linux distribution in use.</li>
+<li>Ubuntu (which Xubuntu is built on) is currently one of the most popular Linux distributions in use.</li>
 <li>Xubuntu is essentially Ubuntu without the poor design choices.</li>
 <li>There is a large support community, if you ever get stuck.</li>
 </ul>
