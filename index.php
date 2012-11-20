@@ -20,6 +20,8 @@ function printSection($chapter_dir, $section, $i){
     $last  = true;
     $in_pre = false;
 
+    $skip_nl2br = false;
+
     $string = "";
     $footnotes = array();
 
@@ -63,8 +65,8 @@ function printSection($chapter_dir, $section, $i){
                 $pre = "";
                 $pre_syntax = false;
                 $nl2br = $last;
-            } else if (preg_match("/^{{(.+?)(\|(.+))?}}(!)?$/i", $line, $matches) > 0){
-                if ($matches[3] == ""){
+            } else if (preg_match("/^{{(.+?)(\|(.*?))?}}(!)?$/i", $line, $matches) > 0){
+                if ($matches[2] == "|"){
                     $matches[3] = false;
                 }
                 if ($matches[4] == "!"){
@@ -72,6 +74,7 @@ function printSection($chapter_dir, $section, $i){
                 } else {
                     $string .= fileToHtml($chapter_dir.$matches[1], true, $matches[3])."<br/>";
                 }
+                $skip_nl2br = true;
             } else if (preg_match_all("/\[\[(.+?)\]\]/", $line, $matches) > 0){
                 foreach ($matches[1] as $match){
                     array_push($footnotes, $match);
@@ -87,10 +90,11 @@ function printSection($chapter_dir, $section, $i){
                 }
             }
 
-            if ($nl2br){
+            if ($nl2br && !$skip_nl2br){
                 $string .= "<br/>";
             } else {
                 $string .= "\n";
+                $skip_nl2br = false;
             }
 
         }
@@ -119,6 +123,10 @@ function fileToHtml($code_file, $download = true, $syntax = false){
     array_pop($code);
     $code = implode("\n", $code);
 
+    if (substr($code_file, strlen($code_file)-2) == ".c" && $syntax !== false){
+        $syntax = "c";
+    }
+
     if ($download){
         $string = "<div class='code'><strong>Download: <a href='".FULL_DIR."$code_file'>$code_file</a></strong><br/><br/>";
     } else {
@@ -140,7 +148,7 @@ function codeToHtml($code, $syntax = false, $self = true){
     $code->set_overall_id(md5($code_file)."lines");
     if ($syntax && ($syntax != "bash")){
         $code->enable_line_numbers(GESHI_NORMAL_LINE_NUMBERS);
-        $code->set_overall_style('background:#fcfcfc; margin:-10px; color:#000;');
+        $code->set_overall_style('background:#fcfcfc; margin:-10px; color:#000; overflow:auto;');
         $code->set_line_style('background:#fff; padding-left:10px; border-left:1px solid #eee;');
     } else {
         $code->enable_line_numbers(false);
@@ -185,13 +193,22 @@ if (isset($_GET['link'])){
     if(array_key_exists($_GET['link'], $chapter_list) || $_GET['skip']){
 
         $chapters = array_keys($chapter_list);
-        $number = array_search($_GET['link'], $chapters);
+        $link = explode("/", $_GET['link']);
+        if (count($link) > 1){
+            $number = array_search($link[0], $chapters);
+        } else {
+            $number = array_search($_GET['link'], $chapters);
+        }
         if ($number > 0){
-            $layout = str_replace("{{PREVIOUS_CHAPTER}}", "<a id='prevchap' href='/chapter/".$chapters[$number-1]."'>&laquo; ".$chapter_list[$chapters[$number-1]]."</a>", $layout);
+            if (count($link) > 1){
+                $layout = str_replace("{{PREVIOUS_CHAPTER}}", "<a id='prevchap' href='/chapter/".$chapters[$number]."'>&laquo; ".$chapter_list[$chapters[$number]]."</a>", $layout);
+            } else {
+                $layout = str_replace("{{PREVIOUS_CHAPTER}}", "<a id='prevchap' href='/chapter/".$chapters[$number-1]."'>&laquo; ".$chapter_list[$chapters[$number-1]]."</a>", $layout);
+            }
         } else {
             $layout = str_replace("{{PREVIOUS_CHAPTER}}", "<a id='prevchap' style='visibility:hidden;'>&nbsp;</a>", $layout);
         }
-        if ($number < sizeof($chapters)-2){
+        if ($number !== false && $number < sizeof($chapters)-2){
             $layout = str_replace("{{NEXT_CHAPTER}}", "<a id='nextchap' href='/chapter/".$chapters[$number+1]."'>".$chapter_list[$chapters[$number+1]]." &raquo;</a>", $layout);
         } else {
             $layout = str_replace("{{NEXT_CHAPTER}}", "<a id='nextchap' style='visibility:hidden;'>&nbsp;</a>", $layout);

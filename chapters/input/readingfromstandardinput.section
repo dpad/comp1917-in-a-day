@@ -1,5 +1,5 @@
 It is often important for users to be able to interact with your program. The simplest way to read input in c is the scanf function. The f stands for formatted. Here is an example of it's use.
-{{input.c}}
+{{input.c|c}}!
 The program will prompt users for input, calculate the volume, then print it to standard output.
 
 scanf uses the same placeholders as printf. The string which makes up the first argument can contain placeholders and white space seperating them. Having white space between placeholders in the string means in the input that users give can have any amount of white space in the corresponding places. It will keep waiting for input until the same number of input items as are placeholders are given. scanf returns the number of placeholders that were of the correct type. This can be used for validating input.

@@ -1,8 +1,8 @@
 Pointers and arrays are <strong>essentially the same things</strong>.
 Did that not just blow your mind?
-<br />
+
 This code should help you understand:
-{{pointersarearrays.c}}
+{{pointersarearrays.c}}!
 output:
 {{arrayoutput}}!
 There is a slight difference between arrays and pointers.

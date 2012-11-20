@@ -1,18 +1,16 @@
 A condition is either true or false (but never both). In c, the integer 0 is evaluated as false, and all other values are evaluated as true. For example in the code:
-<pre class="code">
-if (0) {
+[[c|if (0) {
     do something;
-}
-</pre>
+}]]
 the something will not be done, as 0 is false. If the 0 was replaced with any other value, the something would be done. It is common to #define TRUE 1 and #define FALSE 0 to avoid confusion.
 
 More complicated cases involve operators. There are several operators used for comparrison. They are:
-== equals
-&gt; greater than
-&lt; less than
-&gt;= greater than or equal to
-&lt;= less than or equal to
-!= not equal to
+**==** equals
+**&gt;** greater than
+**&lt;** less than
+**&gt;=** greater than or equal to
+**&lt;=** less than or equal to
+**!=** not equal to
 
 Placing a '!' before any condition (like !TRUE or !(a==b)) inverts its logical evaluation (ie false is true and true is false).
 

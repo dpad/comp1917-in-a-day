@@ -1,11 +1,11 @@
-{{naive.c}}
+{{naive.c}}!
 But we can do much better than this.
 A quick modification that would make it more efficient is to start counting from a higher number and stop as soon as 
 we find a common divisor.
 This reduces the number of iterations from the value of the smallest number to that value minus the gcd of the two.
 Note that in the worst case (when the integers are coprine) the number of iterations will be the same.
 Here is the modified code:
-{{optimised.c}}
+{{optimised.c}}!
 But still we can do better.
 The Euclidean algorithm is an efficent way to calcute the gcd of a pair of integers.
 Here is how it works.
@@ -14,4 +14,4 @@ Repeat this process by taking the smaller integer from the previous step and usi
 When the result becomes 0, the smaller integer in that step is the gcd.
 More explinations and a proof can be found <a href="http://en.wikipedia.org/wiki/Euclidean_algorithm">here</a>.
 Here is an implementation of this algorithm in c:
-{{euclid.c}}
+{{euclid.c}}!

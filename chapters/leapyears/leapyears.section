@@ -9,5 +9,5 @@ The program can use only what we have leant so far.
 The solution is below, however is coloured white. Select the text in the box below to view the solution.
 
 <div style="color:white;border:2px solid black;">
-{{leap.c}}
+{{leap.c|}}!
 </div>

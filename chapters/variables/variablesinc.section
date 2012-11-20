@@ -13,8 +13,8 @@ These are the main types of variable.<br/>
 
 The sizes of each variable are machine dependent (ie different computers may use different amounts of memory). To find the size of a particular variable, use the sizeof function (see below). These sizes are important as they define size limits on values stored in variables, but more on this later.
 </br>
-Lets use some variables:
-{{variables.c}}
+Let's use some variables:
+{{variables.c|c}}!
 The output from that is:
 {{output}}!
 On lines 4 and 5 we <strong>declare</strong> the variables. The syntax for declaring a variable is "type name;". Optionally, the variable can be assigned a value at this point by using "type name = value;". After a variable is declared, it can be assigned a value "name = value;". The new value replaces its old value.

@@ -3,9 +3,9 @@ A string is an array of characters. They can be treated exactly like arrays. Add
 Don't confuse the string terminator with the end of the array. If you have a char array of 20 elements, it can store a string with a maximum length of 19 (as the terminator must also be stored). However the terminator can be anywhere in the array. If you only want your string to be 5 characters long, the sixth element will be the terminator. Information about the length of the array or string is not stored.
 
 Here is an example:
-{{hellostring.c}}
+{{hellostring.c}}!
 output:
 {{stringout}}!
 Firstly, notice that there is another file included: string.h. This contains definitions of string functions like strlen, strcpy and strcat. These are the main generic string functions that you will use. However, you can your own string functions to do just about anything. You will also probably end up writing your own versions of generic string furctions. In fact, lets make one now.
-{{mystring.c}}
+{{mystring.c}}!
 This does exactly what the first program does, except now it uses no functions from string.h. While in assignments you will probably be using the functions in string.h, it is good to know how they work so you can make any function you need.

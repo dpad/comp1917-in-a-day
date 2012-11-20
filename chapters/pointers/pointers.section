@@ -1,8 +1,7 @@
 Lets jump straight into it.
-{{pointers.c}}
+{{pointers.c}}!
 output:
 {{pointerout}}!
-
 <h2>Pointer Syntax</h2>
 When declaring a pointer variable, use the type of the variable to which it will point, an asterisk, then the name of the pointer variable.
 If you want to access the value stored in the memory to which the pointer points, use an asterisk followed by the pointer's name. This is called <strong>dereferencing</strong>.
