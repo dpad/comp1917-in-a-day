@@ -249,12 +249,12 @@ a.github-button {
     color: #eee;
 }
 
-a.github-buton:hover {
+a.github-button:hover {
     color: orange;
 }
 
 i.github-icon {
-    background: url(/img/octocat.svg) no-repat;
+    background: url(/img/octocat.svg)no-repeat;
     background-size: contain;
     padding-left:2em;
     opacity: 0.6;
