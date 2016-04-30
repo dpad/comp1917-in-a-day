@@ -1,0 +1,12 @@
+runtime: php55
+api_version: 1
+automatic_scaling:
+  max_idle_instances: 1
+
+handlers:
+- url: /(.*\.(ico$|jpg$|png$|gif$|htm$|html$|css$|js$))
+  static_files: \1
+  upload: (.*\.(ico$|jpg$|png$|gif$|htm$|html$|css$|js$))
+  application_readable: true
+- url: /(.*)
+  script: router.php

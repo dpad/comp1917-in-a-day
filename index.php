@@ -6,6 +6,16 @@
   Index page.
 ============================================*/
 
+// Perform some manual mod_rewrite magic to play nicely with GAE
+preg_match("/^\/chapter\/([^\/]+?)(\/([^\/]+?))?\/?$/", $_GET['q'], $matches);
+if (isset($matches[1])){
+    $_GET['link'] = $matches[1];
+}
+if (isset($matches[3])){
+    $_GET['link'] = $matches[1] . "/" . $matches[3];
+    $_GET['skip'] = 1;
+}
+
 include_once 'geshi/geshi.php';
 
 function getTemplate($template){
