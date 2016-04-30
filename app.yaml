@@ -4,9 +4,9 @@ automatic_scaling:
   max_idle_instances: 1
 
 handlers:
-- url: /(.*\.(ico$|jpg$|png$|gif$|htm$|html$|css$|js$))
+- url: /(.*\.(ico$|jpg$|png$|gif$|htm$|html$|css$|js$|svg$))
   static_files: \1
-  upload: (.*\.(ico$|jpg$|png$|gif$|htm$|html$|css$|js$))
+  upload: (.*\.(ico$|jpg$|png$|gif$|htm$|html$|css$|js$|svg$))
   application_readable: true
 - url: /(.*)
   script: router.php

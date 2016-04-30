@@ -73,6 +73,12 @@ div.warning {
     text-align:center;
 }
 
+div.cool {
+    background-color:rgba(0, 255, 0, 0.1);
+    color: #333;
+    text-align:center;
+}
+
 div.packed, div.section.packed, div.warning.packed, div.small.packed {
     margin: -30px auto;
 }
@@ -152,10 +158,11 @@ div#list {
 div#footer {
     position:relative;
     height:40px;
-    width:100%;
+    width:700px;
     font-family:monospace;
     text-align:center;
     clear:left;
+    margin:0px auto;
 }
 
 ul li {
@@ -225,4 +232,30 @@ hr.footnote {
     border:0px;
     border-top: 1px solid #aaa;
     margin: 50px 0px 20px 0px;
+}
+
+a.github-button {
+    float:right;
+    display: block;
+    display: inline-block;
+    float: right;
+    border-radius: .3em;
+    padding: 5px 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.5);
+    margin: 0px 0px 0px 20px;
+    color: #eee;
+}
+
+a.github-buton:hover {
+    color: orange;
+}
+
+i.github-icon {
+    background: url(/img/octocat.svg) no-repat;
+    background-size: contain;
+    padding-left:2em;
+    opacity: 0.6;
 }

@@ -272,7 +272,7 @@ if (isset($_GET['link'])){
 
 } else {
 
-    $content = "<div class='section warning small'><strong style='font-size:15px;'>WARNING</strong><br/>This guide contains strong language, parody machismo, outright assertions of superiority over \"trendy\" subcultures,<br/>and other acts which may be perceived as inappropriate. You have been warned.</div>";
+    $content = "<div class='section warning small'><strong style='font-size:15px;'>WARNING</strong><br/>This guide contains <strong>strong language</strong>, <strong>parody machismo</strong>, <strong>assertions of superiority</strong> over \"trendy\" subcultures, <strong>blatant sexist and discriminatory remarks</strong>, and other acts which may be perceived as <strong>inappropriate</strong>. You have been warned.</div>";
     $content .= "<div class='section'><h1>Lessons</h1>".$toc."</div>";
     $content .= "<div class='section'><p><h2>For the love of code...</h2>";
     $content .= "<pre id='heartoutnolines' class='code'>";
