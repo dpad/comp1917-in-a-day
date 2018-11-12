@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+<html> 
+<head> 
+<script> 
+ 
+function toggleLineNos(name) {
+ 
+    if (document.getElementById(name + "lines").style.display == "none") {
+ 
+        document.getElementById(name + "lines").style.display = "";
+        document.getElementById(name + "nolines").style.display = "none";
+    } else {
+        document.getElementById(name + "lines").style.display = "none";
+        document.getElementById(name + "nolines").style.display = "";
+ 
+    }
+ 
+}
+function toggleList() {
+    if (document.getElementById("list").style.display == "none") {   
+        document.getElementById("list").style.display = "";
+        document.getElementById("showbtn").innerHTML = "Table of Contents";
+    } else {
+        document.getElementById("list").style.display = "none";
+        document.getElementById("showbtn").innerHTML = "Table of Contents";
+    }
+}
+</script> 
+<link href="../css/sections.css" rel="stylesheet"  type="text/css"/>  
+<title>COMP1917 in a Day >> FAQs: Frequently Asked Questions</title> 
+</head> 
+<body> 
+
+ 
+<h1 id='header'>FAQs: Frequently Asked Questions</h1> 
+
+<a name='faqs'></a><div class='section'><h1></h1><h3>I don't know any programming. What do?</h3><br/>Perfect. There's no assumption of any knowledge other than an understanding of the English language, and basic proficiency with computers. Simply begin reading the guide and you will be a master in no time!<sup class='footnote'><a name='head-1-1' class='anchor'></a><a href='faqs.html#foot-1-1'>1</a></sup><br/><br/><h3>"in a day" is grossly misleading and/or blatantly false. It takes much longer than 24 hours to complete the course!</h3><br/>Utter nonsense. The title simply refers to the amount of effort put into creating the course.<br/><br/><h3>I followed this course to the letter and subsequently failed. What gives?</h3><br/>A common mistake. You may have fallen into the slippery trap known as being a dumb-ass. Try immersing yourself in a bath of we don't give a shit.<br/><br/><h3>You guys suck. I found a mistake.</h3><br/><a href='mailto:ddp@cse.unsw.edu.au'>No you didn't.</a><br/><br/><hr class='footnote'/><div class='footnote'><a name='foot-1-1' class='anchor'></a><a href='faqs.html#head-1-1' class='footanchor'>^1</a>"No time" of course meaning some finite amount of time depending on your own circumstances.</div>
+</div>
+
+<div id="chapbuttons">
+<a id='nextchap' style='visibility:hidden;'>&nbsp;</a>
+<a id='prevchap' href='structures.html'>&laquo; Chapter 10: Structures</a>
+</div>
+
+<div class='section warning small'><strong>DISCLAIMER: This is an unofficial, unendorsed, unmaintained guide.</strong><br/>
+This guide was written by previous students based on their own experiences of the course, and may thus become increasingly irrelevant over the course of time. Everything in this guide should be taken as <strong>advice only.</strong> When in doubt, <strong>consult your tutor and/or lecturer.</strong>
+</div>
+
+<a id='indexbtn' href="../index.html">index</a> 
+<a id="showbtn" href="javascript:toggleList();">Table of Contents</a> 
+ 
+<div id="list" style="display:none;">
+<a href='linuxintro.html'>Choice of Operating System</a><br/><a href='thecommandline.html'>The Linux Command Line</a><br/><a href='helloworld.html'>Chapter 1: Hello, World!</a><br/><a href='variables.html'>Chapter 2: Variables</a><br/><a href='input.html'>Chapter 3: Input</a><br/><a href='ifstatements.html'>Chapter 4: If Statements</a><br/><a href='leapyears.html'>Exercise: Leap Years</a><br/><a href='loops.html'>Chapter 5: Loops</a><br/><a href='functions.html'>Chapter 6: Functions</a><br/><a href='arrays.html'>Chapter 7: Arrays</a><br/><a href='recap1.html'>Recap 1</a><br/><a href='pointers.html'>Chapter 8: Pointers</a><br/><a href='strings.html'>Chapter 9: Strings</a><br/><a href='structures.html'>Chapter 10: Structures</a><br/><a href='faqs.html'>FAQs: Frequently Asked Questions</a><br/><a href='index.html'></a><br/> 
+</div> 
+ 
+<div id="footer"> 
+<a href='https://github.com/dpad/comp1917-in-a-day' class='github-button'><i class='github-icon'></i>Github</a>
+&copy; 2011 &mdash; 2013<br/>Dan Padilha, Stephen Sherratt
+</div> 
+</body> 
+</html>

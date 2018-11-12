@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+<html> 
+<head> 
+<script> 
+ 
+function toggleLineNos(name) {
+ 
+    if (document.getElementById(name + "lines").style.display == "none") {
+ 
+        document.getElementById(name + "lines").style.display = "";
+        document.getElementById(name + "nolines").style.display = "none";
+    } else {
+        document.getElementById(name + "lines").style.display = "none";
+        document.getElementById(name + "nolines").style.display = "";
+ 
+    }
+ 
+}
+function toggleList() {
+    if (document.getElementById("list").style.display == "none") {   
+        document.getElementById("list").style.display = "";
+        document.getElementById("showbtn").innerHTML = "Table of Contents";
+    } else {
+        document.getElementById("list").style.display = "none";
+        document.getElementById("showbtn").innerHTML = "Table of Contents";
+    }
+}
+</script> 
+<link href="../css/sections.css" rel="stylesheet"  type="text/css"/>  
+<title>COMP1917 in a Day >> Exercise: Leap Years</title> 
+</head> 
+<body> 
+
+ 
+<h1 id='header'>Exercise: Leap Years</h1> 
+
+<a name='leapyears'></a><div class='section'><h1>Leap Years</h1>Now it's time to have some fun.<br/><br/>In order to account for the fact that a solar year is slightly less than 365.25 earth days, the Gegorian calendar includes leap years. A leap year occurs in each year that is evenly divisibly by 4, with the exception of years that are evenly divisible by 100, unless that year is also divisible by 400. For example 1900 and 1999 were not leap years. 1904 and 2000 were leap years.<br/><br/>Your task is to write a program in c that prompts users to enter a year, reads the year from the command line, and tells the user whether or not it is a leap year, before terminating.<br/><br/>The program can use only what we have leant so far.<br/><br/>The solution is below, however is coloured white. Select the text in the box below to view the solution.<br/><br/><div style="color:white;border:2px solid black;"><br/><div class='code'><pre class="" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;">#include &lt;stdio.h&gt;
+&nbsp;
+int main<span class="br0">&#40;</span>int argc, char *argv<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+&nbsp;
+    int year;
+&nbsp;
+    printf<span class="br0">&#40;</span>&quot;Enter a year: &quot;<span class="br0">&#41;</span>;
+&nbsp;
+    scanf<span class="br0">&#40;</span>&quot;%d&quot;, &amp;year<span class="br0">&#41;</span>;
+&nbsp;
+    if <span class="br0">&#40;</span>year % <span style="">4</span> == <span style="">0</span> &amp;&amp; <span class="br0">&#40;</span><span class="br0">&#40;</span>year % <span style="">100</span> != <span style="">0</span><span class="br0">&#41;</span> || <span class="br0">&#40;</span>year % <span style="">400</span> == <span style="">0</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        printf<span class="br0">&#40;</span>&quot;%d is a leap year.\n&quot;, year<span class="br0">&#41;</span>;
+    <span class="br0">&#125;</span> else <span class="br0">&#123;</span>
+        printf<span class="br0">&#40;</span>&quot;%d is not a leap year.\n&quot;, year<span class="br0">&#41;</span>;
+    <span class="br0">&#125;</span>
+&nbsp;
+    return <span style="">0</span>;
+<span class="br0">&#125;</span></pre></div><br/>
+</div><br/><br/></div>
+
+<div id="chapbuttons">
+<a id='nextchap' href='loops.html'>Chapter 5: Loops &raquo;</a>
+<a id='prevchap' href='ifstatements.html'>&laquo; Chapter 4: If Statements</a>
+</div>
+
+<div class='section warning small'><strong>DISCLAIMER: This is an unofficial, unendorsed, unmaintained guide.</strong><br/>
+This guide was written by previous students based on their own experiences of the course, and may thus become increasingly irrelevant over the course of time. Everything in this guide should be taken as <strong>advice only.</strong> When in doubt, <strong>consult your tutor and/or lecturer.</strong>
+</div>
+
+<a id='indexbtn' href="../index.html">index</a> 
+<a id="showbtn" href="javascript:toggleList();">Table of Contents</a> 
+ 
+<div id="list" style="display:none;">
+<a href='linuxintro.html'>Choice of Operating System</a><br/><a href='thecommandline.html'>The Linux Command Line</a><br/><a href='helloworld.html'>Chapter 1: Hello, World!</a><br/><a href='variables.html'>Chapter 2: Variables</a><br/><a href='input.html'>Chapter 3: Input</a><br/><a href='ifstatements.html'>Chapter 4: If Statements</a><br/><a href='leapyears.html'>Exercise: Leap Years</a><br/><a href='loops.html'>Chapter 5: Loops</a><br/><a href='functions.html'>Chapter 6: Functions</a><br/><a href='arrays.html'>Chapter 7: Arrays</a><br/><a href='recap1.html'>Recap 1</a><br/><a href='pointers.html'>Chapter 8: Pointers</a><br/><a href='strings.html'>Chapter 9: Strings</a><br/><a href='structures.html'>Chapter 10: Structures</a><br/><a href='faqs.html'>FAQs: Frequently Asked Questions</a><br/><a href='index.html'></a><br/> 
+</div> 
+ 
+<div id="footer"> 
+<a href='https://github.com/dpad/comp1917-in-a-day' class='github-button'><i class='github-icon'></i>Github</a>
+&copy; 2011 &mdash; 2013<br/>Dan Padilha, Stephen Sherratt
+</div> 
+</body> 
+</html>

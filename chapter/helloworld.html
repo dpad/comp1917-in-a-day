@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+<html> 
+<head> 
+<script> 
+ 
+function toggleLineNos(name) {
+ 
+    if (document.getElementById(name + "lines").style.display == "none") {
+ 
+        document.getElementById(name + "lines").style.display = "";
+        document.getElementById(name + "nolines").style.display = "none";
+    } else {
+        document.getElementById(name + "lines").style.display = "none";
+        document.getElementById(name + "nolines").style.display = "";
+ 
+    }
+ 
+}
+function toggleList() {
+    if (document.getElementById("list").style.display == "none") {   
+        document.getElementById("list").style.display = "";
+        document.getElementById("showbtn").innerHTML = "Table of Contents";
+    } else {
+        document.getElementById("list").style.display = "none";
+        document.getElementById("showbtn").innerHTML = "Table of Contents";
+    }
+}
+</script> 
+<link href="../css/sections.css" rel="stylesheet"  type="text/css"/>  
+<title>COMP1917 in a Day >> Chapter 1: Hello, World!</title> 
+</head> 
+<body> 
+
+ 
+<h1 id='header'>Chapter 1: Hello, World!</h1> 
+
+<a name='yourfirstcprogram'></a><div class='section'><h1>Your first C program</h1>To appease the computer gods, we must begin by writing a "Hello, World!" program.  This is an ancient ritual, passed down by generation upon generation of programmers, which must be performed any time a programmer begins to learn a new programming language.<br/><br/>The "Hello, World!" program is a program that does nothing more than print out the text "Hello, World!", in all its textual glory.<br/><br/>So without further ado, open up your preferred text editor, type in the following (without the line numbers), and save it as "helloworld.c".<br/><div class='code'><pre class="c" id="d41d8cd98f00b204e9800998ecf8427elines" style="background:#fcfcfc; margin:-10px; color:#000; overflow:auto;"><ol><li style="background:#fff; padding-left:10px; border-left:1px solid #eee;"><div style="font: normal normal 1em/1.5em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #339933;">#include &lt;stdio.h&gt;</span></div></li><li style="background:#fff; padding-left:10px; border-left:1px solid #eee;"><div style="font: normal normal 1em/1.5em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="background:#fff; padding-left:10px; border-left:1px solid #eee;"><div style="font: normal normal 1em/1.5em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #993333;">int</span> main<span style="color: #009900;">&#40;</span><span style="color: #993333;">int</span> argc<span style="color: #339933;">,</span> <span style="color: #993333;">char</span> <span style="color: #339933;">*</span>argv<span style="color: #009900;">&#91;</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span> <span style="color: #009900;">&#123;</span></div></li><li style="background:#fff; padding-left:10px; border-left:1px solid #eee;"><div style="font: normal normal 1em/1.5em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: #666666; font-style: italic;">//print a message</span></div></li><li style="background:#fff; padding-left:10px; border-left:1px solid #eee;"><div style="font: normal normal 1em/1.5em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: #000066;">printf</span><span style="color: #009900;">&#40;</span><span style="color: #ff0000;">&quot;Hello World!<span style="color: #000099; font-weight: bold;">\n</span>&quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span></div></li><li style="background:#fff; padding-left:10px; border-left:1px solid #eee;"><div style="font: normal normal 1em/1.5em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="background:#fff; padding-left:10px; border-left:1px solid #eee;"><div style="font: normal normal 1em/1.5em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: #b1b100;">return</span> <span style="color: #0000dd;">0</span><span style="color: #339933;">;</span></div></li><li style="background:#fff; padding-left:10px; border-left:1px solid #eee;"><div style="font: normal normal 1em/1.5em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #009900;">&#125;</span></div></li></ol></pre></div><br/>
+If you're a bit lost, you can follow this procedure: make a directory for your C programs and navigate to it, then create a new file in gedit (or your preferred text editor):<br/>
+
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #666666;">steve$ </span><span style="color: #c20cb9; font-weight: bold;">mkdir</span> helloworld
+<span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">cd</span> helloworld
+<span style="color: #666666;">steve$ </span>gedit helloworld.c</pre></div><br/>Save the file in your C directory with the name helloworld.c.<br/><br/>Now we can compile it with gcc. Remember this command?<br/>
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #666666;">steve$ </span><span style="color: #c20cb9; font-weight: bold;">gcc</span> <span style="color: #660033;">-Wall</span> <span style="color: #660033;">-Werror</span> <span style="color: #660033;">-O</span> <span style="color: #660033;">-o</span> helloworld helloworld.c
+.... compiles ....</pre></div><br/>If there are any errors or warnings, simply make sure you typed the program in exactly.<br/><br/>Finally, we can run the program. Remember that <strong>.</strong> is shorthand for "current directory".<br/>
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #666666;">steve$ </span>.<span style="color: #000000; font-weight: bold;">/</span>helloworld
+Hello, World<span style="color: #000000; font-weight: bold;">!</span></pre></div><br/>Congratulations! You just compiled and executed your first C program!<br/><br/><img src='../img/patyourselfontheback.jpg'><sub class='imgsub'>Pat yourself on the back!</sub><br/><h2>What does this mean!?</h2><br/></div><div class="section warning packed"><strong>Don't stress if these explanations make no sense to you yet.</strong><br/>Keep reading through the course and more and more will begin to make sense.<br/></div><div class="section"><br/><h3>Line 1:</h3><br/><strong>#include</strong> is a keyword in C that places the entire contents of the included file into the source code when it is compiled. It is essentially the same as copy and pasting all the code in the included file into your code. <br/><br/>"stdio.h" is a <strong>header file</strong> that contains <strong>function definitions</strong> for <strong>functions</strong> used for reading and writing on the screen. <br/><br/>This specific line is necessary in any program that reads from or writes to the command line (in other words, pretty much every program you write in this course).<br/><br/><h3>Line 2:</h3><br/>A blank line, also known as white space. C ignores white space (spaces, tabs and new lines). This means that you can space out your code as much as you like. This helps make it easy to read, so don't feel that you have to cram all your code into as little space as possible.<br/><br/><h3>Line 3:</h3><br/>Beginning of definition of the "main" <strong>function</strong>.<br/><br/>In C, the main function is the only function that is called when the program is executed. Here is a breakdown of this line.<br/><br/><strong>int</strong> - (integer) the "return" type of this function. We'll learn more about functions later.<br/><strong>main</strong> - the name of the function<br/><strong>(int argc, char *argv[])</strong> - a list of arguments. For the main function, arguments are entered at the command line following the program name.<br/><br/><h3>Line 4:</h3><br/>This line is a comment. A <strong>comment</strong> is something C ignores completely. <br/><br/>Single line comments in C are started with "//". Comments can follow code on the same line. Multi-line comments begin with /* and end with */. <br/><br/>A useful debugging trick is using comments to disable certain parts of code so you can see which part is problematic. You'll learn more about debugging later.<br/><br/><h3>Line 5:</h3><br/><strong>printf</strong> - the f stands for formatted, but more on that later. <br/><br/>printf is used to print text to "standard output" (in other words, the command line you're running the program in). The '\n' is a newline character (essentially what happens if you press ENTER in a text editor). '\' is used to escape certain characters to make special characters. '\n' is used very often.<br/><br/><h3>Line 7:</h3><br/>Specifies the return value of the function. For the main function, it should always be 0. This tells the operating system that the program terminated correctly.<br/><br/></div><a name='anoteonstyle'></a><div class='section'><h1>A Note on Style</h1>CSE has a style guide, and it is again worth noting a few aspects of it:<br/><br/>You lines of code should not be longer than 70 characters, including trailing comments. In practice, a maximum of 80 characters is generally good. Note that gedit has the current character column in the status bar on the bottom right corner of the screen. You can also set the "display right margin" option.<br/><br/>Always indent your code when entering a new structure. A rule of thumb is, if you end a line with "{", indent the next line, and remove an indent on a line with "}". You'll learn about structures soon.<br/><br/></div><a name='tips'></a><div class='section'><h1>Some Tips</h1>The convention for file extensions of C source files is .c (as in helloworld.c). <br/><br/>For C header files (which you will make later) it is .h (as in stdio.h).<br/><br/>When compiling code, take special care not to do this:<br/>
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #c20cb9; font-weight: bold;">gcc</span> <span style="color: #660033;">-Wall</span> <span style="color: #660033;">-Werror</span> <span style="color: #660033;">-O</span> <span style="color: #660033;">-o</span> helloworld<span style='color:red'><u><span style="color: #000000; font-weight: bold;"><strong></span>.c<span style="color: #000000; font-weight: bold;"></strong></span></u></span> helloworld.c</pre></div><br/>Writing this is equivalent to:<br/>
+<div class='code'><pre class="" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;">compile helloworld.c and save the result in helloworld<span style='color:red'>.c</span></pre></div><br/>This essentially erases all the code you have written.<br/><br/>Also be careful not to forget semicolons (i.e. ";") at the end of your lines. Practically every line that doesn't end in "{" or "}" will need one of these.<br/><br/></div>
+
+<div id="chapbuttons">
+<a id='nextchap' href='variables.html'>Chapter 2: Variables &raquo;</a>
+<a id='prevchap' href='thecommandline.html'>&laquo; The Linux Command Line</a>
+</div>
+
+<div class='section warning small'><strong>DISCLAIMER: This is an unofficial, unendorsed, unmaintained guide.</strong><br/>
+This guide was written by previous students based on their own experiences of the course, and may thus become increasingly irrelevant over the course of time. Everything in this guide should be taken as <strong>advice only.</strong> When in doubt, <strong>consult your tutor and/or lecturer.</strong>
+</div>
+
+<a id='indexbtn' href="../index.html">index</a> 
+<a id="showbtn" href="javascript:toggleList();">Table of Contents</a> 
+ 
+<div id="list" style="display:none;">
+<a href='linuxintro.html'>Choice of Operating System</a><br/><a href='thecommandline.html'>The Linux Command Line</a><br/><a href='helloworld.html'>Chapter 1: Hello, World!</a><br/><a href='variables.html'>Chapter 2: Variables</a><br/><a href='input.html'>Chapter 3: Input</a><br/><a href='ifstatements.html'>Chapter 4: If Statements</a><br/><a href='leapyears.html'>Exercise: Leap Years</a><br/><a href='loops.html'>Chapter 5: Loops</a><br/><a href='functions.html'>Chapter 6: Functions</a><br/><a href='arrays.html'>Chapter 7: Arrays</a><br/><a href='recap1.html'>Recap 1</a><br/><a href='pointers.html'>Chapter 8: Pointers</a><br/><a href='strings.html'>Chapter 9: Strings</a><br/><a href='structures.html'>Chapter 10: Structures</a><br/><a href='faqs.html'>FAQs: Frequently Asked Questions</a><br/><a href='index.html'></a><br/> 
+</div> 
+ 
+<div id="footer"> 
+<a href='https://github.com/dpad/comp1917-in-a-day' class='github-button'><i class='github-icon'></i>Github</a>
+&copy; 2011 &mdash; 2013<br/>Dan Padilha, Stephen Sherratt
+</div> 
+</body> 
+</html>

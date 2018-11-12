@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+<html> 
+<head> 
+<script> 
+ 
+function toggleLineNos(name) {
+ 
+    if (document.getElementById(name + "lines").style.display == "none") {
+ 
+        document.getElementById(name + "lines").style.display = "";
+        document.getElementById(name + "nolines").style.display = "none";
+    } else {
+        document.getElementById(name + "lines").style.display = "none";
+        document.getElementById(name + "nolines").style.display = "";
+ 
+    }
+ 
+}
+function toggleList() {
+    if (document.getElementById("list").style.display == "none") {   
+        document.getElementById("list").style.display = "";
+        document.getElementById("showbtn").innerHTML = "Table of Contents";
+    } else {
+        document.getElementById("list").style.display = "none";
+        document.getElementById("showbtn").innerHTML = "Table of Contents";
+    }
+}
+</script> 
+<link href="../css/sections.css" rel="stylesheet"  type="text/css"/>  
+<title>COMP1917 in a Day >> The Linux Command Line</title> 
+</head> 
+<body> 
+
+ 
+<h1 id='header'>The Linux Command Line</h1> 
+
+<a name='othernotes'></a><div class='section'><h1></h1></div><div class='section warning packed'><strong>WARNING!</strong><br/>This section contains <strong>awesome explosions</strong>. Proceed at your own risk.</div><div class="section"><br/>Now that you have a Linux distribution installed (or are running Mac OSX), we can get started with the command line.<br/><br/><strong>Depending on your Linux distribution</strong>, you will need to find how to open the terminal application. Look through the menus, google it, and so on until you find it.<br/><br/>An example for an older version of Ubuntu might be to begin by clicking on System -> Preferences -> Keyboard Shortcuts. Add a shortcut for "Terminal", something like Alt-T is recommended. You should now be able to open the terminal (a black rectangle) by pressing this shortcut. If not, you can still open the Terminal by clicking on Applications -> Accessories -> Terminal.<br/><br/>Once you know how to open the terminal, do so. You will be greeted by a black rectangle<sup class='footnote'><a name='head-1-1' class='anchor'></a><a href='thecommandline.html#foot-1-1'>1</a></sup> with text like this:<br/>
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #666666;">steve$</span></pre></div><br/>Isn't that phenomenally exciting?<br/>As bland as this may look, most of your work for COMP1917 will be done in this black box.<br/><br/><h2>What is the point?</h2><br/>The terminal is basically a simple way of interacting with your computer. It gets rid of all the useless clutter on the screen and presents you with only the information you need precisely when you ask for it. What can you do in the terminal? Practically everything!<br/><br/><h2>Using the terminal</h2><br/>Before we begin, notice the blinking white block. This is your "prompt", that is, where you type in commands. Try the command shown below (write the text  pwd  after steve$, then press Enter on your keyboard):<br/>
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">pwd</span>
+<span style="color: #000000; font-weight: bold;">/</span>home<span style="color: #000000; font-weight: bold;">/</span>steve</pre></div><br/>This is the directory you are currently in, also known as your "working" directory. In fact, "pwd" stands for "print working directory". A directory is the Linux nerd's name for a folder.<br/><br/>Below are the files and directories currently inside your working directory. "ls" stands for "list".<br/>
+
+
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #666666;">steve$ </span><span style="color: #c20cb9; font-weight: bold;">ls</span>
+Desktop
+Documents
+Music</pre></div><br/>You can move to different directories. This moves you into the Documents directory, so now you are at /home/yourusername/Documents, or ~/Documents in shorthand.<br/>
+
+
+
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">cd</span> Documents
+<span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">pwd</span>
+<span style="color: #000000; font-weight: bold;">/</span>home<span style="color: #000000; font-weight: bold;">/</span>steve<span style="color: #000000; font-weight: bold;">/</span>Documents
+<span style="color: #666666;">steve$ </span><span style="color: #c20cb9; font-weight: bold;">ls</span>
+assignment.txt</pre></div><br/>/home/yourusername is your home diretory. If you're lazy, you can type <strong>~</strong> instead, so that ~ is your home diretory and ~dan is dan's home diretory.<br/>
+
+
+
+
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">cd</span> ~dan
+<span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">pwd</span>
+<span style="color: #000000; font-weight: bold;">/</span>home<span style="color: #000000; font-weight: bold;">/</span>dan
+<span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">cd</span> ~
+<span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">pwd</span>
+<span style="color: #000000; font-weight: bold;">/</span>home<span style="color: #000000; font-weight: bold;">/</span>steve</pre></div><br/>You can create directories! Here, we create a directory called "comp1917". "mkdir" stands for "make directory".<br/>
+
+
+
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">cd</span> Documents
+<span style="color: #666666;">steve$ </span><span style="color: #c20cb9; font-weight: bold;">mkdir</span> comp1917
+<span style="color: #666666;">steve$ </span><span style="color: #c20cb9; font-weight: bold;">ls</span>
+assignment.txt
+comp1917</pre></div><br/>You can also move up the directory structure.<br/>
+
+
+
+
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">cd</span> comp1917
+<span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">pwd</span>
+<span style="color: #000000; font-weight: bold;">/</span>home<span style="color: #000000; font-weight: bold;">/</span>steve<span style="color: #000000; font-weight: bold;">/</span>Documents<span style="color: #000000; font-weight: bold;">/</span>comp1917
+<span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">cd</span> ..
+<span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">pwd</span>
+<span style="color: #000000; font-weight: bold;">/</span>home<span style="color: #000000; font-weight: bold;">/</span>steve<span style="color: #000000; font-weight: bold;">/</span>Documents</pre></div><br/>In this example we moved around in different directories. Make sure you remember the following shorthand symbols:<br/><strong>~</strong> means /home/yourusername<br/><strong>..</strong> means the parent directory of the current (working) directory<br/><strong>.</strong> means the current (working) directory<br/><br/>Some commands we learned from the examples above are:<br/><strong>ls</strong> - list the files and directories in the working directory<br/><strong>pwd</strong> - print the working directory. Effectively, "where am I?"<br/><strong>cd directory</strong> - go into "directory", i.e. change the working directory<br/><br/>ls, pwd, cd are all examples of commands. The terminal recognises that we want to run a specific program, for example, the "pwd" program, and finds it in its program library.<br/><br/>Linux files and directories are <strong>case-sensitive</strong>. So, "ls" is <em>not</em> the same as "LS" and "Documents" is not the same as "documents".<br/><br/>If you want to run the last command you typed again, simply press the up arrow key on your keyboard. This will copy the last command you executed into the prompt. Press up again and it will copy the second last command, and so on.<br/><br/><em>Don't worry, you'll remember all of this with practice.</em><br/><br/><h2>Man up!</h2><br/>If you need to know what a given command does, simply run the command "man" with an argument of your command. The "man" command runs the "man" program, short for "<strong>man</strong>ual". Go ahead and run it now:<br/>
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #666666;">steve$ </span><span style="color: #c20cb9; font-weight: bold;">man</span>
+What manual page <span style="color: #000000; font-weight: bold;">do</span> you want?</pre></div><br/>An "<strong>argument</strong>" is something you give to the command, a form of input. In the terminal, you can give arguments to commands by simply typing them after the command name.<br/><br/>For example, when you use the "mkdir" command, you have to specify a directory for it to create. The directory you specify is the "argument" you pass into the command "mkdir".<br/><br/>Depending on the command/program you run, it may or many not accept, expect, or even rely on arguments. In order to know what arguments it accepts, you should consult its <strong>man</strong>ual page. The "man" command takes one argument: the page you want to read.<sup class='footnote'><a name='head-1-2' class='anchor'></a><a href='thecommandline.html#foot-1-2'>2</a></sup><br/><br/>So, in a similar sense, if you want to know what "mkdir" does, you can pass "mkdir" as an argument into the "man" command, like so:<br/>
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #666666;">steve$ </span><span style="color: #c20cb9; font-weight: bold;">man</span> mkir
+... lots of text <span style="color: #000000; font-weight: bold;">in</span> here ...</pre></div><br/>Press the up and down arrow keys to read the manual, or "q" to exit out of the manual.<br/><br/>Note that some commands won't have a manual. In many cases, you can simply add the "--help" argument to the command to get a summarised manual. For example, try "mkdir --help".<br/><br/><h2>Some more tips:</h2><br/>Ctrl+C kills the current command. Use it to exit your programs if you are ever stuck in an infinite loop or taking too long to run.<br/><br/>Ctrl+D enters the end of file (EOF) character. It is a more elegant way of closing some programs, and closes the terminal if entered at the prompt. You will learn more about this later, especially during the <strong>Input</strong> chapter.<br/><br/>To close a terminal in Mac OSX, press Cmd+W.<br/><br/><h2>TAB Completion</h2><br/>Tab completion is an extremely useful feature in command lines which helps you be even lazier. By now, you should be seeing a pattern emerge of computer scientists' heavy reliance on laziness.<br/><br/>Tab completion essentially completes a command you have half-typed out so you don't have to waste precious milliseconds writing the rest of it. It is literally magical.<br/><br/>For example, let's say we have a directory called "antidisestablishmentarianism". Don't ask why someone would name a directory like that, that's above your pay grade, code monkey! <br/><br/>Now let's say we want to go to that directory.<br/><br/>Rather than typing this:<br/>
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">cd</span> antidisestablishmen screw this
+cd:cd:<span style="color: #000000;">10</span>: too many arguments</pre></div><br/>We can instead do this:<br/>
+
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">cd</span> an<span style="color: #7a0874; font-weight: bold;">&#91;</span>TAB KEY<span style="color: #7a0874; font-weight: bold;">&#93;</span><span style="color: #7a0874; font-weight: bold;">&#91;</span>ENTER<span style="color: #7a0874; font-weight: bold;">&#93;</span>
+<span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">pwd</span>
+<span style="color: #000000; font-weight: bold;">/</span>home<span style="color: #000000; font-weight: bold;">/</span>steve<span style="color: #000000; font-weight: bold;">/</span>antidisestablishmentarianism</pre></div><br/>Holy fucking shit.<br/><br/><img src='../img/explosion.png'><sub class='imgsub'>Look quickly! It's Michael Bay!</sub><br/>But wait, what would happen if we had two directories, and one of them was called "antidisestablishmentawesome"?<br/>
+
+
+
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #666666;">steve$ </span><span style="color: #c20cb9; font-weight: bold;">ls</span>
+antidisestablishmentawesome
+antidisestablishmentarianism
+<span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">cd</span> an<span style="color: #7a0874; font-weight: bold;">&#91;</span>TAB KEY<span style="color: #7a0874; font-weight: bold;">&#93;</span>
+<span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">cd</span> antidisestablishmenta</pre></div><br/>Oh noes! It didn't complete the whole directory name and now we have wasted precious milliseconds of our lives that we'll never get back!<br/><br/>Since we have two directories that both start with "an", the tab completion decided to fill in the rest of what you were typing, which was almost surely "antidisestablishmenta", but then there are two choices and so it left us to complete the rest.<sup class='footnote'><a name='head-1-3' class='anchor'></a><a href='thecommandline.html#foot-1-3'>3</a></sup><br/><br/>All you have to do now therefore is show the terminal which one you want by adding an extra character to differentiate between them. That is, if you add a "w":<br/>
+
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">cd</span> antidisestablishmentaw<span style="color: #7a0874; font-weight: bold;">&#91;</span>TAB KEY<span style="color: #7a0874; font-weight: bold;">&#93;</span>
+<span style="color: #666666;">steve$ </span><span style="color: #7a0874; font-weight: bold;">pwd</span> 
+<span style="color: #000000; font-weight: bold;">/</span>home<span style="color: #000000; font-weight: bold;">/</span>steve<span style="color: #000000; font-weight: bold;">/</span>antidisestablishmentawesome</pre></div><br/>Note that commands will not actually run until you press ENTER.<br/><br/><hr class='footnote'/><div class='footnote'><a name='foot-1-1' class='anchor'></a><a href='thecommandline.html#head-1-1' class='footanchor'>^1</a>Yes, it's a white rectangle on this site. We have budget constraints. Deal with it.</div>
+<div class='footnote'><a name='foot-1-2' class='anchor'></a><a href='thecommandline.html#head-1-2' class='footanchor'>^2</a>Actually, it takes many, many more arguments, but none that you will need to use for quite some time yet.</div>
+<div class='footnote'><a name='foot-1-3' class='anchor'></a><a href='thecommandline.html#head-1-3' class='footanchor'>^3</a>Note that this sort of behaviour, while default in some terminals, is not guaranteed to always be this way. Play around with tab completion in your terminal to see what it can and, most importantly, can't do for you.</div>
+</div><a name='texteditors'></a><div class='section'><h1>Text Editors</h1>To be a good programmer, you must have good tools at your disposal. A text editor, surprisingly, does exactly what it claims to: edit text. It may come as a shock to you now, but "programming" is essentially shorthand for "writing lots of random text that makes the computer do stuff".<br/><br/><h2>A Note on Style</h2><br/>CSE has a style guide that you must adhere to. Part of that is 'soft' tabs. This is when your TAB key inserts spaces to emulate the behaviour of an actual TAB. Also, CSE requires that your tab width be 3 or 4 spaces wide. <br/><br/>If this makes no sense to you, don't worry, just find the "soft tab" option in your text editor and make sure it's set to 4 spaces.<br/><br/><h2>Picking your poison</h2><br/>Before we dive into programming, you should first decide what tool you will use in order to make your life as painless as possible.<br/><br/>Below are some suggestions of text editors you may choose to use.<br/><br/><h2>gedit</h2><br/>gedit is the default text editor in Ubuntu and its derivatives. It features syntax highlighting and all the other cool stuff you need for programming, and it's extremely simple to use. You can also find it on the CSE computer lab machines.<br/><br/>We recommend <strong>gedit</strong> for beginners.<br/><br/>Mac users, in their superiority complex, can feel satisfied in that <a href=http://ftp.gnome.org/pub/GNOME/binaries/mac/gedit/2.30/gedit-2.30.2.dmg>gedit is also available for Mac</a>.<br/><br/>Make sure you change gedit's default configuration (Editor -> Preferences) to adhere to CSE's style guide.<br/><br/><h2>vi/vim</h2><br/>vi vi vi, the text editor used by the devil himself!<br/><br/>vi and <strong>vim</strong> (<em>vi </em>i<em>m</em>proved) are two text editors that are completely command line based. This means you can edit files and never leave the comfort and safety of the command line! This also means that generally every installation of Linux will come with at least vi, usually vim, installed.<br/><br/>vi/vim is <strong>not recommended</strong> for anyone who is not familiar with command lines. <br/><br/>It is also <strong>not recommended</strong> for anyone with any remaining trace of a stable mind. vi/vim is <strong>extremely difficult to learn</strong>, with a difficulty curve not unlike an immovable brick wall and learning it as painful as smashing your head repeatedly against said wall.<br/><br/><strong>However,</strong> if you are willing to put in the effort it takes to learn vi/vim, you will see why it is the preferred choice of text editor for programmers worldwide.<sup class='footnote'><a name='head-2-1' class='anchor'></a><a href='thecommandline.html#foot-2-1'>1</a></sup><br/><br/><strong>Did you know:</strong> this entire website is coded entirely using vim.<br/><br/><h2>nano/pico</h2><br/>Known as the kiddy-friendly version of vi/vim. Essentially gedit, but in the command line!<br/><br/>If you decide to skip on gedit and the bloodbath that is vim, opt for <strong>nano</strong>.<br/><br/>pico is basically a non-free<sup class='footnote'><a name='head-2-2' class='anchor'></a><a href='thecommandline.html#foot-2-2'>2</a></sup> version of nano, so don't use it.<br/><br/><hr class='footnote'/><div class='footnote'><a name='foot-2-1' class='anchor'></a><a href='thecommandline.html#head-2-1' class='footanchor'>^1</a>Emacs? Get the fuck out.</div>
+<div class='footnote'><a name='foot-2-2' class='anchor'></a><a href='thecommandline.html#head-2-2' class='footanchor'>^2</a>Non-free as in speech - that is, it's free but not open source.</div>
+</div><a name='gnuccompiler'></a><div class='section'><h1>GNU C Compiler</h1>We will be using a program known as gcc (the <strong>G</strong>NU <strong>C C</strong>ompiler) to compile our code into programs.<br/><br/><h2>Compile? What?</h2><br/>We'll get to that. Don't worry. First, we need to check if you have it installed:<br/><br/><h2>Linux</h2><br/>Note that generally Linux distributions come with gcc pre-installed. You can check whether you have it installed:<br/>
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #666666;">steve$ </span><span style="color: #c20cb9; font-weight: bold;">which</span> <span style="color: #c20cb9; font-weight: bold;">gcc</span>
+<span style="color: #000000; font-weight: bold;">/</span>usr<span style="color: #000000; font-weight: bold;">/</span>bin<span style="color: #000000; font-weight: bold;">/</span><span style="color: #c20cb9; font-weight: bold;">gcc</span></pre></div><br/>
+
+
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #666666;">steve$ </span><span style="color: #c20cb9; font-weight: bold;">which</span> <span style="color: #c20cb9; font-weight: bold;">gcc</span>
+<span style="color: #c20cb9; font-weight: bold;">gcc</span> not found
+<span style="color: #666666;">steve$ </span><span style="color: #c20cb9; font-weight: bold;">sudo</span> <span style="color: #c20cb9; font-weight: bold;">apt-get install</span> <span style="color: #c20cb9; font-weight: bold;">gcc</span>
+... installs <span style="color: #c20cb9; font-weight: bold;">gcc</span> ...</pre></div><br/>Note that the "sudo apt-get" command only works in Ubuntu (and similar distributions). You'll need to google how to install gcc on your own distribution if you do not already have it.<br/><br/><h2>Mac</h2><br/>Mac users will need to install X Code which is available from the Apple website. Once X Code is installed, gcc can be run from the command line.<br/><br/><h2>A note on compiling</h2><br/>There are some options that should be used when compiling your C code with gcc. Options are arguments, they follow the command and are usually prefixed with a <strong>-</strong>. <br/><br/>When compiling code with gcc for COMP1917, your command line should look like this:<br/>
+<div class='code'><pre class="bash" id="d41d8cd98f00b204e9800998ecf8427elines" style="font-family:monospace;"><span style="color: #666666;">steve$ </span><span style="color: #c20cb9; font-weight: bold;">gcc</span> <span style="color: #660033;">-Wall</span> <span style="color: #660033;">-Werror</span> <span style="color: #660033;">-O</span> <span style="color: #660033;">-o</span> myprogram myprogram.c</pre></div><br/>That should make no sense to you right now. If it does, you're a magical genius and should be applauded by all your friends and enemies. Or you're a cheating bastard who already knows how to do this.<br/><br/>Here's a quick explanation:<br/><strong>gcc</strong>: the command we're running, specifically the GNU C Compiler<br/><strong>-Wall</strong>: show all warnings<br/><strong>-Werror</strong>: all warnings are treated as errors <br/><strong>-O</strong>: automatically optimise the code to improve performance<br/><strong>-o myprogram</strong>: produce a binary executable named &quot;myprogram&quot;<br/><strong>myprogram.c</strong>: the file containing the C code (source code) for the program<br/><br/>A <strong>warning</strong> is when the compiler finds something unusual in your code, but it is still capable of being compiled.<br/><br/>An <strong>error</strong> is when the compiler finds a mistake in your code which means that it cannot be compiled.<br/><br/><h2>Why treat all warnings as errors?</h2><br/>Even though warnings don't mean your code is broken, when a warning is invoked it is likely that your code doesn't mean exactly what you think it means. <br/><br/>Maybe you forgot something, maybe you used valid C syntax in an inappropriate way, or maybe you're just stupid. The compiler likes to warn against that.<br/><br/>Treating warnings as errors means that your code will not compile with warnings, so you have to deal with any problems early, leaving your code easier to debug.<br/><br/><h2>Debug? Slow down with the technobabble!</h2><br/>Debug basically means to fix "bugs" (basically, errors) in your program. Don't worry, all this stuff will be explained in time.<br/><br/></div>
+
+<div id="chapbuttons">
+<a id='nextchap' href='helloworld.html'>Chapter 1: Hello, World! &raquo;</a>
+<a id='prevchap' href='linuxintro.html'>&laquo; Choice of Operating System</a>
+</div>
+
+<div class='section warning small'><strong>DISCLAIMER: This is an unofficial, unendorsed, unmaintained guide.</strong><br/>
+This guide was written by previous students based on their own experiences of the course, and may thus become increasingly irrelevant over the course of time. Everything in this guide should be taken as <strong>advice only.</strong> When in doubt, <strong>consult your tutor and/or lecturer.</strong>
+</div>
+
+<a id='indexbtn' href="../index.html">index</a> 
+<a id="showbtn" href="javascript:toggleList();">Table of Contents</a> 
+ 
+<div id="list" style="display:none;">
+<a href='linuxintro.html'>Choice of Operating System</a><br/><a href='thecommandline.html'>The Linux Command Line</a><br/><a href='helloworld.html'>Chapter 1: Hello, World!</a><br/><a href='variables.html'>Chapter 2: Variables</a><br/><a href='input.html'>Chapter 3: Input</a><br/><a href='ifstatements.html'>Chapter 4: If Statements</a><br/><a href='leapyears.html'>Exercise: Leap Years</a><br/><a href='loops.html'>Chapter 5: Loops</a><br/><a href='functions.html'>Chapter 6: Functions</a><br/><a href='arrays.html'>Chapter 7: Arrays</a><br/><a href='recap1.html'>Recap 1</a><br/><a href='pointers.html'>Chapter 8: Pointers</a><br/><a href='strings.html'>Chapter 9: Strings</a><br/><a href='structures.html'>Chapter 10: Structures</a><br/><a href='faqs.html'>FAQs: Frequently Asked Questions</a><br/><a href='index.html'></a><br/> 
+</div> 
+ 
+<div id="footer"> 
+<a href='https://github.com/dpad/comp1917-in-a-day' class='github-button'><i class='github-icon'></i>Github</a>
+&copy; 2011 &mdash; 2013<br/>Dan Padilha, Stephen Sherratt
+</div> 
+</body> 
+</html>

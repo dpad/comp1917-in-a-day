@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+<html> 
+<head> 
+<script> 
+ 
+function toggleLineNos(name) {
+ 
+    if (document.getElementById(name + "lines").style.display == "none") {
+ 
+        document.getElementById(name + "lines").style.display = "";
+        document.getElementById(name + "nolines").style.display = "none";
+    } else {
+        document.getElementById(name + "lines").style.display = "none";
+        document.getElementById(name + "nolines").style.display = "";
+ 
+    }
+ 
+}
+function toggleList() {
+    if (document.getElementById("list").style.display == "none") {   
+        document.getElementById("list").style.display = "";
+        document.getElementById("showbtn").innerHTML = "Table of Contents";
+    } else {
+        document.getElementById("list").style.display = "none";
+        document.getElementById("showbtn").innerHTML = "Table of Contents";
+    }
+}
+</script> 
+<link href="../css/sections.css" rel="stylesheet"  type="text/css"/>  
+<title>COMP1917 in a Day >> Recap 1</title> 
+</head> 
+<body> 
+
+ 
+<h1 id='header'>Recap 1</h1> 
+
+<a name='story'></a><div class='section'><h1>The Story so Far...</h1><pre style="code">
+Functions in stdio.h:
+printf
+scanf
+getchar
+
+Control Structures:
+if statements
+while loops
+for loops
+
+Arrays
+Functions
+</pre><br/><br/><br/></div><a name='exercise'></a><div class='section'><h1>Exercise</h1>But these are only tools.<br/>What makes a good coder is the ability to use these tools effectively to solve a given problem.<br/>When faced with a problem, rather than starting to code up a solution right away, think about what method you will use.<br/>Keep in mind the limitations of the system and what it is capable of.<br/>When forming a solution (before coding), use words like if and while so that it is simple to then convert into code.<br/>Also keep in mind the number of "steps" your algorithm will take to complete.<br/>For instance, when using iteration (for and while) think about several cases and try to minimise the number of times<br/>the loop will iterate.<br/><br/>Your task is the following:<br/><br/>Write a program that takes two integers as input and prints the greatest common divisor of the two.<br/>Use a function with the prototype<br/><pre style="code">
+int gcd(int a, int b);
+</pre><br/>to find the gcd.<br/>Make a main function that reads two integers, passes them to gcd and then prints its return value.<br/>Note that if you get the following when you run your program:<br/><pre id="code">
+Floating Point Exception
+</pre><br/>it probably means that your program attempted to divide or mod by 0.<br/><a href="recap1/solution.html">Solution</a><br/><br/></div>
+
+<div id="chapbuttons">
+<a id='nextchap' href='pointers.html'>Chapter 8: Pointers &raquo;</a>
+<a id='prevchap' href='arrays.html'>&laquo; Chapter 7: Arrays</a>
+</div>
+
+<div class='section warning small'><strong>DISCLAIMER: This is an unofficial, unendorsed, unmaintained guide.</strong><br/>
+This guide was written by previous students based on their own experiences of the course, and may thus become increasingly irrelevant over the course of time. Everything in this guide should be taken as <strong>advice only.</strong> When in doubt, <strong>consult your tutor and/or lecturer.</strong>
+</div>
+
+<a id='indexbtn' href="../index.html">index</a> 
+<a id="showbtn" href="javascript:toggleList();">Table of Contents</a> 
+ 
+<div id="list" style="display:none;">
+<a href='linuxintro.html'>Choice of Operating System</a><br/><a href='thecommandline.html'>The Linux Command Line</a><br/><a href='helloworld.html'>Chapter 1: Hello, World!</a><br/><a href='variables.html'>Chapter 2: Variables</a><br/><a href='input.html'>Chapter 3: Input</a><br/><a href='ifstatements.html'>Chapter 4: If Statements</a><br/><a href='leapyears.html'>Exercise: Leap Years</a><br/><a href='loops.html'>Chapter 5: Loops</a><br/><a href='functions.html'>Chapter 6: Functions</a><br/><a href='arrays.html'>Chapter 7: Arrays</a><br/><a href='recap1.html'>Recap 1</a><br/><a href='pointers.html'>Chapter 8: Pointers</a><br/><a href='strings.html'>Chapter 9: Strings</a><br/><a href='structures.html'>Chapter 10: Structures</a><br/><a href='faqs.html'>FAQs: Frequently Asked Questions</a><br/><a href='index.html'></a><br/> 
+</div> 
+ 
+<div id="footer"> 
+<a href='https://github.com/dpad/comp1917-in-a-day' class='github-button'><i class='github-icon'></i>Github</a>
+&copy; 2011 &mdash; 2013<br/>Dan Padilha, Stephen Sherratt
+</div> 
+</body> 
+</html>

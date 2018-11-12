@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+<html> 
+<head> 
+<script> 
+ 
+function toggleLineNos(name) {
+ 
+    if (document.getElementById(name + "lines").style.display == "none") {
+ 
+        document.getElementById(name + "lines").style.display = "";
+        document.getElementById(name + "nolines").style.display = "none";
+    } else {
+        document.getElementById(name + "lines").style.display = "none";
+        document.getElementById(name + "nolines").style.display = "";
+ 
+    }
+ 
+}
+function toggleList() {
+    if (document.getElementById("list").style.display == "none") {   
+        document.getElementById("list").style.display = "";
+        document.getElementById("showbtn").innerHTML = "Table of Contents";
+    } else {
+        document.getElementById("list").style.display = "none";
+        document.getElementById("showbtn").innerHTML = "Table of Contents";
+    }
+}
+</script> 
+<link href="../css/sections.css" rel="stylesheet"  type="text/css"/>  
+<title>COMP1917 in a Day >> Choice of Operating System</title> 
+</head> 
+<body> 
+
+ 
+<h1 id='header'>Choice of Operating System</h1> 
+
+<a name='linuxwhat'></a><div class='section'><h1></h1>For the sake of simplicity, we'll say that most of the computer users in the world, and likely you, fall into one of three groups:<br/><ul>
+<li>Those who use Windows (XP, 7, and the shittier ones)</li>
+<li>Those who use Macs (OSX, and whatever other crap they put out)</li>
+<li>Those who use Linux</li>
+</ul>
+All three of these things are known as <strong>operating systems</strong>.<br/><br/><h2>So what?</h2><br/>If you're still reading this chapter then it's likely you fall into one of the first two groups. In this course, we'll teach you how to join the elite group of men and women in the exhalted third group.<br/><br/>Although this course can likely be completed using either of the first two options, <em><u>it will be to your significant advantage</u></em>, <em>especially</em> if you are a Windows user, to learn to use a variant of the third option, <strong>Linux</strong>. CSE courses in general will assume you have some knowledge of Linux systems, and all CSE lab machines run Linux by default.<br/><br/><h2>Hang on, what's an Operating System?</h2><br/>An operating system is, very simply put, the set of tools which allow you to run applications on your computer.<br/><br/>Windows 7 is an operating system. Mac OSX is an operating system. The operating systems define what your computer can and cannot do, and provide applications with access to your computer's hardware (like the hard drive, the screen, the keyboard, or your mother).<br/><br/>If you're a Windows user then you may know that every time you run an application, you essentially run a ".exe" file. But how does the computer know what to do with that file? The operating system takes care of figuring that shit out. If you're a Mac user then simply imagine a relevant example, then throw your terrible piece of over-designed junk out the nearest window.<br/><br/><h2>Linux: Why it rocks the bollocks</h2><br/><strong>Linux</strong> is a somewhat misused term<sup class='footnote'><a name='head-1-1' class='anchor'></a><a href='linuxintro.html#foot-1-1'>1</a></sup> for a collection of operating systems built upon the <a href='http://wikipedia.org/wiki/Linux_kernel'>Linux kernel</a> and <a href='http://wikipedia.org/wiki/GNU_Project'>GNU Project</a>. This is a complicated way of saying that some 20 odd years ago some university nerds around your age decided to build their own operating system for shits and giggles which eventually turned into one of the coolest things in the world of computer science.<br/><br/>An important aspect of Linux operating systems is that they are <strong>free</strong>. Completely, utterly free. They cost zilch. Zero. Nada. You may not realise it, but when you buy a computer with either Windows or Mac OSsomethingorother, there is a percentage of the cost going directly towards the price of using that operating system. <br/><br/>Linux is also free in that you are free to do anything and everything you want with it, including modifying the operating system itself for your own purposes.<sup class='footnote'><a name='head-1-2' class='anchor'></a><a href='linuxintro.html#foot-1-2'>2</a></sup> You have the option to install whichever "flavour" of Linux you want, whenever you want, on whatever computer it may support, in whatever way you want. This makes it exceptionally popular in the field of computer science as you are able to run whatever the hell you want without some turtlenecked hipster dictating exactly how your computer should behave.<br/><br/><img src='../img/steve_jobs_pointing.jpg'><sub class='imgsub'>Get back in line, citizen!</sub><br/><h2>Why you should care</h2><br/><em>"Pfft,"</em> you scoff, <em>"I am well-established financially and can afford to buy overpriced trinkets that satisfy my deeply subconscious desire to conform to popularly-established personality traits while continuing to maintain the illusion that I have any free will or individuality whatsoever. How dare you push me with your lowly peasantries?"</em><br/><br/><img src='../img/mac_sucks.png'><sub class='imgsub'>Hello, I'm a douchebag.</sub><br/>The vast superiorities of running a Linux distribution as your operating system rather than Windows or Mac are already well-documented in nerd battles throughout the internet so we will not bother replicating them here. The following points, however, are notworthy of mention:<br/><ul>
+<li>Linux is completely<sup class='footnote'><a name='head-1-3' class='anchor'></a><a href='linuxintro.html#foot-1-3'>3</a></sup> free and open source<sup class='footnote'><a name='head-1-4' class='anchor'></a><a href='linuxintro.html#foot-1-4'>4</a></sup>, and, much like <a href='../img/fezzes_are_cool.jpg' title='If you get this reference, then you, too, are cool.'>bowties and fezzes</a>, open source is cool.</li>
+<li>Linux has access to subjectively superior development platforms and standardised toolsets.</li>
+<li>You will require access to a powerful command line. Windows' command line is severely lacking.</li>
+<li>Courses in CSE are taught using Linux and will assume that you will be learning to use Linux. Furthermore, all computers in CSE labs run Linux by default.</li>
+<li>Linux is used in over 90% of the world's fastest supercomputers, including in the top 10 fastest. If that isn't bad-ass enough for you, then get out.</li>
+<li>Learning to use Linux will teach you far more about computers than you can imagine, and get you laid.<sup class='footnote'><a name='head-1-5' class='anchor'></a><a href='linuxintro.html#foot-1-5'>5</a></sup></li>
+</ul>
+<br/><h2>Okay, you've convinced me. How do I get the Linux?</h2><br/>Unlike Windows and Mac, there is no single company developing every version of Linux. Everyone has their own idea of what an ideal operating system is, and as such many people and groups of people choose to develop their own versions of Linux, known as "<strong>Linux distributions</strong>".<br/><br/>Some Linux distributions are better at different things than others, so you are encouraged to look up some of the more popular alternatives yourself. <br/><br/>But you're not going to look it up, are you, you lazy shit? After all, no truly motivated person would be reading a website claiming to teach an entire university course in a single day, would they?<br/><br/>So, if you're still stuck on choosing a Linux distribution, then take our advice and choose:<br/><br/><a href='http://www.xubuntu.org'><br/><img src='../img/xubuntu.png'><sub class='imgsub'>Xubuntu, an Ubuntu-based Linux distribution</sub></a><br/><br/><h2>Why should I use Xubuntu?</h2><br/>Because fuck you is why.<br/><br/><h2>No, really, why?</h2><br/>The basic gist of it is this:<br/><ul>
+<li>Xubuntu is easy to install and easy to use.</li>
+<li>Ubuntu (which Xubuntu is built on) is currently one of the most popular Linux distributions in use.</li>
+<li>Xubuntu is essentially Ubuntu without the poor design choices.</li>
+<li>There is a large support community, if you ever get stuck.</li>
+</ul>
+<br/>If you don't like that idea, here are some other distributions we recommend:<br/><ul>
+<li><a href='http://www.ubuntu.com'>Ubuntu</a> is arguably the most popular Linux distribution of all time. Unfortunately, due to some recent poor design decisions, Ubuntu is quickly falling behind in popularity. Ubuntu-based distributions remain strong though thanks to its large community.</li>
+<li><a href='http://www.linuxmint.com'>Linux Mint</a> is an easy-to-use works-out-of-the-box distribution which looks familiar to Windows users, and has recently become the most popular distribution available for beginners. Linux Mint was itself originally based on Ubuntu.</li>
+<li><a href='http://www.debian.org'>Debian</a> is the grand-daddy of a lot of popular distributions, including all of the ones mentioned above. It is known for its stability, but also for its relative age compared to the others (who like to live on the edge with newer but less tested designs). It is a good choice in general but perhaps a little less beginner-friendly than the others.</li>
+<li><a href='https://www.archlinux.org/'>Arch</a> is the hardcore option for those who really, really enjoy suffering and pain. Using Arch is like sailing a ship on the ocean, except that you've never been on or even seen a ship before, and your ship is actually a dinghy that you built yourself from some planks and chewing gum and has more leaky holes than you can keep your fingers plugged into, and every so often someone whispers towards you and the whole thing blows apart. Expect to spend your nights crying, alone, and wondering just where everything in your life went wrong.</li>
+</ul>
+<br/>Honestly, it doesn't matter much which one you pick as long as you do pick one and learn how to use the command line (we'll get to that later). Whichever one makes it easiest to do that (which, for now, we recommend Xubuntu) for you is the one you should use to begin with.<br/><br/><h2>By the way...</h2><br/>Did we also mention the official mascot of Linux is <a href='http://en.wikipedia.org/wiki/Tux'>Tux the penguin</a>? If you don't think that in itself is awesome then you have no heart.<br/><br/><img src='../img/tux_is_no_ordinary_penguin.png' width='300px'><sub class='imgsub'>Cute penguins get more action than you.</sub><br/><hr class='footnote'/><div class='footnote'><a name='foot-1-1' class='anchor'></a><a href='linuxintro.html#head-1-1' class='footanchor'>^1</a>To appease to any Stallman fanboys and fangirls out there, in truth we really should be calling Linux distributions as "GNU/Linux distributions", as they tend to be packaged together, or possibly "Unix-based operating systems". But for the sake of simplicity, we'll be referring to them only as Linux distributions.</div>
+<div class='footnote'><a name='foot-1-2' class='anchor'></a><a href='linuxintro.html#head-1-2' class='footanchor'>^2</a>Not that we expect you to be able to yet, or even to understand what it means to modify an operating system.</div>
+<div class='footnote'><a name='foot-1-3' class='anchor'></a><a href='linuxintro.html#head-1-3' class='footanchor'>^3</a>Technically not completely. Certain Linux kernels include "closed-source" parts such as specific drivers. Some Linux distributions, such as Gentoo, modify the Linux kernel to remove these parts in order to be able to call themselves <strong>completely</strong> free. Similarly, some distributions are not free of cost &mdash; some are directly sold to enterprises with a cost charged for maintenance and support.</div>
+<div class='footnote'><a name='foot-1-4' class='anchor'></a><a href='linuxintro.html#head-1-4' class='footanchor'>^4</a>"Open source" means you can directly view the source code comprising some piece of software, in this case the Linux operating system you choose.</div>
+<div class='footnote'><a name='foot-1-5' class='anchor'></a><a href='linuxintro.html#head-1-5' class='footanchor'>^5</a>Your mileage may vary.</div>
+</div><a name='installinglinux'></a><div class='section'><h1>Installing and Running Linux</h1>For this course we'll be assuming you're running some sort of Linux distribution.<br/><br/>Below, we outline some ways in which you can install <a href='http://www.xubuntu.org'>Xubuntu</a> on your home computer and give you some good keywords you can type into Google and figure shit out for yourself.<br/><br/>If you can't be bothered, you can always just choose to work on your assignments at the CSE labs, which all run a Linux distribution by default.<br/><br/><h2>If you are a Windows user:</h2><br/>Unlike Macbros, you pretty much <em>have</em> to install Linux if you want to do well in this course (unless, of course, you're willing to spend all of your free time in the CSE labs, but surely your mother's basement is far more comfortable).<br/><br/>Windows users can choose any of these three options:<br/><ul>
+<li>Virtual machine &mdash; essentially running Linux while inside Windows. It usually runs a lot slower and you may encounter other issues. Nowadays (2015~) this is actually an acceptable option. Install <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> and go from there.</li>
+<li>Dual-boot &mdash; this means having both Windows and Linux on your computer <em>at the same time</em>. This is the preferred option for most.</li>
+<li>HARDCORE MODE &mdash; erasing Windows from your life entirely and converting to the Church of Linux.</li>
+</ul>
+<br/>The easiest procedure to install in dual-boot mode is as below:<br/><ol>
+<li>Download a copy of the Xubuntu disc image.</li>
+<li>Burn the image onto a CD. Look up <a href='http://www.imgburn.com'>ImgBurn</a> if you don't know how.</li>
+<li>Put the CD into your computer and restart it.</li>
+<li>Follow the instructions, making sure you pay close attention to the partition so that you correctly set up Linux as a dual-boot environment. <strong>WARNING:</strong> Pay attention, or you will mess with and possibly lose all of your existing documents.</li>
+<li>If you just go back to Windows, you'll need to figure out how to change the boot order so that you can boot from CD. Google that shit.</li>
+</ol>
+<br/><h2>If you are a Mac OSX user:</h2><br/>Mac OSX, while still being a steaming pile of dictated manure, has the added benefit that it is Unix-based. Linux is also Unix-based, and as such you should be able to follow along with most of the course, although you too are probably better off running a Linux distribution. Then again, you are also probably better off smashing your overpriced novelty brick against a wall to redeem yourself from the insult of succumbing to Apple's will.<br/><br/>Use CMD+SPACE to open spotlight. Type &quot;terminal&quot; into the search field. Click on Terminal (the black box icon). You will be using this a lot throughout the course.<br/>NOTE: Even if you use a Mac, don't disregard the notes for Linux as this is the operating system that you will use on the CSE lab computers.<br/><br/><h2>If you are already a Linux user:</h2><br/>Congratulations on using a civilised operating system! Have a cookie.<br/><br/></div>
+
+<div id="chapbuttons">
+<a id='nextchap' href='thecommandline.html'>The Linux Command Line &raquo;</a>
+<a id='prevchap' style='visibility:hidden;'>&nbsp;</a>
+</div>
+
+<div class='section warning small'><strong>DISCLAIMER: This is an unofficial, unendorsed, unmaintained guide.</strong><br/>
+This guide was written by previous students based on their own experiences of the course, and may thus become increasingly irrelevant over the course of time. Everything in this guide should be taken as <strong>advice only.</strong> When in doubt, <strong>consult your tutor and/or lecturer.</strong>
+</div>
+
+<a id='indexbtn' href="../index.html">index</a> 
+<a id="showbtn" href="javascript:toggleList();">Table of Contents</a> 
+ 
+<div id="list" style="display:none;">
+<a href='linuxintro.html'>Choice of Operating System</a><br/><a href='thecommandline.html'>The Linux Command Line</a><br/><a href='helloworld.html'>Chapter 1: Hello, World!</a><br/><a href='variables.html'>Chapter 2: Variables</a><br/><a href='input.html'>Chapter 3: Input</a><br/><a href='ifstatements.html'>Chapter 4: If Statements</a><br/><a href='leapyears.html'>Exercise: Leap Years</a><br/><a href='loops.html'>Chapter 5: Loops</a><br/><a href='functions.html'>Chapter 6: Functions</a><br/><a href='arrays.html'>Chapter 7: Arrays</a><br/><a href='recap1.html'>Recap 1</a><br/><a href='pointers.html'>Chapter 8: Pointers</a><br/><a href='strings.html'>Chapter 9: Strings</a><br/><a href='structures.html'>Chapter 10: Structures</a><br/><a href='faqs.html'>FAQs: Frequently Asked Questions</a><br/><a href='index.html'></a><br/> 
+</div> 
+ 
+<div id="footer"> 
+<a href='https://github.com/dpad/comp1917-in-a-day' class='github-button'><i class='github-icon'></i>Github</a>
+&copy; 2011 &mdash; 2013<br/>Dan Padilha, Stephen Sherratt
+</div> 
+</body> 
+</html>

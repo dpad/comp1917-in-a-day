@@ -1,0 +1,261 @@
+* {
+    padding:0px;
+    margin:0px;
+    font-family:sans-serif;
+}
+
+body {
+    padding-top:40px;
+    padding-bottom:20px;
+    background-color:rgb(225,240,255);
+}
+
+h1 {
+    margin: 10px 0px 20px 0px;
+    color:#333;
+    letter-spacing:-2px;
+}
+
+h1, h2, h3 {
+    font-family:Verdana, sans-serif;
+    text-transform:uppercase;
+    font-weight:bold;
+}
+
+h2 {
+    font-size:16px;
+    line-height:21px;
+    margin: 15px 0px -10px 0px;
+}
+
+h3 {
+    font-size:13px;
+    line-height:15px;
+    margin: 10px 0px -20px 0px;
+}
+
+h1#header {
+    color:#000;
+    text-transform:none;
+    text-align:center;
+    font-size:51px;
+    line-height:44px;
+    font-weight:bold;
+    margin: 30px 0px;
+}
+
+
+div.section {
+    width:700px;
+    
+    padding:10px 20px;
+
+    margin:30px auto;
+
+    background-color:rgba(255, 255, 255, 0.6);
+
+    font-size:16px;
+    line-height:23px;
+}
+
+ul, ol {
+    margin: 0px 20px;
+}
+
+div.small {
+    font-size:11px;
+    line-height:15px;
+}
+
+div.warning {
+    background-color:rgba(255, 0, 0, 0.2);
+    color: #333;
+    text-align:center;
+}
+
+div.cool {
+    background-color:rgba(0, 255, 0, 0.1);
+    color: #333;
+    text-align:center;
+}
+
+div.packed, div.section.packed, div.warning.packed, div.small.packed {
+    margin: -30px auto;
+}
+
+div.code, pre.code {
+    display:block;
+    background-color:rgba(255, 255, 255, 8);
+    margin: 10px 0px;
+    padding:10px;
+    font-size:14px;
+    line-height:20px;
+}
+div.code ol {
+    margin: 0px 0px 0px 50px;
+}
+
+pre, pre * {
+    font-family:monospace;
+}
+
+table {
+    border: 0px;
+    
+}
+
+td {
+    border: 1px solid #333;
+    padding: 5px;
+}
+
+a, a:visited, a:link {
+    text-decoration:underline;
+    color:#33a;
+}
+
+a:hover {
+    color: #a33;
+}
+
+a#showbtn, a#showbtn:visited, a#showbtn:link {
+    text-decoration:none;
+    display:block;
+    position:fixed;
+    top:0px;
+    left: 100px;
+    font-family:monospace;
+    font-size:20px;
+    background-color:rgba(255, 255, 255, 0.95);
+    padding: 10px;
+    margin-left: 20px;
+}
+
+a#indexbtn, a#indexbtn:visited, a#indexbtn:link {
+    text-decoration:none;
+    display:block;
+    position:fixed;
+    top:0px;
+    left: 10px;
+    font-family:monospace;
+    font-size:20px;
+    background-color:rgba(255, 255, 255, 0.95);
+    padding: 10px;
+    margin-left: 20px;
+}
+
+div#list {
+    position:fixed;
+    left:100px;
+    top:40px;
+    font-family:monospace;
+    font-size:20px;
+    background-color:rgba(255,255,255,0.95);
+    padding:0px 20px 10px 20px;
+    margin:0px 0px 0px 20px;
+}
+
+div#footer {
+    position:relative;
+    height:40px;
+    width:700px;
+    font-family:monospace;
+    text-align:center;
+    clear:left;
+    margin:0px auto;
+}
+
+ul li {
+    margin:10px 0px;
+}
+
+img {
+    display:block;
+    max-width:660px;
+    text-align:center;
+    margin:0px auto;
+}
+sub.imgsub {
+    display:block;
+    text-align:center;
+    margin:0px auto;
+}
+
+div#chapbuttons {
+    width:700px;
+    position:relative;
+    margin:0px auto;
+    padding:0px;
+}
+
+a#prevchap, a#nextchap {
+    position:relative;
+    display:block;
+    width:340px;
+    margin: 0px 0px 20px -20px;
+    padding: 10px 10px;
+    text-align:left;
+    background-color:rgba(255, 255, 255, 0.6);
+    text-decoration:none;
+    font-size:18px;
+}
+
+a#nextchap {
+    float:right;
+    margin: 0px -20px 20px 0px;
+    margin-left:20px;
+    text-align:right;
+}
+
+div.footnote {
+    font-size:12px;
+    line-height:15px;
+    margin: 10px 0px;
+}
+
+div.footnote a.footanchor {
+    text-decoration:none;
+    display:inline-block;
+    width: 25px;
+}
+
+sup.footnote, div.footnote {
+    position:relative;
+}
+
+sup.footnote a.anchor, div.footnote a.anchor {
+    position:absolute;
+    top: -50px;
+}
+
+hr.footnote {
+    border:0px;
+    border-top: 1px solid #aaa;
+    margin: 50px 0px 20px 0px;
+}
+
+a.github-button {
+    float:right;
+    display: block;
+    display: inline-block;
+    float: right;
+    border-radius: .3em;
+    padding: 5px 10px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.5);
+    margin: 0px 0px 0px 20px;
+    color: #eee;
+}
+
+a.github-button:hover {
+    color: orange;
+}
+
+i.github-icon {
+    background: url(../img/octocat.svg)no-repeat;
+    background-size: contain;
+    padding-left:2em;
+    opacity: 0.6;
+}
