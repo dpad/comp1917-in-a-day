@@ -1,19 +1,19 @@
 {{NL2BR}}
-For this course we'll be assuming you're running some sort of Linux distribution. 
+For this course we'll be assuming you're running some sort of Linux distribution.
 
 Below, we outline some ways in which you can install <a href='http://www.xubuntu.org'>Xubuntu</a> on your home computer and give you some good keywords you can type into Google and figure shit out for yourself.
 
 If you can't be bothered, you can always just choose to work on your assignments at the CSE labs, which all run a Linux distribution by default.
 
 <h2>If you are a Windows user:</h2>
-Unlike Macfags, you pretty much <em>have</em> to install Linux if you want to do well in this course (unless, of course, you're willing to spend all of your free time in the CSE labs, but surely your mother's basement is far more comfortable).
+Unlike Macbros, you pretty much <em>have</em> to install Linux if you want to do well in this course (unless, of course, you're willing to spend all of your free time in the CSE labs, but surely your mother's basement is far more comfortable).
 
 Windows users can choose any of these three options:
 {{NONL2BR}}
 <ul>
-<li>Virtual machine &mdash; essentially running Linux while inside Windows. It usually runs a lot slower and you may encounter other issues.</li>
-<li>Dual-boot &mdash; this means having both Windows and Linux on your computer <em>at the same time</em></li>
-<li>HARDCORE MODE &mdash; erasing Windows from your life entirely and converting to the Church of Linux (requires balls of steel)</li>
+<li>Virtual machine &mdash; essentially running Linux while inside Windows. It usually runs a lot slower and you may encounter other issues. Nowadays (2015~) this is actually an acceptable option. Install <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> and go from there.</li>
+<li>Dual-boot &mdash; this means having both Windows and Linux on your computer <em>at the same time</em>. This is the preferred option for most.</li>
+<li>HARDCORE MODE &mdash; erasing Windows from your life entirely and converting to the Church of Linux.</li>
 </ul>
 {{NL2BR}}
 

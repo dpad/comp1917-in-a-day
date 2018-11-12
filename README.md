@@ -1,43 +1,32 @@
 # COMP1917 In A Day
 
-[COMP1917 In A Day](http://comp1917.dpadilha.com) is an educational website designed to teach the basics of programming in C. 
+[COMP1917 In A Day](http://comp1917.dpadilha.com) is an educational website designed to teach the basics of programming in C.
 
-It was specifically created to cater for [University of New South Wales (UNSW Australia)](http://www.unsw.edu.au) students taking the first-year computer science course, [COMP1917 - Computing 1](https://wiki.cse.unsw.edu.au/info/COMP1917). 
+It was specifically created to cater for [University of New South Wales (UNSW Australia)](http://www.unsw.edu.au) students taking the first-year computer science course, [COMP1917 - Computing 1](https://wiki.cse.unsw.edu.au/info/COMP1917).
 
-The aim of this project is simple:
+The aims of this project were simple:
 * To explain aspects of programming in [C](https://en.wikipedia.org/wiki/C_(programming_language)) (the programming language taught in COMP1917).
 * To teach in a manner that is easy-to-understand.
-* To keep students engaged in learning to program by utilising inappropriate jokes.
-
-The website is currently hosted at [http://comp1917.dpadilha.com](http://comp1917.dpadilha.com) using [Google App Engine](https://cloud.google.com/appengine/docs).
+* To stroke our own egos by building a custom templating engine in PHP (a terrible, terrible mistake).
 
 ## Disclaimers
 
-**This is an unoffical, unendorsed guide** to the COMP1917 course. This guide is written by former students based on their own experiences of the course, and may thus become increasingly irrelevant over the course of time. Everything in this guide should be taken as **advice only**. When in doubt, **consult your tutor and/or lecturer**.
+**This is an unoffical, unendorsed, unmaintained guide** to the COMP1917 course. This guide was written by former students based on their own experiences of the course, and may thus become increasingly irrelevant over the course of time. Everything in this guide should be taken as **advice only**. When in doubt, **consult your tutor and/or lecturer**.
 
-This guide contains **strong language**, **parody machismo**, **outright assertions of superiority over "trendy" subcultures**, **blatant sexist and discriminatory remarks**, and other acts which may be perceived as **inappropriate**. If you are someone who may be offended by such behaviour, you are advised not to engage with this project in any way.
-
-To provide a bit of history, the vast majority of the (actually useful) content of this guide was originally written by [Stephen Sherratt](https://github.com/stevebob). The less-useful bits, including the website itself, the horrible templating engine, and all the blatantly inappropriate stuff, was done by [Dan Padilha](https://github.com/dpad). So you know who to blame if you're truly offended.
+To provide a bit of history, the majority of the actually useful content of this guide was originally written by [Stephen Sherratt](https://github.com/stevebob). The less-useful bits, including the website itself, the horrible custom templating engine (before stuff like Jekyll was cool), and any silly or inappropriate flavour text were mostly done by [Dan Padilha](https://github.com/dpad). So you know who to blame.
 
 ## Contributing changes
 
-*Anyone may contribute changes to this project*, whether to point out or correct mistakes, or
-simply to improve how a specific suject is taught.
+*This project is unmaintained* (or sparsely maintained). You are welcome to provide feedback and/or changes, whether via email or Github, just as we are welcome to completely ignore it and continue about our extremely busy and overwhelmingly successful lives (a natural consequence of having effectively lived this guide, of course).
 
-To contribute, you must have a [GitHub account](https://github.com/). Simply [fork this repository](https://github.com/dpad/comp1917-in-a-day#fork-destination-box) (by clicking on "Fork" on the top-right of this page) into your personal GitHub account, make some changes, then open a [pull request](https://github.com/dpad/comp1917-in-a-day/pulls) detailing the changes you have made. The owners of this repository will review each pull request and will merge any proposed changes on to the [live website](http://comp1917.dpadilha.com).
-
-If you don't understand what any of that means, you'll need to use [the Google](http://lmgtfy.com/?q=how+do+I+contribute+to+a+github+project).
-
-The actual content of the course is stored in the `chapters` directory. Each chapter (as listed in `chapters/chapterslist`) has its own directory containing example code as well as sections (listed in `chapers/some_chapter/sectionslist`), which are files named `something.section`.
-
-Each section is parsed by an amazingly archaic templating engine, which was made before [Markdown](https://en.wikipedia.org/wiki/Markdown) and [reStructuredText](https://en.wikipedia.org/wiki/ReStructuredText) were cool. Just follow the existing examples to see how it works. Maybe you could even implement a Markdown/rST template reader for me or something. I dunno. 
+For future reference, the website is currently hosted at [dpad.github.io/comp1917-in-a-day](https://dpad.github.io/comp1917-in-a-day/). As the original templating engine is built in PHP and we're too lazy to upgrade it, a static snapshot of the website is currently built via a recursive `wget` and committed directly to the `gh-pages` branch. Please forgive us for this great sin, our exalted Lord of Programming, Linus.
 
 ## Copyright and License
 
-COMP1917 In A Day is intended as an educational resource. With that in mind, anyone is allowed to copy, edit, and even host their own copies of it, but:
+COMP1917 In A Day is intended as an educational resource. With that in mind, anyone is allowed to copy, edit, and even host their own copies of it, under the conditions that:
 * You **must** publicly release the source code of any changes you make.
 * You **must** acknowledge and attribute any authors who have previously contributed to this project.
-* You **must not** be a dick by pretending that you made this entire thing through your own sweat and tears just so you can impress chicks. We already tried that and it didn't work.
+* You **must not** pretend that you created this whole thing through your own sweat and tears to try and impress others. We already tried that and it didn't work.
 
 ```
     COMP1917 In A Day is an educational website designed to teach the basics of

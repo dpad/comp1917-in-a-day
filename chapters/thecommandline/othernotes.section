@@ -6,17 +6,17 @@ Now that you have a Linux distribution installed (or are running Mac OSX), we ca
 
 An example for an older version of Ubuntu might be to begin by clicking on System -> Preferences -> Keyboard Shortcuts. Add a shortcut for "Terminal", something like Alt-T is recommended. You should now be able to open the terminal (a black rectangle) by pressing this shortcut. If not, you can still open the Terminal by clicking on Applications -> Accessories -> Terminal.
 
-Once you know how to open the terminal, do so. You will be greeted by a black rectangle with text like this:
+Once you know how to open the terminal, do so. You will be greeted by a black rectangle[[Yes, it's a white rectangle on this site. We have budget constraints. Deal with it.]] with text like this:
 [[steve$
 ]]
 Isn't that phenomenally exciting?
-As bland as this may look, most of your work for COMP1917 will be done in this black box. 
+As bland as this may look, most of your work for COMP1917 will be done in this black box.
 
 <h2>What is the point?</h2>
 The terminal is basically a simple way of interacting with your computer. It gets rid of all the useless clutter on the screen and presents you with only the information you need precisely when you ask for it. What can you do in the terminal? Practically everything!
 
 <h2>Using the terminal</h2>
-Before we begin, notice the blinking white block. This is your "prompt", that is, where you type in commands. Try the command shown below (write the text after steve$)
+Before we begin, notice the blinking white block. This is your "prompt", that is, where you type in commands. Try the command shown below (write the text  pwd  after steve$, then press Enter on your keyboard):
 [[steve$ pwd
 /home/steve]]
 This is the directory you are currently in, also known as your "working" directory. In fact, "pwd" stands for "print working directory". A directory is the Linux nerd's name for a folder.
@@ -76,14 +76,16 @@ If you need to know what a given command does, simply run the command "man" with
 What manual page do you want?]]
 An "<strong>argument</strong>" is something you give to the command, a form of input. In the terminal, you can give arguments to commands by simply typing them after the command name.
 
-For example, when you use the "cd" command, you have to specify a directory for it to change into. The directory you specify is the "argument" you pass into the command "cd".
+For example, when you use the "mkdir" command, you have to specify a directory for it to create. The directory you specify is the "argument" you pass into the command "mkdir".
 
 Depending on the command/program you run, it may or many not accept, expect, or even rely on arguments. In order to know what arguments it accepts, you should consult its <strong>man</strong>ual page. The "man" command takes one argument: the page you want to read.[[Actually, it takes many, many more arguments, but none that you will need to use for quite some time yet.]]
 
-So, in a similar sense, if you want to know what "cd" does, you can pass "cd" as an argument into the "man" command, like so:
-[[steve$ man cd
+So, in a similar sense, if you want to know what "mkdir" does, you can pass "mkdir" as an argument into the "man" command, like so:
+[[steve$ man mkir
 ... lots of text in here ...]]
 Press the up and down arrow keys to read the manual, or "q" to exit out of the manual.
+
+Note that some commands won't have a manual. In many cases, you can simply add the "--help" argument to the command to get a summarised manual. For example, try "mkdir --help".
 
 <h2>Some more tips:</h2>
 Ctrl+C kills the current command. Use it to exit your programs if you are ever stuck in an infinite loop or taking too long to run.
